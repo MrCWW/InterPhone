@@ -542,10 +542,10 @@ static NSInteger const kWMUndefinedIndex = -1;
 
 - (BOOL)isInScreen:(CGRect)frame {
     CGFloat x = frame.origin.x;
-    CGFloat ScreenWidth = self.scrollView.frame.size.width;
+    CGFloat WMScreenWidth = self.scrollView.frame.size.width;
     
     CGFloat contentOffsetX = self.scrollView.contentOffset.x;
-    if (CGRectGetMaxX(frame) > contentOffsetX && x-contentOffsetX < ScreenWidth) {
+    if (CGRectGetMaxX(frame) > contentOffsetX && x-contentOffsetX < WMScreenWidth) {
         return YES;
     } else {
         return NO;

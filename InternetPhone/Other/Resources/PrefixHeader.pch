@@ -16,13 +16,14 @@
 //[[UIColor alloc] initWithRGB:0X32c770]
 #define BASECOLOR ([[UIColor alloc] initWithRGB:0X282828])
 #define BASEGRAYCOLOR ([[UIColor alloc] initWithRGB:0X969696])
+#define SETBASECOLOR(colorName)        [UIColor colorWithRGB:colorName]
 #define ScreenBounds [UIScreen mainScreen].bounds
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define WidthIphone6 [UIScreen mainScreen].bounds.size.width/375
 #define HeightIphone6 [UIScreen mainScreen].bounds.size.height/667
 #define BaseFont(fontSize) [UIFont fontWithName:@"PingFang SC" size:fontSize]
-#define Banners_Height ScreenHeight/3*WidthIphone6
+#define Banners_Height 40
 
 #define Here_Is_inforMation [[NSUserDefaults standardUserDefaults] objectForKey:@"inforMation"]
 #define Here_Is_Login [[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"]
