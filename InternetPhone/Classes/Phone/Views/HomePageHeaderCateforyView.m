@@ -11,7 +11,7 @@
 //#import "HomePageCategoryModel.h"
 
 #define BGViewHeight 218
-#define ItemWidth (ScreenWidth-40)/3
+#define ItemWidth (ScreenWidth-60)/3
 
 #define CellSec @"CellSec"
 @interface HomePageHeaderCateforyView()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -57,7 +57,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.frame = frame;
-        
+        UIImageView *imageBG = [[UIImageView alloc] initWithFrame:HCGRECT(20, 20, self.width - 40, self.height - 40)];
+        imageBG.image = [UIImage imageNamed:@"2@3x20170720"];
+        [self addSubview:imageBG];
         if (imageArr) {
             self.imageDataArr = [NSArray arrayWithArray:imageArr];
         }
@@ -66,20 +68,18 @@
         }
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         //分区之间的间距
-        flowLayout.sectionInset = UIEdgeInsetsMake(10,10,10,10);
+        flowLayout.sectionInset = UIEdgeInsetsMake(20,20,20,20);
         //cell之间的最小间距
         flowLayout.minimumLineSpacing = 10;//行间距
         flowLayout.minimumInteritemSpacing = 5;//列间距
         self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height) collectionViewLayout:flowLayout];
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
-        self.collectionView.backgroundColor = [UIColor whiteColor];
+        self.collectionView.backgroundColor = [UIColor clearColor];
         [self.collectionView registerNib:[UINib nibWithNibName:@"HomePageHeaderCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:CellSec];
         [self addSubview:self.collectionView];
         
-        UIImageView *imageBG = [[UIImageView alloc] initWithFrame:HCGRECT(20, 10, self.width - 40, self.height - 20)];
-        imageBG.image = [UIImage imageNamed:@"2@3x20170720"];
-        [self.collectionView addSubview:imageBG];
+      
         
         
     }
@@ -102,6 +102,7 @@
     
 //        [cell.imageViews sd_setImageWithURL:[NSURL URLWithString:model.image]];
     }
+    
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -115,7 +116,7 @@
 - (CGSize) collectionView:(UICollectionView *)collectionView
                    layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat heightItem = (self.height-50)/4;
+    CGFloat heightItem = (self.height-70)/4;
     return CGSizeMake(ItemWidth,heightItem);
 }
 
