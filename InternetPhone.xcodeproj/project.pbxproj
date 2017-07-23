@@ -11,6 +11,15 @@
 		247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247471421F24A7B40008B066 /* AHomePageViewController.xib */; };
 		247471481F24BF820008B066 /* CallRecordsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471461F24BF820008B066 /* CallRecordsDetailViewController.m */; };
 		247471491F24BF820008B066 /* CallRecordsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247471471F24BF820008B066 /* CallRecordsDetailViewController.xib */; };
+		247471531F24C84E0008B066 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474714C1F24C84E0008B066 /* BasicTableViewCell.m */; };
+		247471541F24C84E0008B066 /* PopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474714E1F24C84E0008B066 /* PopModel.m */; };
+		247471551F24C84E0008B066 /* PopTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471501F24C84E0008B066 /* PopTableCell.m */; };
+		247471561F24C84E0008B066 /* PopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471521F24C84E0008B066 /* PopUpView.m */; };
+		2474715A1F24D55C0008B066 /* HomePageHeaderCateforyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471581F24D55C0008B066 /* HomePageHeaderCateforyView.m */; };
+		2474715B1F24D55C0008B066 /* HomePageHeaderCateforyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247471591F24D55C0008B066 /* HomePageHeaderCateforyView.xib */; };
+		2474715F1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474715D1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m */; };
+		247471601F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2474715E1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib */; };
+		247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */; };
 		249104261F22DADB00B370F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249104251F22DADB00B370F5 /* main.m */; };
 		2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491042D1F22DADB00B370F5 /* Main.storyboard */; };
 		249104311F22DADB00B370F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249104301F22DADB00B370F5 /* Assets.xcassets */; };
@@ -126,6 +135,22 @@
 		247471451F24BF820008B066 /* CallRecordsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordsDetailViewController.h; sourceTree = "<group>"; };
 		247471461F24BF820008B066 /* CallRecordsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecordsDetailViewController.m; sourceTree = "<group>"; };
 		247471471F24BF820008B066 /* CallRecordsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallRecordsDetailViewController.xib; sourceTree = "<group>"; };
+		2474714B1F24C84E0008B066 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTableViewCell.h; sourceTree = "<group>"; };
+		2474714C1F24C84E0008B066 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTableViewCell.m; sourceTree = "<group>"; };
+		2474714D1F24C84E0008B066 /* PopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopModel.h; sourceTree = "<group>"; };
+		2474714E1F24C84E0008B066 /* PopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopModel.m; sourceTree = "<group>"; };
+		2474714F1F24C84E0008B066 /* PopTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTableCell.h; sourceTree = "<group>"; };
+		247471501F24C84E0008B066 /* PopTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTableCell.m; sourceTree = "<group>"; };
+		247471511F24C84E0008B066 /* PopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpView.h; sourceTree = "<group>"; };
+		247471521F24C84E0008B066 /* PopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpView.m; sourceTree = "<group>"; };
+		247471571F24D55C0008B066 /* HomePageHeaderCateforyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeaderCateforyView.h; sourceTree = "<group>"; };
+		247471581F24D55C0008B066 /* HomePageHeaderCateforyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeaderCateforyView.m; sourceTree = "<group>"; };
+		247471591F24D55C0008B066 /* HomePageHeaderCateforyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageHeaderCateforyView.xib; sourceTree = "<group>"; };
+		2474715C1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		2474715D1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		2474715E1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		247471651F24E9FE0008B066 /* UITextField+WWExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WWExtentRange.h"; sourceTree = "<group>"; };
+		247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WWExtentRange.m"; sourceTree = "<group>"; };
 		249104211F22DADB00B370F5 /* InternetPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternetPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249104251F22DADB00B370F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2491042E1F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -334,6 +359,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2474714A1F24C84E0008B066 /* 弹出框 */ = {
+			isa = PBXGroup;
+			children = (
+				2474714B1F24C84E0008B066 /* BasicTableViewCell.h */,
+				2474714C1F24C84E0008B066 /* BasicTableViewCell.m */,
+				2474714D1F24C84E0008B066 /* PopModel.h */,
+				2474714E1F24C84E0008B066 /* PopModel.m */,
+				2474714F1F24C84E0008B066 /* PopTableCell.h */,
+				247471501F24C84E0008B066 /* PopTableCell.m */,
+				247471511F24C84E0008B066 /* PopUpView.h */,
+				247471521F24C84E0008B066 /* PopUpView.m */,
+			);
+			path = "弹出框";
+			sourceTree = "<group>";
+		};
 		249104181F22DADB00B370F5 = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +556,12 @@
 		249104671F22EFF700B370F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				247471571F24D55C0008B066 /* HomePageHeaderCateforyView.h */,
+				247471581F24D55C0008B066 /* HomePageHeaderCateforyView.m */,
+				247471591F24D55C0008B066 /* HomePageHeaderCateforyView.xib */,
+				2474715C1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.h */,
+				2474715D1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m */,
+				2474715E1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -569,6 +615,8 @@
 		2491046D1F22F04700B370F5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				247471651F24E9FE0008B066 /* UITextField+WWExtentRange.h */,
+				247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */,
 				249106011F22F3DD00B370F5 /* BXExtensions.h */,
 				249106021F22F3DD00B370F5 /* CALayer+layerCategory.h */,
 				249106031F22F3DD00B370F5 /* CALayer+layerCategory.m */,
@@ -609,6 +657,7 @@
 		2491046E1F22F04700B370F5 /* Help */ = {
 			isa = PBXGroup;
 			children = (
+				2474714A1F24C84E0008B066 /* 弹出框 */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -1012,6 +1061,8 @@
 				249104341F22DADB00B370F5 /* LaunchScreen.storyboard in Resources */,
 				249106631F22F7E400B370F5 /* SettingViewController.xib in Resources */,
 				2491065E1F22F7D500B370F5 /* PhoneViewController.xib in Resources */,
+				2474715B1F24D55C0008B066 /* HomePageHeaderCateforyView.xib in Resources */,
+				247471601F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib in Resources */,
 				249106541F22F7B600B370F5 /* AddressBookViewController.xib in Resources */,
 				247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */,
 				249104311F22DADB00B370F5 /* Assets.xcassets in Resources */,
@@ -1054,8 +1105,10 @@
 				249105D81F22F20A00B370F5 /* MJRefreshBackStateFooter.m in Sources */,
 				249105CE1F22F20A00B370F5 /* MJRefreshAutoFooter.m in Sources */,
 				249105DF1F22F20A00B370F5 /* UIScrollView+MJExtension.m in Sources */,
+				247471531F24C84E0008B066 /* BasicTableViewCell.m in Sources */,
 				249105D21F22F20A00B370F5 /* MJRefreshHeader.m in Sources */,
 				249105D31F22F20A00B370F5 /* MJRefreshAutoGifFooter.m in Sources */,
+				2474715A1F24D55C0008B066 /* HomePageHeaderCateforyView.m in Sources */,
 				2491062E1F22F3DD00B370F5 /* UILabel+Extension.m in Sources */,
 				249105B71F22F20A00B370F5 /* AFHTTPRequestOperation.m in Sources */,
 				249105E11F22F20A00B370F5 /* UIView+MJExtension.m in Sources */,
@@ -1074,16 +1127,21 @@
 				249106581F22F7C800B370F5 /* CallRecordsViewController.m in Sources */,
 				249105EB1F22F20A00B370F5 /* UIButton+WebCache.m in Sources */,
 				249106251F22F3DD00B370F5 /* NSString+BXExtension.m in Sources */,
+				247471541F24C84E0008B066 /* PopModel.m in Sources */,
 				249105DA1F22F20A00B370F5 /* MJRefreshNormalHeader.m in Sources */,
 				249105D11F22F20A00B370F5 /* MJRefreshFooter.m in Sources */,
+				247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */,
 				249105E41F22F20A00B370F5 /* SDImageCache.m in Sources */,
 				249106281F22F3DD00B370F5 /* UIBarButtonItem+Extension.m in Sources */,
 				249105E51F22F20A00B370F5 /* SDWebImageCompat.m in Sources */,
+				247471561F24C84E0008B066 /* PopUpView.m in Sources */,
+				247471551F24C84E0008B066 /* PopTableCell.m in Sources */,
 				247471431F24A7B40008B066 /* AHomePageViewController.m in Sources */,
 				249105D41F22F20A00B370F5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				249105EA1F22F20A00B370F5 /* SDWebImagePrefetcher.m in Sources */,
 				249105ED1F22F20A00B370F5 /* UIImage+MultiFormat.m in Sources */,
 				249105E61F22F20A00B370F5 /* SDWebImageDecoder.m in Sources */,
+				2474715F1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m in Sources */,
 				249105C31F22F20A00B370F5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				249105CF1F22F20A00B370F5 /* MJRefreshBackFooter.m in Sources */,
 				249105BC1F22F20A00B370F5 /* AFURLConnectionOperation.m in Sources */,

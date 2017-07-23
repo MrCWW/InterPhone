@@ -79,6 +79,7 @@
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
+    self.scrollView.scrollEnabled = NO;
     self.scrollView.bounces = NO;
     self.scrollView.directionalLockEnabled = YES;
     self.scrollView.contentSize = CGSizeMake(ScreenWidth*4, scrollHeight );
