@@ -7,7 +7,6 @@
 //
 
 #import "HBaseViewController.h"
-
 @interface SettingViewController : HBaseViewController
-
+- (instancetype)initWithFrame:(CGRect *)frame;
 @end

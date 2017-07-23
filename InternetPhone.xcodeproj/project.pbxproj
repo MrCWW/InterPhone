@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		247471431F24A7B40008B066 /* AHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471411F24A7B40008B066 /* AHomePageViewController.m */; };
+		247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247471421F24A7B40008B066 /* AHomePageViewController.xib */; };
+		247471481F24BF820008B066 /* CallRecordsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471461F24BF820008B066 /* CallRecordsDetailViewController.m */; };
+		247471491F24BF820008B066 /* CallRecordsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247471471F24BF820008B066 /* CallRecordsDetailViewController.xib */; };
 		249104261F22DADB00B370F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249104251F22DADB00B370F5 /* main.m */; };
-		2491042C1F22DADB00B370F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491042B1F22DADB00B370F5 /* ViewController.m */; };
 		2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491042D1F22DADB00B370F5 /* Main.storyboard */; };
 		249104311F22DADB00B370F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249104301F22DADB00B370F5 /* Assets.xcassets */; };
 		249104341F22DADB00B370F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 249104321F22DADB00B370F5 /* LaunchScreen.storyboard */; };
@@ -94,12 +97,6 @@
 		249106321F22F3DD00B370F5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106201F22F3DD00B370F5 /* UIView+Extension.m */; };
 		249106331F22F3DD00B370F5 /* UIView+IBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106221F22F3DD00B370F5 /* UIView+IBExtension.m */; };
 		249106361F22F4EA00B370F5 /* HNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106351F22F4EA00B370F5 /* HNavigationView.m */; };
-		249106461F22F58C00B370F5 /* WMFloodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491063A1F22F58C00B370F5 /* WMFloodView.m */; };
-		249106471F22F58C00B370F5 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491063C1F22F58C00B370F5 /* WMMenuItem.m */; };
-		249106481F22F58C00B370F5 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491063E1F22F58C00B370F5 /* WMMenuView.m */; };
-		249106491F22F58C00B370F5 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106401F22F58C00B370F5 /* WMProgressView.m */; };
-		2491064A1F22F58C00B370F5 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106421F22F58C00B370F5 /* WMScrollView.m */; };
-		2491064B1F22F58C00B370F5 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106451F22F58C00B370F5 /* WMPageController.m */; };
 		249106531F22F7B600B370F5 /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106511F22F7B600B370F5 /* AddressBookViewController.m */; };
 		249106541F22F7B600B370F5 /* AddressBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249106521F22F7B600B370F5 /* AddressBookViewController.xib */; };
 		249106581F22F7C800B370F5 /* CallRecordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106561F22F7C800B370F5 /* CallRecordsViewController.m */; };
@@ -108,17 +105,8 @@
 		2491065E1F22F7D500B370F5 /* PhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2491065C1F22F7D500B370F5 /* PhoneViewController.xib */; };
 		249106621F22F7E400B370F5 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106601F22F7E400B370F5 /* SettingViewController.m */; };
 		249106631F22F7E400B370F5 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249106611F22F7E400B370F5 /* SettingViewController.xib */; };
-		249106671F22F80100B370F5 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106651F22F80100B370F5 /* HomePageViewController.m */; };
-		249106681F22F80100B370F5 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249106661F22F80100B370F5 /* HomePageViewController.xib */; };
 		2491066C1F22FBD300B370F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491066A1F22FBD300B370F5 /* LoginViewController.m */; };
 		2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2491066B1F22FBD300B370F5 /* LoginViewController.xib */; };
-		2491067B1F22FE8600B370F5 /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106711F22FE8600B370F5 /* NSString+Extention.m */; };
-		2491067C1F22FE8600B370F5 /* FloodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106731F22FE8600B370F5 /* FloodView.m */; };
-		2491067D1F22FE8600B370F5 /* LCMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106751F22FE8600B370F5 /* LCMenuView.m */; };
-		2491067E1F22FE8600B370F5 /* MenuViewBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106771F22FE8600B370F5 /* MenuViewBtn.m */; };
-		2491067F1F22FE8600B370F5 /* ZTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491067A1F22FE8600B370F5 /* ZTViewController.m */; };
-		249106831F22FF1700B370F5 /* HHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249106811F22FF1700B370F5 /* HHomePageViewController.m */; };
-		249106841F22FF1700B370F5 /* HHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249106821F22FF1700B370F5 /* HHomePageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,10 +120,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		247471401F24A7B40008B066 /* AHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHomePageViewController.h; sourceTree = "<group>"; };
+		247471411F24A7B40008B066 /* AHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHomePageViewController.m; sourceTree = "<group>"; };
+		247471421F24A7B40008B066 /* AHomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHomePageViewController.xib; sourceTree = "<group>"; };
+		247471451F24BF820008B066 /* CallRecordsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallRecordsDetailViewController.h; sourceTree = "<group>"; };
+		247471461F24BF820008B066 /* CallRecordsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallRecordsDetailViewController.m; sourceTree = "<group>"; };
+		247471471F24BF820008B066 /* CallRecordsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallRecordsDetailViewController.xib; sourceTree = "<group>"; };
 		249104211F22DADB00B370F5 /* InternetPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternetPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249104251F22DADB00B370F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2491042A1F22DADB00B370F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2491042B1F22DADB00B370F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2491042E1F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		249104301F22DADB00B370F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		249104331F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -307,19 +299,6 @@
 		249106221F22F3DD00B370F5 /* UIView+IBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IBExtension.m"; sourceTree = "<group>"; };
 		249106341F22F4EA00B370F5 /* HNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNavigationView.h; sourceTree = "<group>"; };
 		249106351F22F4EA00B370F5 /* HNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNavigationView.m; sourceTree = "<group>"; };
-		249106391F22F58C00B370F5 /* WMFloodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMFloodView.h; sourceTree = "<group>"; };
-		2491063A1F22F58C00B370F5 /* WMFloodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMFloodView.m; sourceTree = "<group>"; };
-		2491063B1F22F58C00B370F5 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
-		2491063C1F22F58C00B370F5 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
-		2491063D1F22F58C00B370F5 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
-		2491063E1F22F58C00B370F5 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
-		2491063F1F22F58C00B370F5 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
-		249106401F22F58C00B370F5 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
-		249106411F22F58C00B370F5 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
-		249106421F22F58C00B370F5 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
-		249106431F22F58C00B370F5 /* WMPageConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageConst.h; sourceTree = "<group>"; };
-		249106441F22F58C00B370F5 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
-		249106451F22F58C00B370F5 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
 		249106501F22F7B600B370F5 /* AddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookViewController.h; sourceTree = "<group>"; };
 		249106511F22F7B600B370F5 /* AddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		249106521F22F7B600B370F5 /* AddressBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressBookViewController.xib; sourceTree = "<group>"; };
@@ -332,26 +311,9 @@
 		2491065F1F22F7E400B370F5 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		249106601F22F7E400B370F5 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		249106611F22F7E400B370F5 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
-		249106641F22F80100B370F5 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
-		249106651F22F80100B370F5 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
-		249106661F22F80100B370F5 /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
 		249106691F22FBD300B370F5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2491066A1F22FBD300B370F5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2491066B1F22FBD300B370F5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		249106701F22FE8600B370F5 /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
-		249106711F22FE8600B370F5 /* NSString+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extention.m"; sourceTree = "<group>"; };
-		249106721F22FE8600B370F5 /* FloodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloodView.h; sourceTree = "<group>"; };
-		249106731F22FE8600B370F5 /* FloodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloodView.m; sourceTree = "<group>"; };
-		249106741F22FE8600B370F5 /* LCMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCMenuView.h; sourceTree = "<group>"; };
-		249106751F22FE8600B370F5 /* LCMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCMenuView.m; sourceTree = "<group>"; };
-		249106761F22FE8600B370F5 /* MenuViewBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewBtn.h; sourceTree = "<group>"; };
-		249106771F22FE8600B370F5 /* MenuViewBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewBtn.m; sourceTree = "<group>"; };
-		249106781F22FE8600B370F5 /* ZTPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTPage.h; sourceTree = "<group>"; };
-		249106791F22FE8600B370F5 /* ZTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTViewController.h; sourceTree = "<group>"; };
-		2491067A1F22FE8600B370F5 /* ZTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTViewController.m; sourceTree = "<group>"; };
-		249106801F22FF1700B370F5 /* HHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHomePageViewController.h; sourceTree = "<group>"; };
-		249106811F22FF1700B370F5 /* HHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHomePageViewController.m; sourceTree = "<group>"; };
-		249106821F22FF1700B370F5 /* HHomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HHomePageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,8 +359,6 @@
 				2491045A1F22EFF700B370F5 /* Base */,
 				2491045B1F22EFF700B370F5 /* Classes */,
 				2491046C1F22EFF700B370F5 /* Other */,
-				2491042A1F22DADB00B370F5 /* ViewController.h */,
-				2491042B1F22DADB00B370F5 /* ViewController.m */,
 				249104241F22DADB00B370F5 /* Supporting Files */,
 			);
 			path = InternetPhone;
@@ -502,6 +462,9 @@
 				249106551F22F7C800B370F5 /* CallRecordsViewController.h */,
 				249106561F22F7C800B370F5 /* CallRecordsViewController.m */,
 				249106571F22F7C800B370F5 /* CallRecordsViewController.xib */,
+				247471451F24BF820008B066 /* CallRecordsDetailViewController.h */,
+				247471461F24BF820008B066 /* CallRecordsDetailViewController.m */,
+				247471471F24BF820008B066 /* CallRecordsDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -536,12 +499,9 @@
 				2491065A1F22F7D500B370F5 /* PhoneViewController.h */,
 				2491065B1F22F7D500B370F5 /* PhoneViewController.m */,
 				2491065C1F22F7D500B370F5 /* PhoneViewController.xib */,
-				249106641F22F80100B370F5 /* HomePageViewController.h */,
-				249106651F22F80100B370F5 /* HomePageViewController.m */,
-				249106661F22F80100B370F5 /* HomePageViewController.xib */,
-				249106801F22FF1700B370F5 /* HHomePageViewController.h */,
-				249106811F22FF1700B370F5 /* HHomePageViewController.m */,
-				249106821F22FF1700B370F5 /* HHomePageViewController.xib */,
+				247471401F24A7B40008B066 /* AHomePageViewController.h */,
+				247471411F24A7B40008B066 /* AHomePageViewController.m */,
+				247471421F24A7B40008B066 /* AHomePageViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -649,8 +609,6 @@
 		2491046E1F22F04700B370F5 /* Help */ = {
 			isa = PBXGroup;
 			children = (
-				2491066E1F22FE8600B370F5 /* ZTpage */,
-				249106371F22F58C00B370F5 /* WMPageController */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -934,34 +892,6 @@
 			path = BaseView;
 			sourceTree = "<group>";
 		};
-		249106371F22F58C00B370F5 /* WMPageController */ = {
-			isa = PBXGroup;
-			children = (
-				249106381F22F58C00B370F5 /* WMMenuView */,
-				249106431F22F58C00B370F5 /* WMPageConst.h */,
-				249106441F22F58C00B370F5 /* WMPageController.h */,
-				249106451F22F58C00B370F5 /* WMPageController.m */,
-			);
-			path = WMPageController;
-			sourceTree = "<group>";
-		};
-		249106381F22F58C00B370F5 /* WMMenuView */ = {
-			isa = PBXGroup;
-			children = (
-				249106391F22F58C00B370F5 /* WMFloodView.h */,
-				2491063A1F22F58C00B370F5 /* WMFloodView.m */,
-				2491063B1F22F58C00B370F5 /* WMMenuItem.h */,
-				2491063C1F22F58C00B370F5 /* WMMenuItem.m */,
-				2491063D1F22F58C00B370F5 /* WMMenuView.h */,
-				2491063E1F22F58C00B370F5 /* WMMenuView.m */,
-				2491063F1F22F58C00B370F5 /* WMProgressView.h */,
-				249106401F22F58C00B370F5 /* WMProgressView.m */,
-				249106411F22F58C00B370F5 /* WMScrollView.h */,
-				249106421F22F58C00B370F5 /* WMScrollView.m */,
-			);
-			path = WMMenuView;
-			sourceTree = "<group>";
-		};
 		2491064C1F22F73100B370F5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -994,32 +924,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		2491066E1F22FE8600B370F5 /* ZTpage */ = {
-			isa = PBXGroup;
-			children = (
-				2491066F1F22FE8600B370F5 /* Category */,
-				249106721F22FE8600B370F5 /* FloodView.h */,
-				249106731F22FE8600B370F5 /* FloodView.m */,
-				249106741F22FE8600B370F5 /* LCMenuView.h */,
-				249106751F22FE8600B370F5 /* LCMenuView.m */,
-				249106761F22FE8600B370F5 /* MenuViewBtn.h */,
-				249106771F22FE8600B370F5 /* MenuViewBtn.m */,
-				249106781F22FE8600B370F5 /* ZTPage.h */,
-				249106791F22FE8600B370F5 /* ZTViewController.h */,
-				2491067A1F22FE8600B370F5 /* ZTViewController.m */,
-			);
-			path = ZTpage;
-			sourceTree = "<group>";
-		};
-		2491066F1F22FE8600B370F5 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				249106701F22FE8600B370F5 /* NSString+Extention.h */,
-				249106711F22FE8600B370F5 /* NSString+Extention.m */,
-			);
-			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1104,18 +1008,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247471491F24BF820008B066 /* CallRecordsDetailViewController.xib in Resources */,
 				249104341F22DADB00B370F5 /* LaunchScreen.storyboard in Resources */,
 				249106631F22F7E400B370F5 /* SettingViewController.xib in Resources */,
 				2491065E1F22F7D500B370F5 /* PhoneViewController.xib in Resources */,
 				249106541F22F7B600B370F5 /* AddressBookViewController.xib in Resources */,
+				247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */,
 				249104311F22DADB00B370F5 /* Assets.xcassets in Resources */,
 				249106591F22F7C800B370F5 /* CallRecordsViewController.xib in Resources */,
 				249105DC1F22F20A00B370F5 /* MJRefresh.bundle in Resources */,
 				249105C01F22F20A00B370F5 /* LICENSE in Resources */,
-				249106841F22FF1700B370F5 /* HHomePageViewController.xib in Resources */,
 				2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */,
 				2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */,
-				249106681F22F80100B370F5 /* HomePageViewController.xib in Resources */,
 				249105CB1F22F20A00B370F5 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1140,7 +1044,6 @@
 				249105DB1F22F20A00B370F5 /* MJRefreshStateHeader.m in Sources */,
 				249105E91F22F20A00B370F5 /* SDWebImageManager.m in Sources */,
 				249105C51F22F20A00B370F5 /* UIButton+AFNetworking.m in Sources */,
-				2491064B1F22F58C00B370F5 /* WMPageController.m in Sources */,
 				249105DE1F22F20A00B370F5 /* NSBundle+MJRefresh.m in Sources */,
 				249105CC1F22F20A00B370F5 /* MBProgressHUD.m in Sources */,
 				249105C81F22F20A00B370F5 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1157,19 +1060,14 @@
 				249105B71F22F20A00B370F5 /* AFHTTPRequestOperation.m in Sources */,
 				249105E11F22F20A00B370F5 /* UIView+MJExtension.m in Sources */,
 				249105FE1F22F27A00B370F5 /* HBaseViewController.m in Sources */,
-				2491042C1F22DADB00B370F5 /* ViewController.m in Sources */,
 				2491066C1F22FBD300B370F5 /* LoginViewController.m in Sources */,
-				249106831F22FF1700B370F5 /* HHomePageViewController.m in Sources */,
 				249106001F22F27A00B370F5 /* HBaseView.m in Sources */,
 				249105B81F22F20A00B370F5 /* AFHTTPRequestOperationManager.m in Sources */,
 				249105BA1F22F20A00B370F5 /* AFNetworkReachabilityManager.m in Sources */,
-				2491067E1F22FE8600B370F5 /* MenuViewBtn.m in Sources */,
 				249105C11F22F20A00B370F5 /* README.md in Sources */,
 				249105C61F22F20A00B370F5 /* UIImageView+AFNetworking.m in Sources */,
 				249105BE1F22F20A00B370F5 /* AFURLResponseSerialization.m in Sources */,
-				2491064A1F22F58C00B370F5 /* WMScrollView.m in Sources */,
 				249105D61F22F20A00B370F5 /* MJRefreshBackGifFooter.m in Sources */,
-				249106671F22F80100B370F5 /* HomePageViewController.m in Sources */,
 				249106261F22F3DD00B370F5 /* NSString+CalculatorHeight.m in Sources */,
 				249106241F22F3DD00B370F5 /* MBProgressHUD+AddHud.m in Sources */,
 				249105F01F22F20A00B370F5 /* UIImageView+WebCache.m in Sources */,
@@ -1181,6 +1079,7 @@
 				249105E41F22F20A00B370F5 /* SDImageCache.m in Sources */,
 				249106281F22F3DD00B370F5 /* UIBarButtonItem+Extension.m in Sources */,
 				249105E51F22F20A00B370F5 /* SDWebImageCompat.m in Sources */,
+				247471431F24A7B40008B066 /* AHomePageViewController.m in Sources */,
 				249105D41F22F20A00B370F5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				249105EA1F22F20A00B370F5 /* SDWebImagePrefetcher.m in Sources */,
 				249105ED1F22F20A00B370F5 /* UIImage+MultiFormat.m in Sources */,
@@ -1191,21 +1090,16 @@
 				249105BB1F22F20A00B370F5 /* AFSecurityPolicy.m in Sources */,
 				249105EF1F22F20A00B370F5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				249105DD1F22F20A00B370F5 /* MJRefreshConst.m in Sources */,
-				249106461F22F58C00B370F5 /* WMFloodView.m in Sources */,
 				249105D91F22F20A00B370F5 /* MJRefreshGifHeader.m in Sources */,
 				249105D71F22F20A00B370F5 /* MJRefreshBackNormalFooter.m in Sources */,
 				2491065D1F22F7D500B370F5 /* PhoneViewController.m in Sources */,
-				2491067C1F22FE8600B370F5 /* FloodView.m in Sources */,
 				2491062C1F22F3DD00B370F5 /* UIFont+Extension.m in Sources */,
 				249105B91F22F20A00B370F5 /* AFHTTPSessionManager.m in Sources */,
-				2491067B1F22FE8600B370F5 /* NSString+Extention.m in Sources */,
-				2491067D1F22FE8600B370F5 /* LCMenuView.m in Sources */,
 				249106621F22F7E400B370F5 /* SettingViewController.m in Sources */,
 				249105E01F22F20A00B370F5 /* UIScrollView+MJRefresh.m in Sources */,
 				2491062F1F22F3DD00B370F5 /* UINavigationBar+Awesome.m in Sources */,
 				249105FF1F22F27A00B370F5 /* HBaseModel.m in Sources */,
 				249105BD1F22F20A00B370F5 /* AFURLRequestSerialization.m in Sources */,
-				249106471F22F58C00B370F5 /* WMMenuItem.m in Sources */,
 				249105BF1F22F20A00B370F5 /* AFURLSessionManager.m in Sources */,
 				249105F11F22F20A00B370F5 /* UIView+WebCacheOperation.m in Sources */,
 				249105C91F22F20A00B370F5 /* UIWebView+AFNetworking.m in Sources */,
@@ -1222,14 +1116,12 @@
 				249106271F22F3DD00B370F5 /* ShowAlter.m in Sources */,
 				249106291F22F3DD00B370F5 /* UIButton+Extension.m in Sources */,
 				249106531F22F7B600B370F5 /* AddressBookViewController.m in Sources */,
-				249106491F22F58C00B370F5 /* WMProgressView.m in Sources */,
-				249106481F22F58C00B370F5 /* WMMenuView.m in Sources */,
-				2491067F1F22FE8600B370F5 /* ZTViewController.m in Sources */,
 				249105E81F22F20A00B370F5 /* SDWebImageDownloaderOperation.m in Sources */,
 				249105C21F22F20A00B370F5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				249106331F22F3DD00B370F5 /* UIView+IBExtension.m in Sources */,
 				249106321F22F3DD00B370F5 /* UIView+Extension.m in Sources */,
 				249105E71F22F20A00B370F5 /* SDWebImageDownloader.m in Sources */,
+				247471481F24BF820008B066 /* CallRecordsDetailViewController.m in Sources */,
 				249104731F22F09600B370F5 /* AppDelegate.m in Sources */,
 				249106301F22F3DD00B370F5 /* UIScreen+Extension.m in Sources */,
 			);

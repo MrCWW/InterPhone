@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "HomePageViewController.h"
 #import "LoginViewController.h"
-#import "HHomePageViewController.h"
 #import "HBaseNavigationController.h"
+#import "AHomePageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -27,7 +26,7 @@
         self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
     }else{
         if ([num intValue] == 1) {
-     [self.window setRootViewController:[HomePageViewController mainPageViewController]];
+//     [self.window setRootViewController:[A mainPageViewController]];
         }else{
             self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
         }
@@ -81,7 +80,7 @@
 //用户登录成功
 - (void)userloginSuc {
     [MBProgressHUD showText:@"登录成功" toView:nil];
-    [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:[[HHomePageViewController alloc] init]]];
+    [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:[[AHomePageViewController alloc] init]]];
        [self.window makeKeyAndVisible];
     
 }

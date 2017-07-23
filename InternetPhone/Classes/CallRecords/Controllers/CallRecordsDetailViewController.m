@@ -1,32 +1,27 @@
 //
-//  CallRecordsViewController.m
+//  CallRecordsDetailViewController.m
 //  InternetPhone
 //
-//  Created by DUC-apple3 on 2017/7/22.
+//  Created by DUC-apple3 on 2017/7/23.
 //  Copyright © 2017年 DUC-apple3. All rights reserved.
 //
 
-#import "CallRecordsViewController.h"
 #import "CallRecordsDetailViewController.h"
-@interface CallRecordsViewController ()
+
+@interface CallRecordsDetailViewController ()
 
 @end
 
-@implementation CallRecordsViewController
+@implementation CallRecordsDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)testA:(id)sender {
-    CallRecordsDetailViewController *a = [[CallRecordsDetailViewController alloc] init];
-    [self.navigationController pushViewController:a animated:YES];
 }
 
 /*
