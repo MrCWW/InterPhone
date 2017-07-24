@@ -10,8 +10,6 @@
 @interface SettingViewController : HBaseViewController
 //- (instancetype)initWithFrame:(CGRect *)frame;
 @property (weak, nonatomic) IBOutlet UILabel *zhanghao;
-@property (weak, nonatomic) IBOutlet UILabel *money;
-@property (weak, nonatomic) IBOutlet UILabel *date;
 @property (weak, nonatomic) IBOutlet UIButton *quit;
 
 @end

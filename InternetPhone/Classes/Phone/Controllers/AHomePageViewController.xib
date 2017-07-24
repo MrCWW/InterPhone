@@ -78,7 +78,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.11649104033596723" green="0.45169874765457929" blue="0.68214625634517767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="I1s-0H-PEY" firstAttribute="centerY" secondItem="ndK-rx-i0U" secondAttribute="centerY" id="HNE-Yt-CqM"/>
                         <constraint firstItem="RFE-hd-O7v" firstAttribute="leading" secondItem="I1s-0H-PEY" secondAttribute="trailing" constant="10" id="KOs-TW-HfJ"/>
@@ -93,7 +93,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-rH-8qj">
                             <rect key="frame" x="10" y="0.0" width="67.5" height="65"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20170720-中華電信-電話符號-灰" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-Fw-lKg">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20170720-中華電信-電話符號-藍" translatesAutoresizingMaskIntoConstraints="NO" id="e0T-Fw-lKg">
                                     <rect key="frame" x="19" y="8" width="30" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="P1B-Fc-zp8"/>
@@ -107,7 +107,7 @@
                                         <constraint firstAttribute="height" constant="21" id="N0C-6h-tiS"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.1164910403" green="0.45169874770000001" blue="0.68214625630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -284,7 +284,7 @@
     </objects>
     <resources>
         <image name="11@3x20170720" width="60" height="60"/>
-        <image name="20170720-中華電信-電話符號-灰" width="40" height="40"/>
+        <image name="20170720-中華電信-電話符號-藍" width="40" height="40"/>
         <image name="21@3x20170720" width="60" height="60"/>
         <image name="9@3x20170720" width="60" height="60"/>
     </resources>

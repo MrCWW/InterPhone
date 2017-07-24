@@ -113,7 +113,7 @@
     if (self.selectLabel == self.phoneLabel) {
         return;
     }
-    self.phoneLabel.textColor = [UIColor blueColor];
+    self.phoneLabel.textColor = [UIColor colorWithRed:0/255.0 green:91/255.0 blue:176/255.0 alpha:1.0f];
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
     self.phonePic.image = [UIImage imageNamed:@"20170720-中華電信-電話符號-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
@@ -127,7 +127,8 @@
     if (self.selectLabel == self.addressBookLabel) {
         return;
     }
-    self.addressBookLabel.textColor = [UIColor blueColor];
+    self.addressBookLabel.textColor =[UIColor colorWithRed:0/255.0 green:91/255.0 blue:176/255.0 alpha:1.0f];
+
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
     self.addressBookPic.image = [UIImage imageNamed:@"20170720-中華電信-聯絡人-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
@@ -146,7 +147,8 @@
     if (self.selectLabel == self.callRecordsLabel) {
         return;
     }
-    self.callRecordsLabel.textColor = [UIColor blueColor];
+    self.callRecordsLabel.textColor = [UIColor colorWithRed:0/255.0 green:91/255.0 blue:176/255.0 alpha:1.0f];
+
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
     self.callRecordsPic.image = [UIImage imageNamed:@"20170720-中華電信-通話紀錄-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
@@ -164,7 +166,8 @@
     if (self.selectLabel == self.setLabel) {
         return;
     }
-    self.setLabel.textColor = [UIColor blueColor];
+    self.setLabel.textColor = [UIColor colorWithRed:0/255.0 green:91/255.0 blue:176/255.0 alpha:1.0f];
+
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
     self.setPic.image = [UIImage imageNamed:@"20170720-中華電信-設定-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];

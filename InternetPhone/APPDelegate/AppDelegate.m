@@ -37,10 +37,29 @@
     
 
     [self.window makeKeyAndVisible];
+    [self regiestNotif];
 
     return YES;
 }
 
+//注册通知
+-(void)regiestNotif{
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quit) name:@"quit" object:nil];
+}
+
+-(void)quit{
+    
+    MBProgressHUD *hud = [MBProgressHUD lc_showMessag:@"正在退出" toView:nil];
+    [self login];
+    [hud hide:YES];
+    
+}
+-(void)login{
+    LoginViewController *loginVC = [[LoginViewController alloc]init];
+    [self.window setRootViewController:loginVC];
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
