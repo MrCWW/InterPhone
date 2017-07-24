@@ -22,6 +22,11 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define WidthIphone6 [UIScreen mainScreen].bounds.size.width/375
 #define HeightIphone6 [UIScreen mainScreen].bounds.size.height/667
+
+#define DISTENCEW (([UIScreen mainScreen].bounds.size.width) / 320)
+#define DISTENCEH (([UIScreen mainScreen].bounds.size.height) / 568)
+
+
 #define BaseFont(fontSize) [UIFont fontWithName:@"PingFang SC" size:fontSize]
 #define Banners_Height 40
 

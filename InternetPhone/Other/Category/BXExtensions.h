@@ -31,5 +31,6 @@
 
 //#import "UIImage+ScreenShot.h"
 #import "UIFont+Extension.h"
+#import "UITextField+WWExtentRange.h"
 
 //#import "NSDictionary+Extension.h"

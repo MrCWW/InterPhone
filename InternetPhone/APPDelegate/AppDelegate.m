@@ -72,7 +72,7 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"isLogin"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
     
     
 }
