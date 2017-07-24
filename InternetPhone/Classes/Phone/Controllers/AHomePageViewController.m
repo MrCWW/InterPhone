@@ -114,7 +114,7 @@
     }
     self.phoneLabel.textColor = [UIColor blueColor];
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
-    self.phonePic.image = [UIImage imageNamed:@"3@3x20170720"];
+    self.phonePic.image = [UIImage imageNamed:@"20170720-中華電信-電話符號-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.phoneLabel;
     self.selectPic = self.phonePic;
@@ -128,7 +128,7 @@
     }
     self.addressBookLabel.textColor = [UIColor blueColor];
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
-    self.addressBookPic.image = [UIImage imageNamed:@"3@3x20170720"];
+    self.addressBookPic.image = [UIImage imageNamed:@"20170720-中華電信-聯絡人-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.addressBookLabel;
     self.selectPic = self.addressBookPic;
@@ -147,7 +147,7 @@
     }
     self.callRecordsLabel.textColor = [UIColor blueColor];
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
-    self.callRecordsPic.image = [UIImage imageNamed:@"3@3x20170720"];
+    self.callRecordsPic.image = [UIImage imageNamed:@"20170720-中華電信-通話紀錄-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.callRecordsLabel;
     self.selectPic = self.callRecordsPic;
@@ -165,7 +165,7 @@
     }
     self.setLabel.textColor = [UIColor blueColor];
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
-    self.setPic.image = [UIImage imageNamed:@"3@3x20170720"];
+    self.setPic.image = [UIImage imageNamed:@"20170720-中華電信-設定-藍"];
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.setLabel;
     self.selectPic = self.setPic;
@@ -181,7 +181,7 @@
     NSString *imageStr = nil;
     switch (tag) {
         case 110:
-            imageStr = @"1@3x20170720";
+            imageStr = @"20170720-中華電信-電話符號-灰";
             break;
         case 111:
             imageStr = @"9@3x20170720";
