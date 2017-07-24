@@ -1,20 +1,117 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
             <connections>
+                <outlet property="quit" destination="SdW-MM-Ori" id="lM7-dB-YMM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zhanghao" destination="jxN-cn-D1c" id="Xb4-oL-Q4J"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0M-BI-7Cn">
+                    <rect key="frame" x="182" y="704" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="5jS-fc-v3R"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5@3x20170720" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-ov-3jK">
+                    <rect key="frame" x="157" y="15" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="66s-hX-WfY"/>
+                        <constraint firstAttribute="height" constant="100" id="O7e-w2-6lB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567890" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxN-cn-D1c">
+                    <rect key="frame" x="168" y="123" width="78" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="baY-ah-Dk1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账户余额   888分钟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-rT-Cj6">
+                    <rect key="frame" x="117" y="151" width="180" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="k9s-xN-UgU"/>
+                        <constraint firstAttribute="width" constant="180" id="w0W-pz-ua4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语音失效日期    12 12月 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS6-Vu-VeS">
+                    <rect key="frame" x="95" y="184" width="225" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="2aI-yq-jOB"/>
+                        <constraint firstAttribute="width" constant="225" id="f3d-a9-HEw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdW-MM-Ori">
+                    <rect key="frame" x="57" y="645" width="300" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.54188998621409512" blue="0.071202396681596447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pTQ-zw-eMP"/>
+                    </constraints>
+                    <state key="normal" title="退出登录">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="1" green="0.6824717437580341" blue="0.29132605796960331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="quit:" destination="-1" eventType="touchUpInside" id="w9a-og-ors"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r0M-BI-7Cn" firstAttribute="top" secondItem="SdW-MM-Ori" secondAttribute="bottom" constant="19" id="5PR-Xd-RlA"/>
+                <constraint firstItem="jxN-cn-D1c" firstAttribute="centerX" secondItem="7VT-ov-3jK" secondAttribute="centerX" id="5Qj-TJ-oQI"/>
+                <constraint firstItem="7VT-ov-3jK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="6YV-yV-ZtR"/>
+                <constraint firstItem="lS6-Vu-VeS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="95" id="9Be-aW-Xtt"/>
+                <constraint firstItem="SdW-MM-Ori" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="57" id="DTE-8F-heE"/>
+                <constraint firstItem="yrM-rT-Cj6" firstAttribute="top" secondItem="jxN-cn-D1c" secondAttribute="bottom" constant="7" id="JNK-9q-Wgn"/>
+                <constraint firstItem="jxN-cn-D1c" firstAttribute="top" secondItem="7VT-ov-3jK" secondAttribute="bottom" constant="8" symbolic="YES" id="UNV-Tf-aUp"/>
+                <constraint firstAttribute="trailing" secondItem="lS6-Vu-VeS" secondAttribute="trailing" constant="94" id="d6B-Dv-o0g"/>
+                <constraint firstAttribute="bottom" secondItem="r0M-BI-7Cn" secondAttribute="bottom" constant="11" id="iyB-QK-qdO"/>
+                <constraint firstItem="SdW-MM-Ori" firstAttribute="centerX" secondItem="r0M-BI-7Cn" secondAttribute="centerX" id="nGg-cI-vDN"/>
+                <constraint firstItem="SdW-MM-Ori" firstAttribute="centerX" secondItem="yrM-rT-Cj6" secondAttribute="centerX" id="orl-qD-YRJ"/>
+                <constraint firstItem="SdW-MM-Ori" firstAttribute="centerX" secondItem="lS6-Vu-VeS" secondAttribute="centerX" id="rB6-SY-h6g"/>
+                <constraint firstItem="yrM-rT-Cj6" firstAttribute="centerX" secondItem="jxN-cn-D1c" secondAttribute="centerX" id="rMT-Tk-FWV"/>
+                <constraint firstItem="lS6-Vu-VeS" firstAttribute="top" secondItem="yrM-rT-Cj6" secondAttribute="bottom" constant="8" symbolic="YES" id="tdC-zd-YHe"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="35" y="59"/>
         </view>
     </objects>
+    <resources>
+        <image name="5@3x20170720" width="150" height="150"/>
+    </resources>
 </document>
