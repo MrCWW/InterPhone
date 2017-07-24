@@ -47,7 +47,7 @@
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor redColor];
     //button长按事件
-    [self.deleteBtn setImage:[UIImage imageNamed:@"12@3x20170720"] forState:UIControlStateHighlighted];
+    [self.deleteBtn setImage:[UIImage imageNamed:@"20170720-中華電信-號碼刪除鍵-灰"] forState:UIControlStateHighlighted];
   UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(btnLong:)];
    longPress.minimumPressDuration = 0.8; //定义按的时间
    [_deleteBtn addGestureRecognizer:longPress];
@@ -56,7 +56,7 @@
 }
 //创建拨号界面
 - (void)creatNumberView {
-    NSArray *imageArr = @[@"13@3x201707201",@"14@3x201707202",@"15@3x201707203",@"16@3x201707204",@"17@3x201707205",@"18@3x201707206",@"19@3x201707207",@"19@3x201707208",@"20@3x20170720-9",@"10@3x20170720",@"12@3x20170720",@"8@3x20170720"];
+    NSArray *imageArr = @[@"20170720-中華電信-數字1",@"20170720-中華電信-數字2",@"20170720-中華電信-數字3",@"20170720-中華電信-數字4",@"20170720-中華電信-數字5",@"20170720-中華電信-數字6",@"20170720-中華電信-數字7",@"20170720-中華電信-數字8",@"20170720-中華電信-數字9",@"20170720-中華電信-米字鍵",@"20170720-中華電信-數字0",@"20170720-中華電信-井字鍵"];
     self.dataNumberArr = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"*",@"0",@"#", nil];
     HomePageHeaderCateforyView *headerV = [[HomePageHeaderCateforyView alloc] initWithFrame:HCGRECT(0, 50, ScreenWidth, CollectionHeight) imageArr:imageArr titleArr:nil];
     NSLog(@"%.2f",CollectionHeight);

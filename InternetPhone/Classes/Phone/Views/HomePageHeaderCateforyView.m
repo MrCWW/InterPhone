@@ -58,7 +58,7 @@
     if (self) {
         self.frame = frame;
         UIImageView *imageBG = [[UIImageView alloc] initWithFrame:HCGRECT(20, 20, self.width - 40, self.height - 40)];
-        imageBG.image = [UIImage imageNamed:@"2@3x20170720"];
+        imageBG.image = [UIImage imageNamed:@"20170720-中華電信-撥號背景圖"];
         [self addSubview:imageBG];
         if (imageArr) {
             self.imageDataArr = [NSArray arrayWithArray:imageArr];
