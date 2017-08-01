@@ -1,9 +1,8 @@
 {
   "images" : [
     {
-      "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "20170724-中華電信語音logo-29x29.png",
+      "size" : "20x20",
       "scale" : "2x"
     },
     {
@@ -25,9 +24,8 @@
       "scale" : "3x"
     },
     {
-      "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "20170724-中華電信語音logo-系統搜索框圖示-80x80.png",
+      "size" : "40x40",
       "scale" : "2x"
     },
     {

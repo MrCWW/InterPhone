@@ -1,5 +1,5 @@
 //
-//  AddressBookViewController.h
+//  AddDetailViewController.h
 //  InternetPhone
 //
 //  Created by wangkun on 2017/8/1.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddressBookViewController : UITableViewController
+@interface AddDetailViewController : UIViewController
 
 @end
