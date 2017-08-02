@@ -11,20 +11,25 @@
 #import <ContactsUI/ContactsUI.h>
 #import "contTableViewCell.h"
 #import "AddDetailViewController.h"
-
-@interface AddressBookViewController ()<CNContactViewControllerDelegate, CNContactPickerDelegate, UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) NSMutableArray *contactList;
+#import "PJSearchBar.h"
+#import <UIKit/UIKit.h>
+@interface AddressBookViewController ()<CNContactViewControllerDelegate, CNContactPickerDelegate, UITableViewDataSource, UITableViewDelegate,PJSearchBarDelegate>
 @property(nonatomic,strong)UITableView *myTableView;
+@property (nonatomic, strong) PJSearchBar *searchBar;      //搜索框
+@property(nonatomic,strong)NSMutableArray *cities;
+@property(nonatomic,strong)NSMutableArray *filteredCities;
+@property BOOL isFiltered;
+@property (nonatomic, retain) NSMutableArray *resultArr;   //搜索结果
 
 @end
 
 @implementation AddressBookViewController
-@synthesize contactList;
+@synthesize cities;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    contactList = [[NSMutableArray alloc] init];
+    cities = [[NSMutableArray alloc] init];
     [self loadContactList];
     
     self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
@@ -33,11 +38,16 @@
     [self.view addSubview:self.myTableView];
     [self.myTableView registerNib:[UINib nibWithNibName:@"contTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
-
+    
+    _searchBar = [[PJSearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40) placeholder:@"搜索"];
+    _searchBar.delegate = self;
+    _searchBar.barTintColor = [UIColor redColor];
+    [self.view addSubview:_searchBar];
 }
 -(void)reloadContactList {
-    [contactList removeAllObjects];
+    [cities removeAllObjects];
     [self loadContactList];
+
 }
 
 -(void)loadContactList {
@@ -71,7 +81,7 @@
              NSLog(@"email = %@", contact.emailAddresses);
              
              
-             [contactList addObject:contact];
+             [cities addObject:contact];
          }];
         
         [_myTableView reloadData];
@@ -154,8 +164,16 @@
 }
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"contactList count = %d", (int)[contactList count]);
-    return [contactList count];
+    NSLog(@"contactList count = %d", (int)[cities count]);
+//    return [cities count];
+    if(_isFiltered == YES)
+    {
+        return [_filteredCities count];
+    }
+    else
+    {
+        return [cities count];
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     _myTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -165,9 +183,16 @@
     if (cell1 == nil) {
         cell1 = [[contTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    CNContact* contact = [contactList objectAtIndex:indexPath.row];
-    cell1.textLabel.text = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
-    
+    CNContact* contact = [cities objectAtIndex:indexPath.row];
+//    cell1.textLabel.text = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+    if(_isFiltered == YES){
+        cell1.textLabel.text = [_filteredCities objectAtIndex:indexPath.row];
+    }
+    else{
+        
+        cell1.textLabel.text = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+    }
+
     UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     iv.image = [UIImage imageNamed:@"5@3x20170720"];
     cell1.imageView.image=iv.image;
@@ -182,6 +207,49 @@
     cell1.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return  cell1;
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    
+    if(searchText.length == 0)
+    {
+        _isFiltered = NO;
+    }else {
+        _isFiltered = YES;
+        _filteredCities = [[NSMutableArray alloc]init];
+
+//        for(NSString *cityName in cities)
+//        {
+//            
+//            NSRange cityNameRange = [cityName rangeOfString:searchText options:NSCaseInsensitiveSearch];
+//            
+//            if(cityNameRange.location != NSNotFound)
+//            {
+//                [_filteredCities addObject:cityName];
+//                
+//            }
+//        }
+
+
+        
+    }
+    [_myTableView reloadData];
+}
+- (NSMutableArray *)dataSource{
+    if (!cities) {
+        cities = [[NSMutableArray alloc]init];
+    }
+    return cities;
+}
+- (NSMutableArray *)resultArr{
+    if (!_resultArr) {
+        _resultArr = [[NSMutableArray alloc]init];
+    }
+    return _resultArr;
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [_searchBar resignFirstResponder];
 }
 
 #pragma mark -

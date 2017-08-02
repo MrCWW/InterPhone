@@ -120,6 +120,8 @@
 		EAEE5A4B1F3027E2003F6583 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEE5A4A1F3027E2003F6583 /* ContactsUI.framework */; };
 		EAEE5A4E1F30293F003F6583 /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A4D1F30293F003F6583 /* AddressBookViewController.m */; };
 		EAEE5A511F3038E3003F6583 /* AddDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A501F3038E3003F6583 /* AddDetailViewController.m */; };
+		EAEE5A5F1F31FC33003F6583 /* PJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A5E1F31FC33003F6583 /* PJSearchBar.m */; };
+		EAEE5A611F32027E003F6583 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEE5A601F32027E003F6583 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +351,9 @@
 		EAEE5A4D1F30293F003F6583 /* AddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		EAEE5A4F1F3038E3003F6583 /* AddDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDetailViewController.h; sourceTree = "<group>"; };
 		EAEE5A501F3038E3003F6583 /* AddDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDetailViewController.m; sourceTree = "<group>"; };
+		EAEE5A5D1F31FC33003F6583 /* PJSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJSearchBar.h; sourceTree = "<group>"; };
+		EAEE5A5E1F31FC33003F6583 /* PJSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJSearchBar.m; sourceTree = "<group>"; };
+		EAEE5A601F32027E003F6583 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +361,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEE5A611F32027E003F6583 /* UIKit.framework in Frameworks */,
 				EAEE5A4B1F3027E2003F6583 /* ContactsUI.framework in Frameworks */,
 				EAEE5A491F3027DA003F6583 /* Contacts.framework in Frameworks */,
 			);
@@ -978,6 +984,8 @@
 		EAEE5A401F302734003F6583 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EAEE5A5D1F31FC33003F6583 /* PJSearchBar.h */,
+				EAEE5A5E1F31FC33003F6583 /* PJSearchBar.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -995,6 +1003,7 @@
 		EAEE5A471F3027DA003F6583 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAEE5A601F32027E003F6583 /* UIKit.framework */,
 				EAEE5A4A1F3027E2003F6583 /* ContactsUI.framework */,
 				EAEE5A481F3027DA003F6583 /* Contacts.framework */,
 			);
@@ -1193,6 +1202,7 @@
 				249104261F22DADB00B370F5 /* main.m in Sources */,
 				2491062A1F22F3DD00B370F5 /* UIColor+RGB.m in Sources */,
 				249106361F22F4EA00B370F5 /* HNavigationView.m in Sources */,
+				EAEE5A5F1F31FC33003F6583 /* PJSearchBar.m in Sources */,
 				2491062B1F22F3DD00B370F5 /* UIDevice+DeviceType.m in Sources */,
 				249105CA1F22F20A00B370F5 /* AFNTool.m in Sources */,
 				249105E31F22F20A00B370F5 /* NSData+ImageContentType.m in Sources */,
