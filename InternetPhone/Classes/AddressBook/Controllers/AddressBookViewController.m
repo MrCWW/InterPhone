@@ -43,6 +43,13 @@
     _searchBar.delegate = self;
     _searchBar.barTintColor = [UIColor redColor];
     [self.view addSubview:_searchBar];
+    //点击空白处收回键盘
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    //将触摸事件添加到当前view
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+
 }
 -(void)reloadContactList {
     [cities removeAllObjects];
@@ -82,6 +89,7 @@
              
              
              [cities addObject:contact];
+             
          }];
         
         [_myTableView reloadData];
@@ -220,7 +228,7 @@
 
 //        for(NSString *cityName in cities)
 //        {
-//            
+//
 //            NSRange cityNameRange = [cityName rangeOfString:searchText options:NSCaseInsensitiveSearch];
 //            
 //            if(cityNameRange.location != NSNotFound)
@@ -235,18 +243,7 @@
     }
     [_myTableView reloadData];
 }
-- (NSMutableArray *)dataSource{
-    if (!cities) {
-        cities = [[NSMutableArray alloc]init];
-    }
-    return cities;
-}
-- (NSMutableArray *)resultArr{
-    if (!_resultArr) {
-        _resultArr = [[NSMutableArray alloc]init];
-    }
-    return _resultArr;
-}
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [_searchBar resignFirstResponder];
@@ -255,11 +252,42 @@
 #pragma mark -
 #pragma mark UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+   
+        //Create repository objects contacts
+        CNContactStore *contactStore = [[CNContactStore alloc] init];
+        
+        NSArray *keys = [[NSArray alloc]initWithObjects:CNContactIdentifierKey, CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey, CNContactPhoneNumbersKey, CNContactViewController.descriptorForRequiredKeys, nil];
+        
+        // Create a request object
+        CNContactFetchRequest *request = [[CNContactFetchRequest alloc] initWithKeysToFetch:keys];
+        request.predicate = nil;
+    AddDetailViewController *meVc = [[AddDetailViewController alloc]init];
+
+        [contactStore enumerateContactsWithFetchRequest:request
+                                                  error:nil
+                                             usingBlock:^(CNContact* __nonnull contact, BOOL* __nonnull stop)
+         {
+             NSString *phoneNumber = @"";
+             if( contact.phoneNumbers)
+                 phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
+             meVc.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+             meVc.strPhone = [NSString stringWithFormat:@"%@", phoneNumber];
+             
+         }];
+    [self.navigationController pushViewController:meVc animated:YES];
+
+}
+
+// 点击空白处收起键盘
+-(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
+
+{
     
-
-
+    [self.view endEditing:YES];
     
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

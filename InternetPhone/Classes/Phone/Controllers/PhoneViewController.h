@@ -9,5 +9,6 @@
 #import "HBaseViewController.h"
 
 @interface PhoneViewController : HBaseViewController
+@property(nonatomic,strong)NSString *strPhone;//手机号
 
 @end

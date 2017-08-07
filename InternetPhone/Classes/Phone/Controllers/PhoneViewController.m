@@ -107,6 +107,7 @@
     if (self.saveNumStr.length) {
        self.saveNumStr = [NSMutableString stringWithFormat:@""];
     self.numberTextFiled.text = self.saveNumStr;
+        
     [self.numberTextFiled resignFirstResponder];
         _isHaveGB = NO;
     }
