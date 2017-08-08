@@ -24,7 +24,7 @@
 }
 
 - (void)initSearchBarWithFrame:(CGRect)frame withPlaceholder:(NSString *)placeholder{
-    self.tintColor = [UIColor colorWithRed:0.262 green:0.515 blue:1.000 alpha:1.000];
+    self.tintColor = [UIColor whiteColor];
     self.searchBarStyle = UISearchBarStyleMinimal;
     NSMutableString *blankString = [[NSMutableString alloc] init];
     
@@ -35,11 +35,11 @@
         [blankString appendString:@""];
     }
     self.placeholder = blankString;
-    self.backgroundColor = [UIColor colorWithWhite:0.94 alpha:1.0];
+    self.backgroundColor = [UIColor whiteColor];
     self.searchTextField = [self valueForKey:@"searchField"];
     self.searchTextField.delegate = self;
     self.searchLabel = [[UILabel alloc]initWithFrame:CGRectMake(ScreenWidth/2, 0, 255, 30)];
-    self.searchLabel.textColor = [UIColor colorWithWhite:0.418 alpha:0.650];
+    self.searchLabel.textColor = [UIColor blackColor];
     self.searchLabel.font = [UIFont systemFontOfSize:14];
     self.searchLabel.text = placeholder;
     [self.searchTextField addSubview:self.searchLabel];

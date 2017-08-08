@@ -27,7 +27,7 @@
 
 //添加子controller
 @property (nonatomic, strong) PhoneViewController *phoneVC;
-@property (nonatomic, strong) AddressBookViewController *addressBookVC;
+@property (nonatomic, strong) AddRessBookViewController *addressBookVC;
 @property (nonatomic, strong) CallRecordsViewController *callRecordsVC;
 @property (nonatomic, strong) SettingViewController *setVC;
 
@@ -42,9 +42,9 @@
     }
     return _phoneVC;
 }
-- (AddressBookViewController *)addressBookVC {
+- (AddRessBookViewController *)addressBookVC {
     if (!_addressBookVC) {
-        _addressBookVC = [[AddressBookViewController alloc] init];
+        _addressBookVC = [[AddRessBookViewController alloc] init];
         _addressBookVC.view.frame = HCGRECT(ScreenWidth, 0, ScreenWidth, ScreenHeight - 129);
     }
     return _addressBookVC;

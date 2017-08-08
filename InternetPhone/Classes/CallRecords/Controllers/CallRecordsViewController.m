@@ -17,17 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)testA:(id)sender {
-    CallRecordsDetailViewController *a = [[CallRecordsDetailViewController alloc] init];
-    [self.navigationController pushViewController:a animated:YES];
-}
+
 
 /*
 #pragma mark - Navigation

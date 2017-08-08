@@ -114,11 +114,13 @@
 		249106631F22F7E400B370F5 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249106611F22F7E400B370F5 /* SettingViewController.xib */; };
 		2491066C1F22FBD300B370F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491066A1F22FBD300B370F5 /* LoginViewController.m */; };
 		2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2491066B1F22FBD300B370F5 /* LoginViewController.xib */; };
+		EA4644E31F39698500825157 /* AddModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4644E21F39698500825157 /* AddModel.m */; };
+		EA4644ED1F39976000825157 /* AddRessBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4644EB1F39976000825157 /* AddRessBookViewController.m */; };
+		EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4644EC1F39976000825157 /* AddRessBookViewController.xib */; };
 		EAEE5A451F302758003F6583 /* contTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEE5A421F302758003F6583 /* contTableViewCell.xib */; };
 		EAEE5A461F302758003F6583 /* contTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A431F302758003F6583 /* contTableViewCell.m */; };
 		EAEE5A491F3027DA003F6583 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEE5A481F3027DA003F6583 /* Contacts.framework */; };
 		EAEE5A4B1F3027E2003F6583 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEE5A4A1F3027E2003F6583 /* ContactsUI.framework */; };
-		EAEE5A4E1F30293F003F6583 /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A4D1F30293F003F6583 /* AddressBookViewController.m */; };
 		EAEE5A511F3038E3003F6583 /* AddDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A501F3038E3003F6583 /* AddDetailViewController.m */; };
 		EAEE5A5F1F31FC33003F6583 /* PJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A5E1F31FC33003F6583 /* PJSearchBar.m */; };
 		EAEE5A611F32027E003F6583 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEE5A601F32027E003F6583 /* UIKit.framework */; };
@@ -342,13 +344,16 @@
 		249106691F22FBD300B370F5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2491066A1F22FBD300B370F5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2491066B1F22FBD300B370F5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		EA4644E11F39698500825157 /* AddModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddModel.h; sourceTree = "<group>"; };
+		EA4644E21F39698500825157 /* AddModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddModel.m; sourceTree = "<group>"; };
+		EA4644EA1F39976000825157 /* AddRessBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRessBookViewController.h; sourceTree = "<group>"; };
+		EA4644EB1F39976000825157 /* AddRessBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRessBookViewController.m; sourceTree = "<group>"; };
+		EA4644EC1F39976000825157 /* AddRessBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRessBookViewController.xib; sourceTree = "<group>"; };
 		EAEE5A421F302758003F6583 /* contTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contTableViewCell.xib; sourceTree = "<group>"; };
 		EAEE5A431F302758003F6583 /* contTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contTableViewCell.m; sourceTree = "<group>"; };
 		EAEE5A441F302758003F6583 /* contTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contTableViewCell.h; sourceTree = "<group>"; };
 		EAEE5A481F3027DA003F6583 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		EAEE5A4A1F3027E2003F6583 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
-		EAEE5A4C1F30293F003F6583 /* AddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookViewController.h; sourceTree = "<group>"; };
-		EAEE5A4D1F30293F003F6583 /* AddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		EAEE5A4F1F3038E3003F6583 /* AddDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDetailViewController.h; sourceTree = "<group>"; };
 		EAEE5A501F3038E3003F6583 /* AddDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDetailViewController.m; sourceTree = "<group>"; };
 		EAEE5A5D1F31FC33003F6583 /* PJSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJSearchBar.h; sourceTree = "<group>"; };
@@ -484,10 +489,11 @@
 		2491045D1F22EFF700B370F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EAEE5A4C1F30293F003F6583 /* AddressBookViewController.h */,
-				EAEE5A4D1F30293F003F6583 /* AddressBookViewController.m */,
 				EAEE5A4F1F3038E3003F6583 /* AddDetailViewController.h */,
 				EAEE5A501F3038E3003F6583 /* AddDetailViewController.m */,
+				EA4644EA1F39976000825157 /* AddRessBookViewController.h */,
+				EA4644EB1F39976000825157 /* AddRessBookViewController.m */,
+				EA4644EC1F39976000825157 /* AddRessBookViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -986,6 +992,8 @@
 			children = (
 				EAEE5A5D1F31FC33003F6583 /* PJSearchBar.h */,
 				EAEE5A5E1F31FC33003F6583 /* PJSearchBar.m */,
+				EA4644E11F39698500825157 /* AddModel.h */,
+				EA4644E21F39698500825157 /* AddModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1107,6 +1115,7 @@
 				2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */,
 				EAEE5A451F302758003F6583 /* contTableViewCell.xib in Resources */,
 				2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */,
+				EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */,
 				249105CB1F22F20A00B370F5 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1150,6 +1159,7 @@
 				249105E11F22F20A00B370F5 /* UIView+MJExtension.m in Sources */,
 				249105FE1F22F27A00B370F5 /* HBaseViewController.m in Sources */,
 				2491066C1F22FBD300B370F5 /* LoginViewController.m in Sources */,
+				EA4644ED1F39976000825157 /* AddRessBookViewController.m in Sources */,
 				249106001F22F27A00B370F5 /* HBaseView.m in Sources */,
 				249105B81F22F20A00B370F5 /* AFHTTPRequestOperationManager.m in Sources */,
 				EAEE5A511F3038E3003F6583 /* AddDetailViewController.m in Sources */,
@@ -1215,12 +1225,12 @@
 				249105E81F22F20A00B370F5 /* SDWebImageDownloaderOperation.m in Sources */,
 				249105C21F22F20A00B370F5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				249106331F22F3DD00B370F5 /* UIView+IBExtension.m in Sources */,
-				EAEE5A4E1F30293F003F6583 /* AddressBookViewController.m in Sources */,
 				249106321F22F3DD00B370F5 /* UIView+Extension.m in Sources */,
 				249105E71F22F20A00B370F5 /* SDWebImageDownloader.m in Sources */,
 				247471481F24BF820008B066 /* CallRecordsDetailViewController.m in Sources */,
 				249104731F22F09600B370F5 /* AppDelegate.m in Sources */,
 				249106301F22F3DD00B370F5 /* UIScreen+Extension.m in Sources */,
+				EA4644E31F39698500825157 /* AddModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
