@@ -51,7 +51,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+81" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYL-Wp-M5g">
-                                    <rect key="frame" x="62" y="14.5" width="42" height="21"/>
+                                    <rect key="frame" x="62" y="15" width="42" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="42" id="1Yy-hH-URc"/>
                                         <constraint firstAttribute="height" constant="21" id="YoV-ea-s7M"/>
@@ -102,10 +102,10 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-Xr-NGg">
-                            <rect key="frame" x="40" y="612" width="295" height="45"/>
+                            <rect key="frame" x="40" y="597" width="295" height="45"/>
                             <color key="backgroundColor" red="0.47843137254901957" green="0.73725490196078436" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="45" id="vtv-I3-CWK"/>
+                                <constraint firstAttribute="height" constant="45" id="uoC-Ue-6nb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="撥號" image="1@3x20170720"/>
@@ -122,11 +122,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="4gt-Id-DBR" firstAttribute="top" secondItem="iOJ-iG-V5R" secondAttribute="top" id="4mP-GI-UTB"/>
-                        <constraint firstItem="Yse-Xr-NGg" firstAttribute="leading" secondItem="iOJ-iG-V5R" secondAttribute="leading" constant="40" id="Gk3-G8-YRD"/>
-                        <constraint firstAttribute="trailing" secondItem="Yse-Xr-NGg" secondAttribute="trailing" constant="40" id="Jzl-Zp-HYY"/>
+                        <constraint firstItem="Yse-Xr-NGg" firstAttribute="leading" secondItem="iOJ-iG-V5R" secondAttribute="leading" constant="40" id="AQh-PX-qXB"/>
                         <constraint firstAttribute="trailing" secondItem="4gt-Id-DBR" secondAttribute="trailing" id="Onc-3D-BLm"/>
+                        <constraint firstItem="Yse-Xr-NGg" firstAttribute="centerX" secondItem="4gt-Id-DBR" secondAttribute="centerX" id="QKv-fP-mqK"/>
+                        <constraint firstAttribute="bottom" secondItem="Yse-Xr-NGg" secondAttribute="bottom" constant="25" id="Z5Q-kB-dT2"/>
                         <constraint firstItem="4gt-Id-DBR" firstAttribute="leading" secondItem="iOJ-iG-V5R" secondAttribute="leading" id="dwk-fI-jdF"/>
-                        <constraint firstAttribute="bottom" secondItem="Yse-Xr-NGg" secondAttribute="bottom" constant="10" id="yZE-zY-Nz3"/>
                     </constraints>
                 </view>
             </subviews>

@@ -23,13 +23,15 @@
 
     cities = [[NSMutableArray alloc] init];
     _filteredCities = [[NSMutableArray alloc] init];
+    _PHONE = [[NSMutableArray alloc] init];
 
     [self loadContactList];
     [self creatTableView];
+ 
 
 }
 -(void)creatTableView{
-    self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 45, ScreenWidth, ScreenHeight)];
+    self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 45, ScreenWidth, ScreenHeight-180)];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     self.myTableView.backgroundColor = [UIColor whiteColor];
@@ -46,6 +48,7 @@
 -(void)reloadContactList {
     [cities removeAllObjects];
     [_filteredCities removeAllObjects];
+    [_PHONE removeAllObjects];
     [self loadContactList];
 }
 -(void)loadContactList {
@@ -150,11 +153,7 @@
         _isFiltered = YES;
         _filteredCities = [[NSMutableArray alloc]init];
         CNContactStore *contactStore = [[CNContactStore alloc] init];
-        
-        
         NSArray *keys = [[NSArray alloc]initWithObjects:CNContactIdentifierKey, CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey, CNContactPhoneNumbersKey, CNContactViewController.descriptorForRequiredKeys, nil];
-        
-        // Create a request object
         CNContactFetchRequest *request = [[CNContactFetchRequest alloc] initWithKeysToFetch:keys];
         request.predicate = nil;
         
@@ -180,7 +179,7 @@
                  if(cityNameRange.location != NSNotFound)
                  {
                      [_filteredCities addObject:cityName];
-                     
+                     [_PHONE addObject:phoneNumber];
                  }
              }
          }];
@@ -192,14 +191,26 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
-    CNContact* contact = [cities objectAtIndex:indexPath.row];
-    TsdVc.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
-    NSString *phoneNumber = @"";
-    phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
-    TsdVc.strPhone = phoneNumber;
-    [self.navigationController pushViewController:TsdVc animated:YES];
+
+    if(_isFiltered == YES)
+    {
+        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
+        TsdVc.strname = [_filteredCities objectAtIndex:indexPath.row];
+        TsdVc.strPhone = [_PHONE objectAtIndex:indexPath.row];
+        [self.navigationController pushViewController:TsdVc animated:YES];
+        
+    }
+    else
+    {
+        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
+        CNContact* contact = [cities objectAtIndex:indexPath.row];
+        TsdVc.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+        NSString *phoneNumber = @"";
+        phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
+        TsdVc.strPhone = phoneNumber;
+        [self.navigationController pushViewController:TsdVc animated:YES];
+    }
+   
     
     
 }
