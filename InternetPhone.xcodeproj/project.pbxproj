@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2442F4331F3FE667008BC593 /* AnswerCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442F4311F3FE667008BC593 /* AnswerCallViewController.m */; };
+		2442F4341F3FE667008BC593 /* AnswerCallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442F4321F3FE667008BC593 /* AnswerCallViewController.xib */; };
+		2442F4381F3FE673008BC593 /* MissedCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2442F4361F3FE673008BC593 /* MissedCallViewController.m */; };
+		2442F4391F3FE673008BC593 /* MissedCallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442F4371F3FE673008BC593 /* MissedCallViewController.xib */; };
 		247471431F24A7B40008B066 /* AHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471411F24A7B40008B066 /* AHomePageViewController.m */; };
 		247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247471421F24A7B40008B066 /* AHomePageViewController.xib */; };
 		247471481F24BF820008B066 /* CallRecordsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471461F24BF820008B066 /* CallRecordsDetailViewController.m */; };
@@ -137,6 +141,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2442F4301F3FE667008BC593 /* AnswerCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnswerCallViewController.h; sourceTree = "<group>"; };
+		2442F4311F3FE667008BC593 /* AnswerCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnswerCallViewController.m; sourceTree = "<group>"; };
+		2442F4321F3FE667008BC593 /* AnswerCallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnswerCallViewController.xib; sourceTree = "<group>"; };
+		2442F4351F3FE673008BC593 /* MissedCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissedCallViewController.h; sourceTree = "<group>"; };
+		2442F4361F3FE673008BC593 /* MissedCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissedCallViewController.m; sourceTree = "<group>"; };
+		2442F4371F3FE673008BC593 /* MissedCallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MissedCallViewController.xib; sourceTree = "<group>"; };
 		247471401F24A7B40008B066 /* AHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHomePageViewController.h; sourceTree = "<group>"; };
 		247471411F24A7B40008B066 /* AHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHomePageViewController.m; sourceTree = "<group>"; };
 		247471421F24A7B40008B066 /* AHomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHomePageViewController.xib; sourceTree = "<group>"; };
@@ -514,6 +524,12 @@
 				249106551F22F7C800B370F5 /* CallRecordsViewController.h */,
 				249106561F22F7C800B370F5 /* CallRecordsViewController.m */,
 				249106571F22F7C800B370F5 /* CallRecordsViewController.xib */,
+				2442F4301F3FE667008BC593 /* AnswerCallViewController.h */,
+				2442F4311F3FE667008BC593 /* AnswerCallViewController.m */,
+				2442F4321F3FE667008BC593 /* AnswerCallViewController.xib */,
+				2442F4351F3FE673008BC593 /* MissedCallViewController.h */,
+				2442F4361F3FE673008BC593 /* MissedCallViewController.m */,
+				2442F4371F3FE673008BC593 /* MissedCallViewController.xib */,
 				247471451F24BF820008B066 /* CallRecordsDetailViewController.h */,
 				247471461F24BF820008B066 /* CallRecordsDetailViewController.m */,
 				247471471F24BF820008B066 /* CallRecordsDetailViewController.xib */,
@@ -1107,10 +1123,12 @@
 				2491065E1F22F7D500B370F5 /* PhoneViewController.xib in Resources */,
 				2474715B1F24D55C0008B066 /* HomePageHeaderCateforyView.xib in Resources */,
 				247471601F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib in Resources */,
+				2442F4341F3FE667008BC593 /* AnswerCallViewController.xib in Resources */,
 				247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */,
 				249104311F22DADB00B370F5 /* Assets.xcassets in Resources */,
 				249106591F22F7C800B370F5 /* CallRecordsViewController.xib in Resources */,
 				249105DC1F22F20A00B370F5 /* MJRefresh.bundle in Resources */,
+				2442F4391F3FE673008BC593 /* MissedCallViewController.xib in Resources */,
 				249105C01F22F20A00B370F5 /* LICENSE in Resources */,
 				2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */,
 				EAEE5A451F302758003F6583 /* contTableViewCell.xib in Resources */,
@@ -1168,6 +1186,7 @@
 				249105C61F22F20A00B370F5 /* UIImageView+AFNetworking.m in Sources */,
 				249105BE1F22F20A00B370F5 /* AFURLResponseSerialization.m in Sources */,
 				249105D61F22F20A00B370F5 /* MJRefreshBackGifFooter.m in Sources */,
+				2442F4331F3FE667008BC593 /* AnswerCallViewController.m in Sources */,
 				249106261F22F3DD00B370F5 /* NSString+CalculatorHeight.m in Sources */,
 				249106241F22F3DD00B370F5 /* MBProgressHUD+AddHud.m in Sources */,
 				249105F01F22F20A00B370F5 /* UIImageView+WebCache.m in Sources */,
@@ -1194,6 +1213,7 @@
 				249105BC1F22F20A00B370F5 /* AFURLConnectionOperation.m in Sources */,
 				249105BB1F22F20A00B370F5 /* AFSecurityPolicy.m in Sources */,
 				249105EF1F22F20A00B370F5 /* UIImageView+HighlightedWebCache.m in Sources */,
+				2442F4381F3FE673008BC593 /* MissedCallViewController.m in Sources */,
 				249105DD1F22F20A00B370F5 /* MJRefreshConst.m in Sources */,
 				249105D91F22F20A00B370F5 /* MJRefreshGifHeader.m in Sources */,
 				249105D71F22F20A00B370F5 /* MJRefreshBackNormalFooter.m in Sources */,

@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallRecordsViewController">
             <connections>
+                <outlet property="answerCallBtn" destination="4Fw-7Y-oTB" id="gp9-fX-jph"/>
+                <outlet property="bigScrollView" destination="H8c-Ex-jx7" id="u4a-V0-Hu9"/>
+                <outlet property="eidtCallBtn" destination="6oG-vA-77B" id="6QQ-2E-gxT"/>
+                <outlet property="headerView" destination="GTD-q7-F2f" id="0ty-Uh-ebw"/>
+                <outlet property="missedCallBtn" destination="4c4-XI-6Di" id="Eqv-DW-sE6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +24,133 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-Ex-jx7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB5-pg-oPW">
+                            <rect key="frame" x="0.0" y="0.0" width="750" height="667"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTD-q7-F2f">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fw-7Y-oTB">
+                                            <rect key="frame" x="20" y="10" width="50" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="XCY-ji-4uk"/>
+                                                <constraint firstAttribute="height" constant="30" id="YNO-Fo-CpF"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="20170720-中華電信-通話紀錄-藍"/>
+                                            <connections>
+                                                <action selector="answerAction:" destination="-1" eventType="touchUpInside" id="VEf-pI-V03"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c4-XI-6Di">
+                                            <rect key="frame" x="90" y="10" width="50" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="3dg-fJ-HBJ"/>
+                                                <constraint firstAttribute="width" constant="50" id="Xal-MZ-BK3"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="20170720-中華電信-通話紀錄-灰"/>
+                                            <connections>
+                                                <action selector="missedAction:" destination="-1" eventType="touchUpInside" id="Pzd-58-VFr"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oG-vA-77B">
+                                            <rect key="frame" x="309" y="10" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="sqP-Z9-Sua"/>
+                                                <constraint firstAttribute="width" constant="46" id="zeq-b4-dFI"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="9@3x20170720"/>
+                                            <connections>
+                                                <action selector="eidtCallAction:" destination="-1" eventType="touchUpInside" id="u3M-Wf-MlU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="4c4-XI-6Di" firstAttribute="leading" secondItem="4Fw-7Y-oTB" secondAttribute="trailing" constant="20" id="EHV-F8-1hA"/>
+                                        <constraint firstAttribute="trailing" secondItem="6oG-vA-77B" secondAttribute="trailing" constant="20" id="FXd-Pa-CD0"/>
+                                        <constraint firstAttribute="height" constant="50" id="O6A-Fl-zzC"/>
+                                        <constraint firstItem="4c4-XI-6Di" firstAttribute="centerY" secondItem="4Fw-7Y-oTB" secondAttribute="centerY" id="ZRI-qS-08G"/>
+                                        <constraint firstItem="4Fw-7Y-oTB" firstAttribute="centerY" secondItem="GTD-q7-F2f" secondAttribute="centerY" id="gdT-g6-l5i"/>
+                                        <constraint firstItem="4Fw-7Y-oTB" firstAttribute="leading" secondItem="GTD-q7-F2f" secondAttribute="leading" constant="20" id="m0v-Yd-O0z"/>
+                                        <constraint firstItem="6oG-vA-77B" firstAttribute="centerY" secondItem="4c4-XI-6Di" secondAttribute="centerY" id="x6N-gf-AaS"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ie-jq-9nY">
+                                    <rect key="frame" x="375" y="0.0" width="375" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8Y-6x-2Up">
+                                            <rect key="frame" x="20" y="10" width="50" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="RRO-WE-5ht"/>
+                                                <constraint firstAttribute="width" constant="50" id="V3b-AV-uoZ"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="4@3x20170720"/>
+                                            <connections>
+                                                <action selector="backFirstViewAction:" destination="-1" eventType="touchUpInside" id="f2F-Sf-Sqk"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sE-5z-o5C">
+                                            <rect key="frame" x="309" y="10" width="46" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="Bak-9v-WYA"/>
+                                                <constraint firstAttribute="width" constant="46" id="wJr-ZU-Bbi"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="22@3x20170720"/>
+                                            <connections>
+                                                <action selector="goAddressBookAction:" destination="-1" eventType="touchUpInside" id="RaL-sr-1p4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="9sE-5z-o5C" firstAttribute="centerY" secondItem="B8Y-6x-2Up" secondAttribute="centerY" id="2xg-1W-kD7"/>
+                                        <constraint firstItem="B8Y-6x-2Up" firstAttribute="centerY" secondItem="9ie-jq-9nY" secondAttribute="centerY" id="Jez-NH-D2p"/>
+                                        <constraint firstAttribute="trailing" secondItem="9sE-5z-o5C" secondAttribute="trailing" constant="20" id="PPg-hm-xYD"/>
+                                        <constraint firstItem="B8Y-6x-2Up" firstAttribute="leading" secondItem="9ie-jq-9nY" secondAttribute="leading" constant="20" id="dQ7-Ts-haM"/>
+                                        <constraint firstAttribute="height" constant="50" id="hEs-Kb-25y"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="9ie-jq-9nY" firstAttribute="top" secondItem="tB5-pg-oPW" secondAttribute="top" id="40M-6C-Tmd"/>
+                                <constraint firstItem="9ie-jq-9nY" firstAttribute="width" secondItem="GTD-q7-F2f" secondAttribute="width" id="E8f-ew-xYT"/>
+                                <constraint firstItem="GTD-q7-F2f" firstAttribute="top" secondItem="tB5-pg-oPW" secondAttribute="top" id="KSi-y2-A3y"/>
+                                <constraint firstItem="GTD-q7-F2f" firstAttribute="leading" secondItem="tB5-pg-oPW" secondAttribute="leading" id="UaE-go-bEz"/>
+                                <constraint firstItem="GTD-q7-F2f" firstAttribute="width" secondItem="tB5-pg-oPW" secondAttribute="width" multiplier="1:2" id="X0T-XU-2Mz"/>
+                                <constraint firstAttribute="trailing" secondItem="9ie-jq-9nY" secondAttribute="trailing" id="vid-Cm-4Vo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tB5-pg-oPW" firstAttribute="centerY" secondItem="H8c-Ex-jx7" secondAttribute="centerY" id="7PU-bZ-klL"/>
+                        <constraint firstItem="tB5-pg-oPW" firstAttribute="width" secondItem="H8c-Ex-jx7" secondAttribute="width" multiplier="2:1" id="EPZ-pA-ivN"/>
+                        <constraint firstAttribute="bottom" secondItem="tB5-pg-oPW" secondAttribute="bottom" id="GGq-zg-LRe"/>
+                        <constraint firstItem="tB5-pg-oPW" firstAttribute="top" secondItem="H8c-Ex-jx7" secondAttribute="top" id="IEU-km-47y"/>
+                        <constraint firstItem="tB5-pg-oPW" firstAttribute="leading" secondItem="H8c-Ex-jx7" secondAttribute="leading" id="pQH-aQ-K6e"/>
+                        <constraint firstAttribute="trailing" secondItem="tB5-pg-oPW" secondAttribute="trailing" id="qpS-UZ-rVo"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="H8c-Ex-jx7" secondAttribute="bottom" id="9Po-sV-liP"/>
+                <constraint firstItem="H8c-Ex-jx7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kSX-rr-45n"/>
+                <constraint firstItem="H8c-Ex-jx7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lEU-nc-MgR"/>
+                <constraint firstAttribute="trailing" secondItem="H8c-Ex-jx7" secondAttribute="trailing" id="oMT-zp-1cJ"/>
+            </constraints>
             <point key="canvasLocation" x="33.5" y="115.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="20170720-中華電信-通話紀錄-灰" width="40" height="40"/>
+        <image name="20170720-中華電信-通話紀錄-藍" width="40" height="40"/>
+        <image name="22@3x20170720" width="60" height="60"/>
+        <image name="4@3x20170720" width="60" height="60"/>
+        <image name="9@3x20170720" width="60" height="60"/>
+    </resources>
 </document>
