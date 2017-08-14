@@ -8,7 +8,9 @@
 
 #import "AddDetailViewController.h"
 #import "PhoneViewController.h"
-@interface AddDetailViewController ()
+#import "AddRessBookViewController.h"
+@interface AddDetailViewController ()<UIScrollViewDelegate>
+@property (strong, nonatomic) UIScrollView *scrollView;
 
 @end
 
@@ -18,20 +20,54 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    [self creatScrollView];
     [self createUI];
 
 
 }
+- (void)creatScrollView{
+
+    self.scrollView = [[UIScrollView alloc]initWithFrame:HCGRECT(0, 0, ScreenWidth, ScreenHeight - 135)];
+    NSInteger scrollHeight = self.scrollView.height;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.delegate = self;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth, scrollHeight );
+    [self.view addSubview:self.scrollView];
+
+}
 - (void)createUI{
+    
+    UIView *vvv = [[UIView alloc] initWithFrame:HCGRECT(0, 0, ScreenWidth, 50)];
+    vvv.backgroundColor = [UIColor colorWithRed:222/255.0 green:222/255.0 blue:222/255.0 alpha:1];
+    [self.scrollView addSubview:vvv];
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 23, 150, 40);
+    button.frame = CGRectMake(0, 3, 150, 45);
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setImageEdgeInsets:UIEdgeInsetsMake(0, -85, 0, 0)];
     [button setImage:[UIImage imageNamed:@"btn_backBlack"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(clickbacktwo:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    [vvv addSubview:button];
     
-    UIImageView *im  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2-40, 50, 100, 100)];
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button2.frame = CGRectMake(ScreenWidth/2+40, 3, 80, 45);
+    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button2 setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [button2 setImage:[UIImage imageNamed:@"delete_default"] forState:UIControlStateNormal];
+    [button2 addTarget:self action:@selector(clickbacksc:) forControlEvents:UIControlEventTouchUpInside];
+    [vvv addSubview:button2];
+    
+    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button3.frame = CGRectMake(ScreenWidth-80, 3, 80, 45);
+    [button3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button3 setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [button3 setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
+    [button3 addTarget:self action:@selector(clickbackxg:) forControlEvents:UIControlEventTouchUpInside];
+    [vvv addSubview:button3];
+    
+    UIImageView *im  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2-40, 80, 100, 100)];
     UIImage *image = [UIImage imageNamed:@"5@3x20170720"];
     im.image = image;
     im.layer.masksToBounds = YES;
@@ -60,7 +96,7 @@
     [self.view addSubview:lb2];
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
-    button1.frame = CGRectMake(ScreenWidth/2-16, CGRectGetMaxY(lb2.frame)+5, 50, 50);
+    button1.frame = CGRectMake(ScreenWidth/2-10, CGRectGetMaxY(lb2.frame)+5, 40, 40);
     [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button1 setImageEdgeInsets:UIEdgeInsetsMake(8, 8, 10, 10)];
     button1.backgroundColor = [UIColor orangeColor];
@@ -75,11 +111,20 @@
 
 //pop返回方法，如果是push过来的就会使用此方法
 - (void)clickbacktwo:(UIBarButtonItem *)but {
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:YES];
-
+    
+    AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
+    [self addChildViewController:aVC];
+    aVC.view.backgroundColor  = [UIColor whiteColor];
+    [self.scrollView addSubview:aVC.view];
 }
-
+//删除
+- (void)clickbacksc:(UIBarButtonItem *)but {
+    
+}
+//修改
+- (void)clickbackxg:(UIBarButtonItem *)but {
+    
+}
 - (void)clickbackphone:(UIBarButtonItem *)but {
     PhoneViewController *meVc = [[PhoneViewController alloc]init];
     meVc.strPhone = _strPhone;

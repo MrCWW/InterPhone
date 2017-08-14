@@ -76,8 +76,15 @@
 #import "AFNTool.h"
 #import "UIImageView+WebCache.h"
 #import "SDImageCache.h"
+//SDK
+#import "UCSIPCCManager.h"
+#import "UCSUserDefaultManager.h"
+#import "SVProgressHUD.h"
+#import "UIView+Convenience.h"
 
-
+#ifdef __OBJC__
+#import "DialerViewController.h" 
+#endif
 
 
 #endif /* PrefixHeader_pch */

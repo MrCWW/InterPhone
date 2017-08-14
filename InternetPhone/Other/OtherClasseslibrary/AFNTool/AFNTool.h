@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, RequsetBodyStyle){
  *  @param body      网络请求携带的Body
  *  @param style     请求返回的数据的格式
  *  @param bodyStyle 请求返回的数据的格式
- *  @param dic       请求头
+ *  @param cookies       请求头
  *  @param success   成功调用的Block
  *  @param failure   失败调用的Block
  */

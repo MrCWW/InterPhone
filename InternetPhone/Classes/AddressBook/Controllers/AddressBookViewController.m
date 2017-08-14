@@ -11,7 +11,9 @@
 #import "contTableViewCell.h"
 #import <ContactsUI/ContactsUI.h>
 #import "AddDetailViewController.h"
-@interface AddRessBookViewController ()
+@interface AddRessBookViewController ()<UIScrollViewDelegate>
+@property (strong, nonatomic) UIScrollView *scrollView;
+@property (nonatomic, strong)  UIView *lineView;
 
 @end
 
@@ -26,16 +28,35 @@
     _PHONE = [[NSMutableArray alloc] init];
 
     [self loadContactList];
-    [self creatTableView];
- 
+    [self creatScrollView];
+
 
 }
--(void)creatTableView{
-    self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 45, ScreenWidth, ScreenHeight-180)];
+- (void)creatScrollView {
+    self.scrollView = [[UIScrollView alloc]initWithFrame:HCGRECT(0, 0, ScreenWidth, ScreenHeight - 135)];
+    NSInteger scrollHeight = self.scrollView.height;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.delegate = self;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth, scrollHeight );
+    [self.view addSubview:self.scrollView];
+    
+
+    UIView *vvv = [[UIView alloc] initWithFrame:HCGRECT(0, 0, ScreenWidth, ScreenHeight-100)];
+    [self.scrollView addSubview:vvv];
+
+    self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 45, ScreenWidth, ScreenHeight-190)];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     self.myTableView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.myTableView];
+    [vvv addSubview:self.myTableView];
+
+
+
+    
+    _mysearchbar.frame = HCGRECT(0, 0, ScreenWidth, 40);
+    [vvv addSubview:_mysearchbar];
     //点击空白处收回键盘
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -43,8 +64,12 @@
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];
 
-    
+
 }
+
+
+
+
 -(void)reloadContactList {
     [cities removeAllObjects];
     [_filteredCities removeAllObjects];
@@ -194,26 +219,48 @@
 
     if(_isFiltered == YES)
     {
-        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
-        TsdVc.strname = [_filteredCities objectAtIndex:indexPath.row];
-        TsdVc.strPhone = [_PHONE objectAtIndex:indexPath.row];
-        [self.navigationController pushViewController:TsdVc animated:YES];
+//        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
+//        TsdVc.strname = [_filteredCities objectAtIndex:indexPath.row];
+//        TsdVc.strPhone = [_PHONE objectAtIndex:indexPath.row];
+//        [self.navigationController pushViewController:TsdVc animated:YES];
+        
+        NSInteger scrollHeight = self.scrollView.height;
+        AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
+        aVC.strname = [_filteredCities objectAtIndex:indexPath.row];
+        aVC.strPhone = [_PHONE objectAtIndex:indexPath.row];
+        [self addChildViewController:aVC];
+        aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
+        aVC.view.backgroundColor  = [UIColor whiteColor];
+        [self.scrollView addSubview:aVC.view];
         
     }
     else
     {
-        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
+//        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
+//        CNContact* contact = [cities objectAtIndex:indexPath.row];
+//        TsdVc.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+//        NSString *phoneNumber = @"";
+//        phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
+//        TsdVc.strPhone = phoneNumber;
+//        [self.navigationController pushViewController:TsdVc animated:YES];
+        
+        NSInteger scrollHeight = self.scrollView.height;
+        AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
         CNContact* contact = [cities objectAtIndex:indexPath.row];
-        TsdVc.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+        aVC.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
         NSString *phoneNumber = @"";
         phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
-        TsdVc.strPhone = phoneNumber;
-        [self.navigationController pushViewController:TsdVc animated:YES];
+        aVC.strPhone = phoneNumber;
+        [self addChildViewController:aVC];
+        aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
+        aVC.view.backgroundColor  = [UIColor whiteColor];
+        [self.scrollView addSubview:aVC.view];
     }
    
     
     
 }
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [_mysearchbar resignFirstResponder];
