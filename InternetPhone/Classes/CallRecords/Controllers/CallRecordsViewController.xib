@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                                 <constraint firstAttribute="width" constant="50" id="XCY-ji-4uk"/>
                                                 <constraint firstAttribute="height" constant="30" id="YNO-Fo-CpF"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="20170720-中華電信-通話紀錄-藍"/>
+                                            <state key="normal" title="Button" image="history_all_default"/>
                                             <connections>
                                                 <action selector="answerAction:" destination="-1" eventType="touchUpInside" id="VEf-pI-V03"/>
                                             </connections>
@@ -62,7 +62,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="sqP-Z9-Sua"/>
                                                 <constraint firstAttribute="width" constant="46" id="zeq-b4-dFI"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="9@3x20170720"/>
+                                            <state key="normal" title="Button" image="edit_list_default"/>
                                             <connections>
                                                 <action selector="eidtCallAction:" destination="-1" eventType="touchUpInside" id="u3M-Wf-MlU"/>
                                             </connections>
@@ -88,7 +88,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="RRO-WE-5ht"/>
                                                 <constraint firstAttribute="width" constant="50" id="V3b-AV-uoZ"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="4@3x20170720"/>
+                                            <state key="normal" title="Button" image="cancel_edit_default"/>
                                             <connections>
                                                 <action selector="backFirstViewAction:" destination="-1" eventType="touchUpInside" id="f2F-Sf-Sqk"/>
                                             </connections>
@@ -99,13 +99,13 @@
                                                 <constraint firstAttribute="height" constant="30" id="Bak-9v-WYA"/>
                                                 <constraint firstAttribute="width" constant="46" id="wJr-ZU-Bbi"/>
                                             </constraints>
-                                            <state key="normal" title="Button" image="22@3x20170720"/>
+                                            <state key="normal" title="Button" image="delete_default"/>
                                             <connections>
                                                 <action selector="goAddressBookAction:" destination="-1" eventType="touchUpInside" id="RaL-sr-1p4"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="9sE-5z-o5C" firstAttribute="centerY" secondItem="B8Y-6x-2Up" secondAttribute="centerY" id="2xg-1W-kD7"/>
                                         <constraint firstItem="B8Y-6x-2Up" firstAttribute="centerY" secondItem="9ie-jq-9nY" secondAttribute="centerY" id="Jez-NH-D2p"/>
@@ -148,9 +148,9 @@
     </objects>
     <resources>
         <image name="20170720-中華電信-通話紀錄-灰" width="40" height="40"/>
-        <image name="20170720-中華電信-通話紀錄-藍" width="40" height="40"/>
-        <image name="22@3x20170720" width="60" height="60"/>
-        <image name="4@3x20170720" width="60" height="60"/>
-        <image name="9@3x20170720" width="60" height="60"/>
+        <image name="cancel_edit_default" width="29" height="29"/>
+        <image name="delete_default" width="21" height="28"/>
+        <image name="edit_list_default" width="30" height="28"/>
+        <image name="history_all_default" width="33" height="32"/>
     </resources>
 </document>

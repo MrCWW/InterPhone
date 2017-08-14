@@ -34,12 +34,12 @@
 }
 - (void)creatScrollView {
     self.scrollView = [[UIScrollView alloc]initWithFrame:HCGRECT(0, 0, ScreenWidth, ScreenHeight - 135)];
-    NSInteger scrollHeight = self.scrollView.height;
+//    NSInteger scrollHeight = self.scrollView.height;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.bounces = NO;
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth, scrollHeight );
+//    self.scrollView.contentSize = CGSizeMake(ScreenWidth, scrollHeight );
     [self.view addSubview:self.scrollView];
     
 
