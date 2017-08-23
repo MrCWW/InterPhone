@@ -219,10 +219,6 @@
 
     if(_isFiltered == YES)
     {
-//        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
-//        TsdVc.strname = [_filteredCities objectAtIndex:indexPath.row];
-//        TsdVc.strPhone = [_PHONE objectAtIndex:indexPath.row];
-//        [self.navigationController pushViewController:TsdVc animated:YES];
         
         NSInteger scrollHeight = self.scrollView.height;
         AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
@@ -236,19 +232,14 @@
     }
     else
     {
-//        AddDetailViewController *TsdVc = [[AddDetailViewController alloc]init];
-//        CNContact* contact = [cities objectAtIndex:indexPath.row];
-//        TsdVc.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
-//        NSString *phoneNumber = @"";
-//        phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
-//        TsdVc.strPhone = phoneNumber;
-//        [self.navigationController pushViewController:TsdVc animated:YES];
         
         NSInteger scrollHeight = self.scrollView.height;
         AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
         CNContact* contact = [cities objectAtIndex:indexPath.row];
         aVC.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+        aVC.arraytxl = [cities objectAtIndex:indexPath.row];
         NSString *phoneNumber = @"";
+        
         phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
         aVC.strPhone = phoneNumber;
         [self addChildViewController:aVC];

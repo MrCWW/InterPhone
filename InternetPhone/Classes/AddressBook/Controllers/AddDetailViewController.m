@@ -9,10 +9,17 @@
 #import "AddDetailViewController.h"
 #import "PhoneViewController.h"
 #import "AddRessBookViewController.h"
+#import <Contacts/Contacts.h>
+
 @interface AddDetailViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong,nonatomic) UIButton *btnone;
 @property (strong,nonatomic) UIButton *btnTwo;
+@property (nonatomic,copy) UITextField *mmField;
+@property (nonatomic,copy) UITextField *mxmField;
+@property (nonatomic,copy) UITextField *sipField;
+@property (nonatomic,copy) UITextField *phoneField;
+
 
 @end
 
@@ -65,6 +72,8 @@
     [_btnone setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     [_btnone setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
     [_btnone addTarget:self action:@selector(clickbackxg:) forControlEvents:UIControlEventTouchUpInside];
+    
+    _btnone.selected = NO;
     [vvv addSubview:_btnone];
     
     UIImageView *im  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth/2-40, 80, 100, 100)];
@@ -111,46 +120,125 @@
 
 //
 - (void)clickbacktwo:(UIBarButtonItem *)but {
-    
-    if ((self.btnTwo.selected = !self.btnTwo.selected)) {
-        [_btnone setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
-        [_btnTwo setImage:[UIImage imageNamed:@"btn_backBlack"] forState:UIControlStateNormal];
-        self.btnTwo.userInteractionEnabled = YES;
-
-    }else {
-        
+    if ((self.btnone.selected = !self.btnone.selected)) {
         AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
         [self addChildViewController:aVC];
         [self.scrollView addSubview:aVC.view];
 
-    }
-    
-    
-    
+    }else{
+        [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 
+        [_btnone setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
+        [_btnTwo setImage:[UIImage imageNamed:@"btn_backBlack"] forState:UIControlStateNormal];
+        [self createUI];
+
+    }
+   
 }
 //删除
 - (void)clickbacksc:(UIBarButtonItem *)but {
+    UIAlertView *alerat = [[UIAlertView alloc] initWithTitle:@"提示" message:@"确认删除联系人？" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alerat.tag = 1001;
+    alerat.delegate = self;
+    [alerat show];
     
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (alertView.tag == 1001) {
+        if (buttonIndex == 0) {
+            
+            
+        }else if(buttonIndex == 1){
+            //删除联系人
+            
+        }
+    }
+}
+
+-(void)deleteContact:(CNContact*)contact {
+    CNMutableContact *mutableContact = contact.mutableCopy;
+    CNContactStore *store = [[CNContactStore alloc] init];
+    CNSaveRequest *deleteRequest = [[CNSaveRequest alloc] init];
+    [deleteRequest deleteContact:mutableContact];
+    
+    NSError *error;
+    if([store executeSaveRequest:deleteRequest error:&error]) {
+        NSLog(@"delete complete");
+    }else {
+        NSLog(@"delete error : %@", [error description]);
+    }
+    
+}
+
 //修改
 - (void)clickbackxg:(UIBarButtonItem *)but {
     if ((self.btnone.selected = !self.btnone.selected)) {
+        
         [_btnone setImage:[UIImage imageNamed:@"valid_default"] forState:UIControlStateNormal];
         [_btnTwo setImage:[UIImage imageNamed:@"cancel_edit_default"] forState:UIControlStateNormal];
         self.btnone.userInteractionEnabled = YES;
-
+        
+            UIView *viewphone  = [[UIView alloc] initWithFrame:CGRectMake(0, 180, ScreenWidth, ScreenHeight)];
+            viewphone.backgroundColor = [UIColor whiteColor];
+            [self.view addSubview:viewphone];
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-3,5, 100, 30)];
+            label.text = @"姓名";
+            [viewphone addSubview:label];
+            _mmField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label.frame)+5, ScreenWidth-46, 30)];
+            _mmField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
+            [_mmField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
+            _mmField.text = _strname;
+            [viewphone addSubview:_mmField];
+            
+            UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_mmField.frame)+5, 100, 30)];
+            label2.text = @"sip 地址";
+            [viewphone addSubview:label2];
+            _sipField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label2.frame)+5, ScreenWidth-46, 30)];
+            _sipField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
+            [_sipField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
+            [viewphone addSubview:_sipField];
+            
+            UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_sipField.frame)+5, 100, 30)];
+            label3.text = @"電話號碼";
+            [viewphone addSubview:label3];
+            _phoneField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label3.frame)+5, ScreenWidth-46, 30)];
+            _phoneField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
+            [_phoneField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
+            _phoneField.text = _strPhone;
+            [viewphone addSubview:_phoneField];
+        
 
         
     }else {
+
+//        [self saveContact:_mmField.text givenName:@"" phoneNumber:_phoneField.text];
+
+        //删除子View
+        [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [_btnone setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
         [_btnTwo setImage:[UIImage imageNamed:@"btn_backBlack"] forState:UIControlStateNormal];
         self.btnTwo.userInteractionEnabled = YES;
-        self.btnTwo.enabled = NO;
+        [self createUI];
 
     }
     
 }
+-(void)saveContact:(NSString*)familyName givenName:(NSString*)givenName phoneNumber:(NSString*)phoneNumber {
+    CNMutableContact *mutableContact = [[CNMutableContact alloc] init];
+    
+    mutableContact.givenName = givenName;
+    mutableContact.familyName = familyName;
+    CNPhoneNumber * phone =[CNPhoneNumber phoneNumberWithStringValue:phoneNumber];
+    
+    mutableContact.phoneNumbers = [[NSArray alloc] initWithObjects:[CNLabeledValue labeledValueWithLabel:CNLabelPhoneNumberiPhone value:phone], nil];
+    CNContactStore *store = [[CNContactStore alloc] init];
+    CNSaveRequest *saveRequest = [[CNSaveRequest alloc] init];
+    
+    [saveRequest addContact:mutableContact toContainerWithIdentifier:store.defaultContainerIdentifier];
+    
+}
+
 
 - (void)clickbackphone:(UIBarButtonItem *)but {
 //    PhoneViewController *meVc = [[PhoneViewController alloc]init];
