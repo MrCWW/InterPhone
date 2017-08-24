@@ -19,6 +19,8 @@
                 <outlet property="phonePic" destination="e0T-Fw-lKg" id="EKB-yB-y9O"/>
                 <outlet property="setLabel" destination="4AM-Cs-reG" id="RLh-EV-8g6"/>
                 <outlet property="setPic" destination="0DW-6A-V8l" id="uca-uQ-tZl"/>
+                <outlet property="stateLabel" destination="RFE-hd-O7v" id="G2e-Va-Na3"/>
+                <outlet property="statusView" destination="LTI-Sq-lPM" id="7AS-FT-A7O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,7 +44,7 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-Sq-lPM">
                                     <rect key="frame" x="2" y="2" width="10" height="10"/>
-                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.55294117647058827" green="0.76078431372549016" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="10" id="BcS-Sh-ARG"/>
                                         <constraint firstAttribute="width" constant="10" id="zma-f3-fIs"/>

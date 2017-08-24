@@ -10,8 +10,9 @@
 #import "LoginViewController.h"
 #import "HBaseNavigationController.h"
 #import "AHomePageViewController.h"
-@interface AppDelegate ()
-
+@interface AppDelegate ()<UCSIPCCDelegate>
+@property (nonatomic, strong) AHomePageViewController *dialerVC;
+@property (nonatomic, strong) LoginViewController *vc;
 @end
 
 @implementation AppDelegate
@@ -23,43 +24,66 @@
     
     NSNumber *num = Here_Is_Login;
     if (num == nil) {
-        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+        self.vc = [[LoginViewController alloc] init];
+        self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
     }else{
         if ([num intValue] == 1) {
-//     [self.window setRootViewController:[A mainPageViewController]];
+            //     [self.window setRootViewController:[A mainPageViewController]];
+            self.dialerVC = [[AHomePageViewController alloc] init];
+            [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
+                 [[UCSIPCCManager instance] addProxyConfig:Here_Get_UserName password:Here_Get_passWord displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
+
         }else{
-            self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+            self.vc = [[LoginViewController alloc] init];
+            self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
         }
     }
     [self.window makeKeyAndVisible];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userloginSuc) name:@"UserLoginSuc" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userTokenIvalid) name:@"userTokenInvalidNotification" object:nil];
     
-
+    
     [self.window makeKeyAndVisible];
-    [self regiestNotif];
-
+    [self setNotification];
+    //    [self regiestNotif];
+    
     return YES;
 }
 
-//注册通知
--(void)regiestNotif{
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quit) name:@"quit" object:nil];
+- (void)setNotification{
+    
+    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callStateUpdateEvent:) name:kUCSCallUpdate object:nil];
+    
+    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registrationUpdateEvent:) name:kUCSRegistrationUpdate object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userConfigSucceedEvent) name:@"addConfigSucceed" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userConfigSucceedEvent) name:@"removeConfigSucceed" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goConfigEvent) name:@"goConfig" object:nil];
+    
+    [[UCSIPCCManager instance] startUCSphone];
+    
+    [[UCSIPCCManager instance] setDelegate:self];
 }
 
--(void)quit{
-    
-    MBProgressHUD *hud = [MBProgressHUD lc_showMessag:@"正在退出" toView:nil];
-    [self login];
-    [hud hide:YES];
-    
-}
--(void)login{
-    LoginViewController *loginVC = [[LoginViewController alloc]init];
-    [self.window setRootViewController:loginVC];
-    
-}
+////注册通知
+//-(void)regiestNotif{
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(quit) name:@"quit" object:nil];
+//}
+//
+//-(void)quit{
+//
+//    MBProgressHUD *hud = [MBProgressHUD lc_showMessag:@"正在退出" toView:nil];
+//    [self login];
+//    [hud hide:YES];
+//
+//}
+//-(void)login{
+//    LoginViewController *loginVC = [[LoginViewController alloc]init];
+//    [self.window setRootViewController:loginVC];
+//
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -91,17 +115,75 @@
     
     [[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"isLogin"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    self.vc = [[LoginViewController alloc] init];
+    self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
     
     
 }
 
 //用户登录成功
 - (void)userloginSuc {
+    [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"isLogin"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [MBProgressHUD showText:@"登录成功" toView:nil];
-    [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:[[AHomePageViewController alloc] init]]];
-       [self.window makeKeyAndVisible];
+    self.dialerVC = [[AHomePageViewController alloc] init];
+    [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
+    [self.window makeKeyAndVisible];
     
+}
+//登录回调方法
+- (void)onRegisterStateChange:(UCSRegistrationState)state message:(const char *)message
+{
+    //    NSLog(@"{\nstate:%d, \nmessage:%s\n}", state, message);
+    
+    switch (state) {
+        case UCSRegistrationOk: {
+            // 登陆成功
+            {
+                //在登录页，登录成功的话，跳主页
+                if ([Here_Is_Login integerValue] ==0) {
+                    [self userloginSuc];
+                }
+                [self.dialerVC onRegisterStateChange:state message:message];
+            }
+            break;
+        }
+        case UCSRegistrationNone:
+        case UCSRegistrationCleared: {
+//            self.stateLabel.textColor = [UIColor blackColor];
+//            self.stateLabel.text = @"· 未登录";
+//            self.statusView.backgroundColor = [UIColor redColor];
+            //未登录，登录失败跳登录页
+            if ([Here_Is_Login integerValue] == 1) {
+                
+                [self userTokenIvalid];
+            }
+//          [MBProgressHUD showText:@"登录失败" toView:nil];
+            break;
+        }
+        case UCSRegistrationFailed: {
+            {
+                //在主页，登录失败跳登录页
+                if ([Here_Is_Login integerValue] == 1) {
+                    
+                    [self userTokenIvalid];
+                }
+                 [MBProgressHUD showText:@"登录失败" toView:nil];
+                
+            }
+            break;
+        }
+        case UCSRegistrationProgress: {
+            {
+                 [MBProgressHUD showText:@"登录中" toView:nil];
+            }
+            break;
+        }
+        default:break;
+    }
+
+    
+    [self.dialerVC onRegisterStateChange:state message:message];
 }
 
 

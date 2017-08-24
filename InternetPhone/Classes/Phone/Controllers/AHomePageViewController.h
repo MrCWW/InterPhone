@@ -9,5 +9,5 @@
 #import "HBaseViewController.h"
 
 @interface AHomePageViewController : HBaseViewController
-
+- (void)onRegisterStateChange:(UCSRegistrationState) state message:(const char*) message ;
 @end

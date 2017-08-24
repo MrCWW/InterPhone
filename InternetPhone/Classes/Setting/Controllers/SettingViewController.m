@@ -39,8 +39,8 @@
     
 }
 - (IBAction)quit:(id)sender {
-    
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"quit" object:nil];
+        [[UCSIPCCManager instance] removeAccount];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"userTokenInvalidNotification" object:nil];
 
 }
 

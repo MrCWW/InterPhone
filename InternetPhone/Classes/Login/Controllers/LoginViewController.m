@@ -14,9 +14,14 @@
 
 @implementation LoginViewController
 - (IBAction)loginBtnAction:(id)sender {
-   // NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    //[userDefaults setObject:@1 forKey:@"isLogin"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoginSuc" object:nil];
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//    [userDefaults setObject:self.Loginaccount.text forKey:@"userNames"];
+//    [userDefaults setObject:self.Loginpasswd.text forKey:@"userPassword"];
+//    [userDefaults synchronize];
+    Here_Save_UserName(self.Loginaccount.text);
+    Here_Save_passWord(self.Loginpasswd.text);
+     [[UCSIPCCManager instance] addProxyConfig:self.Loginaccount.text password:self.Loginpasswd.text displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoginSuc" object:nil];
 }
 
 - (void)viewDidLoad {

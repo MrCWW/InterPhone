@@ -36,7 +36,13 @@
 #define Here_Ever_login [[NSUserDefaults standardUserDefaults] objectForKey:@"everLogin"]
 #define Here_Ever_Version [[NSUserDefaults standardUserDefaults] objectForKey:@"everversion"]
 
+#define Here_Save_UserName(userName)  [[NSUserDefaults standardUserDefaults] setObject:(userName) forKey:@"userName"];\
+[[NSUserDefaults standardUserDefaults] synchronize];
+#define Here_Get_UserName [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"]
 
+#define Here_Save_passWord(passWord)  [[NSUserDefaults standardUserDefaults] setObject:(passWord) forKey:@"passWord"];\
+[[NSUserDefaults standardUserDefaults] synchronize];
+#define Here_Get_passWord [[NSUserDefaults standardUserDefaults] objectForKey:@"passWord"]
 
 #define HCGRECT(x,y,w,h) CGRectMake(x, y, w, h)
 #define TimeLineCellHighlightedColor [UIColor colorWithRed:92/255.0 green:140/255.0 blue:193/255.0 alpha:1.0]
