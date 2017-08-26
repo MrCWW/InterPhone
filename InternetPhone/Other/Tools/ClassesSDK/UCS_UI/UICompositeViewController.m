@@ -274,9 +274,9 @@
 
     NSTimeInterval animationDuration = animated? 0.3f : 0.0;
 
-    [controller willRotateToInterfaceOrientation:orientation duration:animationDuration];
-    [controller willAnimateRotationToInterfaceOrientation:orientation duration:animationDuration];
-    [controller didRotateFromInterfaceOrientation:oldOrientation];
+//    [controller willRotateToInterfaceOrientation:orientation duration:animationDuration];
+//    [controller willAnimateRotationToInterfaceOrientation:orientation duration:animationDuration];
+//    [controller didRotateFromInterfaceOrientation:oldOrientation];
     [UIView animateWithDuration:animationDuration animations:^{
         [controller.view setFrame:frame];
     }];

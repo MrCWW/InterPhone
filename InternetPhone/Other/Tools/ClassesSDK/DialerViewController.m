@@ -17,7 +17,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-#import <AVFoundation/AVAudioSession.h>
+//#import <AVFoundation/AVAudioSession.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 #import "DialerViewController.h"
@@ -259,38 +259,5 @@ static UICompositeViewDescription *compositeDescription = nil;
     }
 
 }
-//- (void)registrationUpdateEvent:(NSNotification*)notif {}
-//
-//    NSLog(@"%@", notif);
-//    [self registrationUpdate:[[notif.userInfo objectForKey: @"state"] intValue]];
-//}
-//
-//- (void)registrationUpdate:(UCSRegistrationState)state {
-//    switch (state) {
-//        case UCSRegistrationOk: {
-//            // 登陆成功
-//            self.stateLabel.textColor = [UIColor colorWithRed:0.1126 green:0.5388 blue:0.1944 alpha:1.0];
-//            self.stateLabel.text = @"· 登录成功";
-//            break;
-//        }
-//        case UCSRegistrationNone:
-//        case UCSRegistrationCleared: {
-//            self.stateLabel.textColor = [UIColor blackColor];
-//            self.stateLabel.text = @"· 未登录";
-//            break;
-//        }
-//        case UCSRegistrationFailed: {
-//            self.stateLabel.textColor = [UIColor colorWithRed:0.9843 green:0.2588 blue:0.2039 alpha:1.0];
-//            self.stateLabel.text = @"· 登录失败";
-//            break;
-//        }
-//        case UCSRegistrationProgress: {
-//            self.stateLabel.textColor = [UIColor colorWithRed:0.9765 green:0.4039 blue:0.0 alpha:1.0];
-//            self.stateLabel.text = @"· 登录中...";
-//            break;
-//        }
-//        default:break;
-//    }
-//}
 
 @end

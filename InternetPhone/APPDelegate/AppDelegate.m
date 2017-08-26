@@ -65,7 +65,11 @@
     
     [[UCSIPCCManager instance] setDelegate:self];
 }
-
+- (void)userConfigSucceedEvent{
+   
+}
+- (void)goConfigEvent {
+}
 ////注册通知
 //-(void)regiestNotif{
 //
@@ -125,7 +129,7 @@
 - (void)userloginSuc {
     [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"isLogin"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    [MBProgressHUD showText:@"登录成功" toView:nil];
+    [MBProgressHUD showText:@"登錄成功" toView:nil];
     self.dialerVC = [[AHomePageViewController alloc] init];
     [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
     [self.window makeKeyAndVisible];
@@ -168,14 +172,14 @@
                     
                     [self userTokenIvalid];
                 }
-                 [MBProgressHUD showText:@"登录失败" toView:nil];
+                 [MBProgressHUD showText:@"登錄失败" toView:nil];
                 
             }
             break;
         }
         case UCSRegistrationProgress: {
             {
-                 [MBProgressHUD showText:@"登录中" toView:nil];
+                 [MBProgressHUD showText:@"登錄中" toView:nil];
             }
             break;
         }

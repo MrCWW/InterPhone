@@ -14,7 +14,7 @@
 
 @interface PJSearchBar : UISearchBar<UISearchBarDelegate>
 
-@property (nonatomic, weak) id <PJSearchBarDelegate> delegate;
+//@property (nonatomic, weak) id <PJSearchBarDelegate> delegate;
 @property (nonatomic, strong) UITextField *searchTextField;
 
 - (id)initWithFrame:(CGRect)frame placeholder:(NSString *)placeholder;

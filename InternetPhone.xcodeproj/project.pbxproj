@@ -40,7 +40,6 @@
 		249105BE1F22F20A00B370F5 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 249105461F22F20A00B370F5 /* AFURLResponseSerialization.m */; };
 		249105BF1F22F20A00B370F5 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 249105481F22F20A00B370F5 /* AFURLSessionManager.m */; };
 		249105C01F22F20A00B370F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 249105491F22F20A00B370F5 /* LICENSE */; };
-		249105C11F22F20A00B370F5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2491054A1F22F20A00B370F5 /* README.md */; };
 		249105C21F22F20A00B370F5 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491054D1F22F20A00B370F5 /* AFNetworkActivityIndicatorManager.m */; };
 		249105C31F22F20A00B370F5 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491054F1F22F20A00B370F5 /* UIActivityIndicatorView+AFNetworking.m */; };
 		249105C41F22F20A00B370F5 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 249105511F22F20A00B370F5 /* UIAlertView+AFNetworking.m */; };
@@ -50,9 +49,7 @@
 		249105C81F22F20A00B370F5 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491055B1F22F20A00B370F5 /* UIRefreshControl+AFNetworking.m */; };
 		249105C91F22F20A00B370F5 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491055D1F22F20A00B370F5 /* UIWebView+AFNetworking.m */; };
 		249105CA1F22F20A00B370F5 /* AFNTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 249105601F22F20A00B370F5 /* AFNTool.m */; };
-		249105CB1F22F20A00B370F5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 249105621F22F20A00B370F5 /* LICENSE */; };
 		249105CC1F22F20A00B370F5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 249105641F22F20A00B370F5 /* MBProgressHUD.m */; };
-		249105CD1F22F20A00B370F5 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 249105651F22F20A00B370F5 /* README.mdown */; };
 		249105CE1F22F20A00B370F5 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 249105691F22F20A00B370F5 /* MJRefreshAutoFooter.m */; };
 		249105CF1F22F20A00B370F5 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491056B1F22F20A00B370F5 /* MJRefreshBackFooter.m */; };
 		249105D01F22F20A00B370F5 /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491056D1F22F20A00B370F5 /* MJRefreshComponent.m */; };
@@ -144,7 +141,6 @@
 		EA6D73BE1F4174EA00DCB6F3 /* UITransparentTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D739B1F4174EA00DCB6F3 /* UITransparentTVCell.m */; };
 		EA6D73BF1F4174EA00DCB6F3 /* UIView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D739D1F4174EA00DCB6F3 /* UIView+Convenience.m */; };
 		EA6D73C01F4174EA00DCB6F3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA6D73A01F4174EA00DCB6F3 /* LICENSE.txt */; };
-		EA6D73C11F4174EA00DCB6F3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EA6D73A11F4174EA00DCB6F3 /* README.md */; };
 		EA6D73C21F4174EA00DCB6F3 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D73A41F4174EA00DCB6F3 /* SVIndefiniteAnimatedView.m */; };
 		EA6D73C31F4174EA00DCB6F3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EA6D73A51F4174EA00DCB6F3 /* SVProgressHUD.bundle */; };
 		EA6D73C41F4174EA00DCB6F3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D73A71F4174EA00DCB6F3 /* SVProgressHUD.m */; };
@@ -653,9 +649,9 @@
 		2491045C1F22EFF700B370F5 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				2491045D1F22EFF700B370F5 /* Controllers */,
 				EAEE5A411F302743003F6583 /* View */,
 				EAEE5A401F302734003F6583 /* Model */,
-				2491045D1F22EFF700B370F5 /* Controllers */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -1441,7 +1437,6 @@
 				EAEE5A451F302758003F6583 /* contTableViewCell.xib in Resources */,
 				2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */,
 				EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */,
-				249105CB1F22F20A00B370F5 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1497,7 +1492,6 @@
 				EA6D73B61F4174EA00DCB6F3 /* UICompositeViewController.m in Sources */,
 				249105BA1F22F20A00B370F5 /* AFNetworkReachabilityManager.m in Sources */,
 				EA6D73C21F4174EA00DCB6F3 /* SVIndefiniteAnimatedView.m in Sources */,
-				249105C11F22F20A00B370F5 /* README.md in Sources */,
 				249105C61F22F20A00B370F5 /* UIImageView+AFNetworking.m in Sources */,
 				EA6D73AA1F4174EA00DCB6F3 /* CallIncomingView.m in Sources */,
 				249105BE1F22F20A00B370F5 /* AFURLResponseSerialization.m in Sources */,
@@ -1507,7 +1501,6 @@
 				2442F4331F3FE667008BC593 /* AnswerCallViewController.m in Sources */,
 				249106261F22F3DD00B370F5 /* NSString+CalculatorHeight.m in Sources */,
 				249106241F22F3DD00B370F5 /* MBProgressHUD+AddHud.m in Sources */,
-				EA6D73C11F4174EA00DCB6F3 /* README.md in Sources */,
 				249105F01F22F20A00B370F5 /* UIImageView+WebCache.m in Sources */,
 				249106581F22F7C800B370F5 /* CallRecordsViewController.m in Sources */,
 				249105EB1F22F20A00B370F5 /* UIButton+WebCache.m in Sources */,
@@ -1567,7 +1560,6 @@
 				249105FD1F22F27A00B370F5 /* HBaseNavigationController.m in Sources */,
 				249106231F22F3DD00B370F5 /* CALayer+layerCategory.m in Sources */,
 				249105D01F22F20A00B370F5 /* MJRefreshComponent.m in Sources */,
-				249105CD1F22F20A00B370F5 /* README.mdown in Sources */,
 				249106271F22F3DD00B370F5 /* ShowAlter.m in Sources */,
 				249106291F22F3DD00B370F5 /* UIButton+Extension.m in Sources */,
 				249105E81F22F20A00B370F5 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1748,8 +1740,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/wangkun/Desktop/phone,
-					/Users/wangkun/Desktop/phone/libucsipccsdk.a,
 				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = YuTongZi.Hei.InternetPhone;
@@ -1771,8 +1761,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/wangkun/Desktop/phone,
-					/Users/wangkun/Desktop/phone/libucsipccsdk.a,
 				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = YuTongZi.Hei.InternetPhone;
