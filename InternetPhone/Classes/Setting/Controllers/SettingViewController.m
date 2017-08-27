@@ -10,6 +10,7 @@
 
 @interface SettingViewController ()
 @property (nonatomic,copy) UIButton *dlbutton;
+@property (nonatomic,assign) int chatType;
 
 @end
 
@@ -36,6 +37,8 @@
 
 - (void)backClidtc:(UIButton *)sender{
     
+ [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.eznippon.com/clause/"]]];
+
     
 }
 - (IBAction)quit:(id)sender {

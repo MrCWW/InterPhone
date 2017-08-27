@@ -12,5 +12,4 @@
 @property(nonatomic,strong)NSString *strname;//姓名
 @property(nonatomic,strong)NSString *strPhone;//手机号
 @property(nonatomic,strong)NSArray *arraytxl;
-
 @end
