@@ -101,10 +101,10 @@
              NSString *phoneNumber = @"";
              if( contact.phoneNumbers)
                  phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
-             
-             NSLog(@"phoneNumber = %@", phoneNumber);
-             NSLog(@"givenName = %@", contact.givenName);
-             NSLog(@"familyName = %@", contact.familyName);
+//             
+//             NSLog(@"phoneNumber = %@", phoneNumber);
+//             NSLog(@"givenName = %@", contact.givenName);
+//             NSLog(@"familyName = %@", contact.familyName);
              
              
              [cities addObject:contact];
@@ -189,10 +189,10 @@
              NSString *phoneNumber = @"";
              if( contact.phoneNumbers)
                  phoneNumber = [[[contact.phoneNumbers firstObject] value] stringValue];
-             
-             NSLog(@"phoneNumber = %@", phoneNumber);
-             NSLog(@"givenName = %@", contact.givenName);
-             NSLog(@"familyName = %@", contact.familyName);
+//             
+//             NSLog(@"phoneNumber = %@", phoneNumber);
+//             NSLog(@"givenName = %@", contact.givenName);
+//             NSLog(@"familyName = %@", contact.familyName);
              
              NSString *phoneNumber1 = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
              NSArray* array = [phoneNumber1 componentsSeparatedByString:@";"];

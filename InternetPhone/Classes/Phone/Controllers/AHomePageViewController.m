@@ -208,27 +208,29 @@
     switch (state) {
         case UCSRegistrationOk: {
             // 登陆成功
-            self.stateLabel.textColor = [UIColor colorWithRed:0.1126 green:0.5388 blue:0.1944 alpha:1.0];
-            self.stateLabel.text = @"· 登录成功";
+            self.stateLabel.text = @" 已登錄";
             self.statusView.backgroundColor = [UIColor colorWithRGB:0x8DC249];
+            self.stateLabel.textColor = [UIColor whiteColor];
             break;
         }
         case UCSRegistrationNone:
         case UCSRegistrationCleared: {
-            self.stateLabel.textColor = [UIColor blackColor];
-            self.stateLabel.text = @"· 未登录";
-                self.statusView.backgroundColor = [UIColor redColor];
+            self.stateLabel.text = @" 未登錄";
+            self.statusView.backgroundColor = [UIColor redColor];
+            self.stateLabel.textColor = [UIColor redColor];
+
             break;
         }
         case UCSRegistrationFailed: {
-            self.stateLabel.textColor = [UIColor colorWithRed:0.9843 green:0.2588 blue:0.2039 alpha:1.0];
-            self.stateLabel.text = @"· 登录失败";
+            self.stateLabel.text = @" 登錄失败";
             self.statusView.backgroundColor = [UIColor redColor];
+            self.stateLabel.textColor = [UIColor redColor];
+
             break;
         }
         case UCSRegistrationProgress: {
             self.stateLabel.textColor = [UIColor colorWithRed:0.9765 green:0.4039 blue:0.0 alpha:1.0];
-            self.stateLabel.text = @"· 登录中...";
+            self.stateLabel.text = @" 登錄中...";
             self.statusView.backgroundColor = [UIColor redColor];
             break;
         }

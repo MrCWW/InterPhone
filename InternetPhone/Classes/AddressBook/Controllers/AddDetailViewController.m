@@ -151,7 +151,10 @@
             
         }else if(buttonIndex == 1){
             //删除联系人
-            
+//            NSString *nsname = _strname;
+//            CNContact* contact = nsname;
+//            [self deleteContact:contact];
+
         }
     }
 }
@@ -165,6 +168,12 @@
     NSError *error;
     if([store executeSaveRequest:deleteRequest error:&error]) {
         NSLog(@"delete complete");
+//        [self arraytxl];
+//        AddRessBookViewController *add = [[AddRessBookViewController alloc] init];
+//        NSMutableArray *dataArr = [[NSMutableArray alloc]init];
+//        [add.cities addObjectsFromArray:_arraytxl];
+//        add.cities = dataArr;
+//        [self.navigationController pushViewController:add animated:YES];
     }else {
         NSLog(@"delete error : %@", [error description]);
     }

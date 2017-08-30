@@ -29,9 +29,9 @@
 @interface DialerViewController : UIViewController <UITextFieldDelegate, UICompositeViewDelegate> {
 }
 
-- (void)setAddress:(NSString*)address;
-- (void)call:(NSString*)address displayName:(NSString *)displayName;
-- (void)call:(NSString*)address;
+//- (void)setAddress:(NSString*)address;
+//- (void)call:(NSString*)address displayName:(NSString *)displayName;
+//- (void)call:(NSString*)address;
 
 @property (nonatomic, assign) BOOL transferMode;
 
@@ -60,8 +60,8 @@
 @property (nonatomic, retain) IBOutlet UIDigitButton* zeroButton;
 @property (nonatomic, retain) IBOutlet UIDigitButton* sharpButton;
 
-- (IBAction)onAddContactClick: (id) event;
-- (IBAction)onBackClick: (id) event;
+//- (IBAction)onAddContactClick: (id) event;
+//- (IBAction)onBackClick: (id) event;
 - (IBAction)onAddressChange: (id)sender;
 
 
