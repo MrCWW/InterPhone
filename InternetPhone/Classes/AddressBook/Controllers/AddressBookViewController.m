@@ -26,6 +26,7 @@
     cities = [[NSMutableArray alloc] init];
     _filteredCities = [[NSMutableArray alloc] init];
     _PHONE = [[NSMutableArray alloc] init];
+    _arrayname = [[NSMutableArray alloc] init];
 
     [self loadContactList];
     [self creatScrollView];
@@ -51,9 +52,6 @@
     self.myTableView.dataSource = self;
     self.myTableView.backgroundColor = [UIColor whiteColor];
     [vvv addSubview:self.myTableView];
-
-
-
     
     _mysearchbar.frame = HCGRECT(0, 0, ScreenWidth, 40);
     [vvv addSubview:_mysearchbar];
@@ -63,7 +61,6 @@
     tapGestureRecognizer.cancelsTouchesInView = NO;
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];
-
 
 }
 
@@ -133,8 +130,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    _myTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+//    if (_name != nil) {
+//        NSMutableArray *array = [[NSMutableArray alloc] init];
+//        NSString *str = _name;
+//        NSUInteger len = [str length];
+//        for(NSUInteger i=0; i<len; i++)
+//        {
+//            [array addObject:[NSNumber numberWithChar:[str characterAtIndex:i]]];
+//        }
+//        cities = array;
+//        CNContact* contact = [cities objectAtIndex:indexPath.row];
+//        [self deleteContact:contact];
+//    }
+    
 
+    _myTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     static NSString *cellIdentifer = @"cell";
     contTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
     if(cell == nil)
@@ -249,6 +259,21 @@
     }
    
     
+    
+}
+-(void)deleteContact:(CNContact*)contact {
+    CNMutableContact *mutableContact = contact.mutableCopy;
+    CNContactStore *store = [[CNContactStore alloc] init];
+    CNSaveRequest *deleteRequest = [[CNSaveRequest alloc] init];
+    [deleteRequest deleteContact:mutableContact];
+    
+    NSError *error;
+    if([store executeSaveRequest:deleteRequest error:&error]) {
+        NSLog(@"delete complete");
+        [self reloadContactList];
+    }else {
+        NSLog(@"delete error : %@", [error description]);
+    }
     
 }
 

@@ -151,34 +151,17 @@
             
         }else if(buttonIndex == 1){
             //删除联系人
-//            NSString *nsname = _strname;
-//            CNContact* contact = nsname;
-//            [self deleteContact:contact];
+            AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
+            [self addChildViewController:aVC];
+            aVC.name = _strname;
+            [self.scrollView addSubview:aVC.view];
+
+
 
         }
     }
 }
 
--(void)deleteContact:(CNContact*)contact {
-    CNMutableContact *mutableContact = contact.mutableCopy;
-    CNContactStore *store = [[CNContactStore alloc] init];
-    CNSaveRequest *deleteRequest = [[CNSaveRequest alloc] init];
-    [deleteRequest deleteContact:mutableContact];
-    
-    NSError *error;
-    if([store executeSaveRequest:deleteRequest error:&error]) {
-        NSLog(@"delete complete");
-//        [self arraytxl];
-//        AddRessBookViewController *add = [[AddRessBookViewController alloc] init];
-//        NSMutableArray *dataArr = [[NSMutableArray alloc]init];
-//        [add.cities addObjectsFromArray:_arraytxl];
-//        add.cities = dataArr;
-//        [self.navigationController pushViewController:add animated:YES];
-    }else {
-        NSLog(@"delete error : %@", [error description]);
-    }
-    
-}
 
 //修改
 - (void)clickbackxg:(UIBarButtonItem *)but {
@@ -250,17 +233,17 @@
 
 
 - (void)clickbackphone:(UIBarButtonItem *)but {
-//    PhoneViewController *meVc = [[PhoneViewController alloc]init];
-//    meVc.strPhone = _strPhone;
-//    [self.navigationController pushViewController:meVc animated:YES];
-//    
-//    NSInteger scrollHeight = self.scrollView.height;
-//    PhoneViewController *aVC = [[PhoneViewController alloc] init];
-//    aVC.strPhone = _strPhone;
-//    [self addChildViewController:aVC];
-//    aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
-//    aVC.view.backgroundColor  = [UIColor whiteColor];
-//    [self.scrollView addSubview:aVC.view];
+    PhoneViewController *meVc = [[PhoneViewController alloc]init];
+    meVc.strPhone = _strPhone;
+    [self.navigationController pushViewController:meVc animated:YES];
+    
+    NSInteger scrollHeight = self.scrollView.height;
+    PhoneViewController *aVC = [[PhoneViewController alloc] init];
+    aVC.strPhone = _strPhone;
+    [self addChildViewController:aVC];
+    aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
+    aVC.view.backgroundColor  = [UIColor whiteColor];
+    [self.scrollView addSubview:aVC.view];
 }
 
 - (void)didReceiveMemoryWarning {

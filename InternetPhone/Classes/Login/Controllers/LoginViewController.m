@@ -14,14 +14,12 @@
 
 @implementation LoginViewController
 - (IBAction)loginBtnAction:(id)sender {
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    [userDefaults setObject:self.Loginaccount.text forKey:@"userNames"];
-//    [userDefaults setObject:self.Loginpasswd.text forKey:@"userPassword"];
-//    [userDefaults synchronize];
+
     Here_Save_UserName(self.Loginaccount.text);
     Here_Save_passWord(self.Loginpasswd.text);
      [[UCSIPCCManager instance] addProxyConfig:self.Loginaccount.text password:self.Loginpasswd.text displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserLoginSuc" object:nil];
+    
+
 }
 //服务条款
 - (IBAction)servicebutton:(id)sender {
@@ -31,6 +29,7 @@
 - (IBAction)restbutton:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.eznippon.com/appprecautions/"]]];
 }
+//忘记密码
 - (IBAction)pswdbutton:(id)sender {
      [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://shop.eznippon.com/member/helper/card/cht_change_pass"]]];
 }

@@ -8,6 +8,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+#define Token [[[[NSUserDefaults standardUserDefaults] objectForKey:@"user"]objectForKey:@"user"] objectForKey:@"sessionToken"]
 
 #define iOS7Later ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
 #define iOS8Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f)

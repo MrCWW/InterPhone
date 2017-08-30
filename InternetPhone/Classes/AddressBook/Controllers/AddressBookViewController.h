@@ -17,6 +17,9 @@
 @property(nonatomic,strong)NSMutableArray *cities;
 @property(nonatomic,strong)NSMutableArray *filteredCities;
 @property(nonatomic,strong)NSMutableArray *PHONE;
+@property(nonatomic,strong)NSString *name;
+@property(nonatomic,strong)NSMutableArray *arrayname;
+
 
 @property BOOL isFiltered;
 @property(nonatomic,strong)UITableView *myTableView;

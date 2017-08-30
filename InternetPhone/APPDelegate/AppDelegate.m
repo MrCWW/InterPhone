@@ -19,8 +19,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
     
     NSNumber *num = Here_Is_Login;
     if (num == nil) {
@@ -51,10 +49,6 @@
 }
 
 - (void)setNotification{
-    
-    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callStateUpdateEvent:) name:kUCSCallUpdate object:nil];
-    
-    //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registrationUpdateEvent:) name:kUCSRegistrationUpdate object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userConfigSucceedEvent) name:@"addConfigSucceed" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userConfigSucceedEvent) name:@"removeConfigSucceed" object:nil];
