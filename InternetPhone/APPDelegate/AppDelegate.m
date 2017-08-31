@@ -31,6 +31,7 @@
             [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
                  [[UCSIPCCManager instance] addProxyConfig:Here_Get_UserName password:Here_Get_passWord displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
 
+
         }else{
             self.vc = [[LoginViewController alloc] init];
             self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
