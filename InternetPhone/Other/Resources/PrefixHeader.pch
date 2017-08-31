@@ -68,6 +68,12 @@
 
 #endif
 
+/**反归档取出HUserModel, 返回结果为HUserModel类型*/
+#define kUnarchiverHomepageModel (LoginModel *)[NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] objectForKey:@"userModel"]];
+
+/**归档存入HUserModel. 参数传HUserModel类型*/
+#define kArchiverHomepageModel(model) [[NSUserDefaults standardUserDefaults] setObject:[NSKeyedArchiver archivedDataWithRootObject:model] forKey:@"userModel"];
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 //#import "EMSDK.h"
@@ -79,6 +85,7 @@
 //#import "WSBURL.h"
 #import "UIColor+RGB.h"
 #import "MBProgressHUD+AddHud.h"
+#import "PhoneURL.h"
 
 #import "AFNTool.h"
 #import "UIImageView+WebCache.h"

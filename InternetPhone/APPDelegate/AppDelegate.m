@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "HBaseNavigationController.h"
 #import "AHomePageViewController.h"
+#import "LoginModel.h"
 @interface AppDelegate ()<UCSIPCCDelegate>
 @property (nonatomic, strong) AHomePageViewController *dialerVC;
 @property (nonatomic, strong) LoginViewController *vc;
@@ -27,9 +28,12 @@
     }else{
         if ([num intValue] == 1) {
             //     [self.window setRootViewController:[A mainPageViewController]];
+            LoginModel *model = kUnarchiverHomepageModel;
             self.dialerVC = [[AHomePageViewController alloc] init];
             [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
-                 [[UCSIPCCManager instance] addProxyConfig:Here_Get_UserName password:Here_Get_passWord displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
+//                 [[UCSIPCCManager instance] addProxyConfig:Here_Get_UserName password:Here_Get_passWord displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
+            [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+
 
 
         }else{

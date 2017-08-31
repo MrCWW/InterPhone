@@ -53,5 +53,7 @@ typedef NS_ENUM(NSInteger, RequsetBodyStyle){
 + (void)openAFNetworkReachability;
 //开启主界面请求网络
 + (void)monitorNetworkStatus:(void(^)(AFNetworkReachabilityStatus status))AFNetworkStatus;
+/**Phone Post网络请求封装*/
++(void)postPhone:(NSString *)url Body:(id)body success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "LoginModel.h"
 @interface LoginViewController ()
 
 @end
@@ -18,23 +18,38 @@
     Here_Save_UserName(self.Loginaccount.text);
     Here_Save_passWord(self.Loginpasswd.text);
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
     NSDictionary *dict = @{@"username": self.Loginaccount.text, @"password" : self.Loginpasswd.text, @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
-    
-    [manager POST:@"http://175.41.52.241/api/login.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", responseObject);
-        
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:responseObject forKey:@"username"];
-        [userDefaults synchronize];
-        
-         [[UCSIPCCManager instance] addProxyConfig:self.Loginaccount.text password:self.Loginpasswd.text displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
-     
-        NSLog(@"%@", [NSThread currentThread]);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
-    }];
+[AFNTool postPhone:Phone_URL_login_php Body:dict success:^(id result) {
+    NSLog(@"%@", result);
+
+    if ([result[@"message"] isEqualToString:@"Login Successful"]) {
+        NSDictionary *dic = result;
+        LoginModel *model = [LoginModel modelWithDic:dic];
+        kArchiverHomepageModel(model);
+
+        [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+    }else {
+        [MBProgressHUD showText:@"登錄失败" toView:nil];
+    }
+
+} failure:^(NSError *error) {
+    [MBProgressHUD showText:@"登錄失败" toView:nil];
+}];
+//    [manager POST:@"http://175.41.52.241/api/login.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"%@", responseObject);
+//        
+//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//        [userDefaults setObject:responseObject forKey:@"username"];
+//        [userDefaults synchronize];
+//        
+//         [[UCSIPCCManager instance] addProxyConfig:self.Loginaccount.text password:self.Loginpasswd.text displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
+//     
+//        NSLog(@"%@", [NSThread currentThread]);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
 
 }
 //服务条款

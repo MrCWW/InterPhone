@@ -274,4 +274,19 @@
     });
 
 }
++(void)postPhone:(NSString *)url Body:(id)body success:(void (^)(id result))success failure:(void (^)(NSError * error))failure {
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+    [manager POST:url parameters:body success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        if (success) {
+            success(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+            
+        }
+    }];
+}
+
 @end
