@@ -95,7 +95,9 @@
 #import "UCSUserDefaultManager.h"
 #import "SVProgressHUD.h"
 #import "UIView+Convenience.h"
-
+//CoreDate
+#import "CoreDataAPI.h"
+#import "PhoneRecoredModel.h"
 #ifdef __OBJC__
 #import "DialerViewController.h" 
 #endif

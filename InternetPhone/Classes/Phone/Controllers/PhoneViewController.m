@@ -13,7 +13,7 @@
 #define CollectionHeight ScreenHeight - 234
 @interface PhoneViewController ()<CategorySelectDelegete,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
-@property (weak, nonatomic) IBOutlet UITextField *numberTextFiled;
+//@property (weak, nonatomic) IBOutlet UITextField *numberTextFiled;
 @property (weak, nonatomic) IBOutlet UILabel *qianzhuiLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
 //城市
@@ -35,6 +35,16 @@
 //        _dataSaveNumberArr = [NSMutableArray array];
 //    }
 //    return _dataSaveNumberArr;
+//}
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:YES];
+//    if (self.strPhone.length) {
+//        self.numberTextFiled.text = _strPhone;
+//    }
+//}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:YES];
+//    self.strPhone = @"";
 //}
 - (NSMutableString *)saveNumStr{
     if (!_saveNumStr) {
@@ -134,8 +144,26 @@
     self.showView = showView;
     [self.view addSubview:showView];
 }
-//拨号按钮
+#pragma mark - 拨号按钮触发方法
 - (IBAction)callBtnAction:(id)sender {
+    if (_numberTextFiled.text.length) {
+        //存储日期
+         NSDate *today = [NSDate date];
+//        NSDate * date = p.updatedate;
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        format.dateFormat = @"yyyy年MM月dd号";
+        //日期字符串
+        NSString *string = [format stringFromDate:today];
+        PhoneRecoredModel *model = [[PhoneRecoredModel alloc] init];
+        model.name = _strName;
+        model.phone = _numberTextFiled.text;
+        model.timedate = string;
+        model.updatedate = today;
+        //插入到数据库
+        [CoreDataAPI insertPhoneRecored:model];
+    }else {
+        [MBProgressHUD showText:@"請輸入號碼" toView:self.view];
+    }
     
 }
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

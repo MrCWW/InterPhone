@@ -34,22 +34,22 @@
     [_dlbutton addSubview:imone];
     [self.view addSubview:_dlbutton];
     
-    NSMutableDictionary *dic =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    NSString *str2 = [dic objectForKey:@"username"];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-    
-    NSDictionary *dict = @{@"username": str2, @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
-    // 网络访问是异步的,回调是主线程的,因此程序员不用管在主线程更新UI的事情
-    [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%@", responseObject);
-
-        NSLog(@"%@", [NSThread currentThread]);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
-    }];
-
+//    NSMutableDictionary *dic =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+//    NSString *str2 = [dic objectForKey:@"username"];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+//    
+//    NSDictionary *dict = @{@"username": str2, @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
+//    // 网络访问是异步的,回调是主线程的,因此程序员不用管在主线程更新UI的事情
+//    [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"%@", responseObject);
+//
+//        NSLog(@"%@", [NSThread currentThread]);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
+//
 }
 
 - (void)backClidtc:(UIButton *)sender{

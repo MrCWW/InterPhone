@@ -28,8 +28,9 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
-
-        [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+//z8V7pp8Npt%Q*2i"
+//        [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+             [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:@"z8V7pp8Npt%Q*2i" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
     }else {
         [MBProgressHUD showText:@"登錄失败" toView:nil];
     }

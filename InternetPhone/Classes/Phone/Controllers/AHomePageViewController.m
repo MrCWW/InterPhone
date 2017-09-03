@@ -71,7 +71,26 @@
     self.selectPic = self.phonePic;
     self.selectLabel = self.phoneLabel;
     // Do any additional setup after loading the view from its nib.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callActionNoti:) name:@"callActionNoti" object:nil];
+    
+    
     [self creatScrollView];
+}
+#pragma mark - 切换到电话界面通知
+- (void)callActionNoti:(NSNotification *)sender {
+    NSDictionary *dic = sender.object;
+    NSLog(@"%@",dic);
+    self.phoneLabel.textColor = [UIColor colorWithRed:0/255.0 green:91/255.0 blue:176/255.0 alpha:1.0f];
+    self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
+    self.phonePic.image = [UIImage imageNamed:@"20170720-中華電信-電話符號-藍"];
+    self.phoneVC.numberTextFiled.text = dic[@"phone"];
+    self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
+    self.selectLabel = self.phoneLabel;
+    self.selectPic = self.phonePic;
+    self.phoneVC.strPhone = dic[@"phone"];
+    self.phoneVC.strName = dic[@"name"];
+    self.scrollView.contentOffset = CGPointMake(0, 0);
 }
 - (void)creatScrollView {
 
@@ -118,6 +137,9 @@
     self.phoneLabel.textColor = [UIColor colorWithRed:0/255.0 green:91/255.0 blue:176/255.0 alpha:1.0f];
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
     self.phonePic.image = [UIImage imageNamed:@"20170720-中華電信-電話符號-藍"];
+    self.phoneVC.numberTextFiled.text = @"";
+    self.phoneVC.strPhone = @"";
+    self.phoneVC.strName = @"";
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.phoneLabel;
     self.selectPic = self.phonePic;

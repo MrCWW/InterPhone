@@ -116,6 +116,11 @@
 		2491066C1F22FBD300B370F5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2491066A1F22FBD300B370F5 /* LoginViewController.m */; };
 		2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2491066B1F22FBD300B370F5 /* LoginViewController.xib */; };
 		24B4EDDD1F585A7200C063E7 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B4EDDC1F585A7200C063E7 /* LoginModel.m */; };
+		24B4EE811F5B8CB000C063E7 /* PhoneRecored.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24B4EE7F1F5B8CB000C063E7 /* PhoneRecored.xcdatamodeld */; };
+		24B4EE861F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B4EE831F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.m */; };
+		24B4EE871F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B4EE851F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m */; };
+		24B4EE8A1F5B905600C063E7 /* PhoneRecoredModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B4EE891F5B905600C063E7 /* PhoneRecoredModel.m */; };
+		24B4EE8D1F5B90E400C063E7 /* CoreDataAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B4EE8C1F5B90E400C063E7 /* CoreDataAPI.m */; };
 		EA4644E31F39698500825157 /* AddModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4644E21F39698500825157 /* AddModel.m */; };
 		EA4644ED1F39976000825157 /* AddRessBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4644EB1F39976000825157 /* AddRessBookViewController.m */; };
 		EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4644EC1F39976000825157 /* AddRessBookViewController.xib */; };
@@ -409,6 +414,15 @@
 		24B4EDD21F583D9200C063E7 /* PhoneURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneURL.h; sourceTree = "<group>"; };
 		24B4EDDB1F585A7200C063E7 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		24B4EDDC1F585A7200C063E7 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		24B4EE801F5B8CB000C063E7 /* PhoneRecored.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhoneRecored.xcdatamodel; sourceTree = "<group>"; };
+		24B4EE821F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhoneRecored+CoreDataClass.h"; sourceTree = "<group>"; };
+		24B4EE831F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhoneRecored+CoreDataClass.m"; sourceTree = "<group>"; };
+		24B4EE841F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhoneRecored+CoreDataProperties.h"; sourceTree = "<group>"; };
+		24B4EE851F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhoneRecored+CoreDataProperties.m"; sourceTree = "<group>"; };
+		24B4EE881F5B905500C063E7 /* PhoneRecoredModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRecoredModel.h; sourceTree = "<group>"; };
+		24B4EE891F5B905600C063E7 /* PhoneRecoredModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRecoredModel.m; sourceTree = "<group>"; };
+		24B4EE8B1F5B90E400C063E7 /* CoreDataAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataAPI.h; sourceTree = "<group>"; };
+		24B4EE8C1F5B90E400C063E7 /* CoreDataAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataAPI.m; sourceTree = "<group>"; };
 		EA4644E11F39698500825157 /* AddModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddModel.h; sourceTree = "<group>"; };
 		EA4644E21F39698500825157 /* AddModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddModel.m; sourceTree = "<group>"; };
 		EA4644EA1F39976000825157 /* AddRessBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRessBookViewController.h; sourceTree = "<group>"; };
@@ -795,6 +809,7 @@
 		2491046C1F22EFF700B370F5 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				24B4EE7E1F5B8C8E00C063E7 /* CoreDatas */,
 				EA6D736B1F41729400DCB6F3 /* Tools */,
 				249105331F22F20A00B370F5 /* OtherClasseslibrary */,
 				2491046D1F22F04700B370F5 /* Category */,
@@ -1163,6 +1178,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		24B4EE7E1F5B8C8E00C063E7 /* CoreDatas */ = {
+			isa = PBXGroup;
+			children = (
+				24B4EE7F1F5B8CB000C063E7 /* PhoneRecored.xcdatamodeld */,
+				24B4EE821F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.h */,
+				24B4EE831F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.m */,
+				24B4EE841F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.h */,
+				24B4EE851F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m */,
+				24B4EE881F5B905500C063E7 /* PhoneRecoredModel.h */,
+				24B4EE891F5B905600C063E7 /* PhoneRecoredModel.m */,
+				24B4EE8B1F5B90E400C063E7 /* CoreDataAPI.h */,
+				24B4EE8C1F5B90E400C063E7 /* CoreDataAPI.m */,
+			);
+			path = CoreDatas;
+			sourceTree = "<group>";
+		};
 		EA6D736B1F41729400DCB6F3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -1473,6 +1504,7 @@
 				249105CC1F22F20A00B370F5 /* MBProgressHUD.m in Sources */,
 				249105C81F22F20A00B370F5 /* UIRefreshControl+AFNetworking.m in Sources */,
 				249105D51F22F20A00B370F5 /* MJRefreshAutoStateFooter.m in Sources */,
+				24B4EE811F5B8CB000C063E7 /* PhoneRecored.xcdatamodeld in Sources */,
 				249105C41F22F20A00B370F5 /* UIAlertView+AFNetworking.m in Sources */,
 				2491062D1F22F3DD00B370F5 /* UIImage+Extension.m in Sources */,
 				249105EE1F22F20A00B370F5 /* UIImage+WebP.m in Sources */,
@@ -1515,6 +1547,7 @@
 				247471541F24C84E0008B066 /* PopModel.m in Sources */,
 				249105DA1F22F20A00B370F5 /* MJRefreshNormalHeader.m in Sources */,
 				249105D11F22F20A00B370F5 /* MJRefreshFooter.m in Sources */,
+				24B4EE871F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m in Sources */,
 				247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */,
 				249105E41F22F20A00B370F5 /* SDImageCache.m in Sources */,
 				249106281F22F3DD00B370F5 /* UIBarButtonItem+Extension.m in Sources */,
@@ -1528,6 +1561,7 @@
 				249105ED1F22F20A00B370F5 /* UIImage+MultiFormat.m in Sources */,
 				249105E61F22F20A00B370F5 /* SDWebImageDecoder.m in Sources */,
 				2474715F1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m in Sources */,
+				24B4EE8A1F5B905600C063E7 /* PhoneRecoredModel.m in Sources */,
 				249105C31F22F20A00B370F5 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				249105CF1F22F20A00B370F5 /* MJRefreshBackFooter.m in Sources */,
 				249105BC1F22F20A00B370F5 /* AFURLConnectionOperation.m in Sources */,
@@ -1543,6 +1577,7 @@
 				249105D71F22F20A00B370F5 /* MJRefreshBackNormalFooter.m in Sources */,
 				2491065D1F22F7D500B370F5 /* PhoneViewController.m in Sources */,
 				2491062C1F22F3DD00B370F5 /* UIFont+Extension.m in Sources */,
+				24B4EE861F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.m in Sources */,
 				249105B91F22F20A00B370F5 /* AFHTTPSessionManager.m in Sources */,
 				249106621F22F7E400B370F5 /* SettingViewController.m in Sources */,
 				249105E01F22F20A00B370F5 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1564,6 +1599,7 @@
 				EAEE5A5F1F31FC33003F6583 /* PJSearchBar.m in Sources */,
 				2491062B1F22F3DD00B370F5 /* UIDevice+DeviceType.m in Sources */,
 				249105CA1F22F20A00B370F5 /* AFNTool.m in Sources */,
+				24B4EE8D1F5B90E400C063E7 /* CoreDataAPI.m in Sources */,
 				249105E31F22F20A00B370F5 /* NSData+ImageContentType.m in Sources */,
 				249105FD1F22F27A00B370F5 /* HBaseNavigationController.m in Sources */,
 				249106231F22F3DD00B370F5 /* CALayer+layerCategory.m in Sources */,
@@ -1829,6 +1865,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		24B4EE7F1F5B8CB000C063E7 /* PhoneRecored.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24B4EE801F5B8CB000C063E7 /* PhoneRecored.xcdatamodel */,
+			);
+			currentVersion = 24B4EE801F5B8CB000C063E7 /* PhoneRecored.xcdatamodel */;
+			path = PhoneRecored.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 249104191F22DADB00B370F5 /* Project object */;
 }

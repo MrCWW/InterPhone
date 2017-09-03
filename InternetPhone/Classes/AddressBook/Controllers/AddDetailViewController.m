@@ -233,17 +233,19 @@
 
 
 - (void)clickbackphone:(UIBarButtonItem *)but {
-    PhoneViewController *meVc = [[PhoneViewController alloc]init];
-    meVc.strPhone = _strPhone;
-    [self.navigationController pushViewController:meVc animated:YES];
+//    PhoneViewController *meVc = [[PhoneViewController alloc]init];
+//    meVc.strPhone = _strPhone;
+//    [self.navigationController pushViewController:meVc animated:YES];
+//    NSInteger scrollHeight = self.scrollView.height;
+//    PhoneViewController *aVC = [[PhoneViewController alloc] init];
+//    aVC.strPhone = _strPhone;
+//    [self addChildViewController:aVC];
+//    aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
+//    aVC.view.backgroundColor  = [UIColor whiteColor];
+//    [self.scrollView addSubview:aVC.view];
     
-    NSInteger scrollHeight = self.scrollView.height;
-    PhoneViewController *aVC = [[PhoneViewController alloc] init];
-    aVC.strPhone = _strPhone;
-    [self addChildViewController:aVC];
-    aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
-    aVC.view.backgroundColor  = [UIColor whiteColor];
-    [self.scrollView addSubview:aVC.view];
+    [self clickbacktwo:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"callActionNoti" object:@{@"phone":_strPhone,@"name":_strname}];
 }
 
 - (void)didReceiveMemoryWarning {

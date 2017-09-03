@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *eidtCallBtn;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIScrollView *bigScrollView;
+@property (weak, nonatomic) IBOutlet UIView *editDeleteTopView;//编辑界面头视图
+@property (weak, nonatomic) IBOutlet UIButton *hiddenEditViewBtn;//隐藏编辑界面btn
+@property (weak, nonatomic) IBOutlet UIButton *selectAllBtn;//全选btn
+@property (weak, nonatomic) IBOutlet UIButton *deleteDataBtn;//删除btn
 
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (nonatomic, strong)  UIView *lineView;
@@ -34,9 +38,21 @@
     }];
     [self.scrollView setContentOffset:CGPointMake(ScreenWidth, 0)];
 }
+//隐藏编辑界面
+- (IBAction)hiddenEditAciton:(id)sender {
+    self.editDeleteTopView.hidden = YES;
+}
+//全选操作
+- (IBAction)selectAllAction:(id)sender {
+}
+//删除操作
+- (IBAction)deleteDataAction:(id)sender {
+}
+
 //编辑
 - (IBAction)eidtCallAction:(id)sender {
-    [self.bigScrollView setContentOffset:CGPointMake(ScreenWidth, 0)];
+//    [self.bigScrollView setContentOffset:CGPointMake(ScreenWidth, 0)];
+    self.editDeleteTopView.hidden = NO;
 }
 //返回第一页
 - (IBAction)backFirstViewAction:(id)sender {
@@ -56,7 +72,9 @@
 - (void)creatScrollView {
     self.lineView = [[UIView alloc] initWithFrame:HCGRECT(0, 48, 70, 2)];
     _lineView.backgroundColor = [UIColor blueColor];
-    [self.headerView addSubview:_lineView];
+    [self.headerView addSubview:_lineView];// 暂时去掉
+    
+    
     self.scrollView = [[UIScrollView alloc]initWithFrame:HCGRECT(0, 50, ScreenWidth, ScreenHeight - 179)];
     NSInteger scrollHeight = self.scrollView.height;
     //    self.scrollView.showsHorizontalScrollIndicator = NO;
