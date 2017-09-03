@@ -27,35 +27,16 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
-<<<<<<< HEAD
-//z8V7pp8Npt%Q*2i"
-//        [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
-             [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:@"z8V7pp8Npt%Q*2i" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+//sip用户名 密码登录
+             [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
     }else {
         [MBProgressHUD showText:@"登錄失败" toView:nil];
-=======
-        [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
->>>>>>> 58d5191d5904819b2deab9d85a96606fabf4b1d9
+        
     }
 } failure:^(NSError *error) {
     [MBProgressHUD showText:@"登錄失败" toView:nil];
 }];
     
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-//    [manager POST:@"http://175.41.52.241/api/login.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"%@", responseObject);
-//        
-//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//        [userDefaults setObject:responseObject forKey:@"username"];
-//        [userDefaults synchronize];
-//        
-//         [[UCSIPCCManager instance] addProxyConfig:self.Loginaccount.text password:self.Loginpasswd.text displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
-//     
-//        NSLog(@"%@", [NSThread currentThread]);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"%@", error);
-//    }];
 
 }
 //服务条款
