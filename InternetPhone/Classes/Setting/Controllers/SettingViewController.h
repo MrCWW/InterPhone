@@ -11,5 +11,7 @@
 //- (instancetype)initWithFrame:(CGRect *)frame;
 @property (weak, nonatomic) IBOutlet UILabel *zhanghao;
 @property (weak, nonatomic) IBOutlet UIButton *quit;
+@property (weak, nonatomic) IBOutlet UILabel *balabce;
+@property (weak, nonatomic) IBOutlet UILabel *dates;
 
 @end

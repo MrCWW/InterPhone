@@ -21,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+<<<<<<< HEAD
 //    NSNumber *num = Here_Is_Login;
 //    if (num == nil) {
 //        self.vc = [[LoginViewController alloc] init];
@@ -49,6 +50,35 @@
 //    
 //    [self.window makeKeyAndVisible];
 //    [self setNotification];
+=======
+    NSNumber *num = Here_Is_Login;
+    if (num == nil) {
+        self.vc = [[LoginViewController alloc] init];
+        self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
+    }else{
+        if ([num intValue] == 1) {
+            //     [self.window setRootViewController:[A mainPageViewController]];
+            LoginModel *model = kUnarchiverHomepageModel;
+            self.dialerVC = [[AHomePageViewController alloc] init];
+            [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
+//                 [[UCSIPCCManager instance] addProxyConfig:Here_Get_UserName password:Here_Get_passWord displayName:@"123" domain:@"113.35.73.142" port:@"5060" withTransport:@"UDP"];
+            [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku"displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+
+
+
+        }else{
+            self.vc = [[LoginViewController alloc] init];
+            self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
+        }
+    }
+    [self.window makeKeyAndVisible];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userloginSuc) name:@"UserLoginSuc" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userTokenIvalid) name:@"userTokenInvalidNotification" object:nil];
+    
+    
+    [self.window makeKeyAndVisible];
+    [self setNotification];
+>>>>>>> 58d5191d5904819b2deab9d85a96606fabf4b1d9
     //    [self regiestNotif];
     self.dialerVC = [[AHomePageViewController alloc] init];
     [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];

@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
             <connections>
+                <outlet property="balabce" destination="yrM-rT-Cj6" id="eel-ri-6Sy"/>
+                <outlet property="dates" destination="lS6-Vu-VeS" id="Alp-O4-Jeo"/>
                 <outlet property="quit" destination="SdW-MM-Ori" id="lM7-dB-YMM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="zhanghao" destination="jxN-cn-D1c" id="Xb4-oL-Q4J"/>
@@ -46,7 +48,7 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账户余额   888分钟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-rT-Cj6">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrM-rT-Cj6">
                     <rect key="frame" x="117" y="151" width="180" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="k9s-xN-UgU"/>
