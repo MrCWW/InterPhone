@@ -11,7 +11,7 @@
 #import "AddRessBookViewController.h"
 #import <Contacts/Contacts.h>
 
-@interface AddDetailViewController ()<UIScrollViewDelegate>
+@interface AddDetailViewController ()<UIScrollViewDelegate,UITextFieldDelegate>
 @property (strong, nonatomic) UIScrollView *scrollView;
 @property (strong,nonatomic) UIButton *btnone;
 @property (strong,nonatomic) UIButton *btnTwo;
@@ -19,6 +19,7 @@
 @property (nonatomic,copy) UITextField *mxmField;
 @property (nonatomic,copy) UITextField *sipField;
 @property (nonatomic,copy) UITextField *phoneField;
+@property (strong,nonatomic) UILabel *labelone;
 
 
 @end
@@ -30,6 +31,15 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self createUI];
+//    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+//    //当 Keyboard 弹出时会系统会发送 UIKeyboardWillChangeFrameNotification 通知
+//    [center addObserver:self selector:@selector(changeTextfieldFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
+    tapGestureRecognizer.cancelsTouchesInView = YES;
+    //将触摸事件添加到当前view
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 
 
 }
@@ -181,30 +191,31 @@
             _mmField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
             [_mmField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
             _mmField.text = _strname;
+            _mmField.delegate = self;
             [viewphone addSubview:_mmField];
             
             UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_mmField.frame)+5, 100, 30)];
-            label2.text = @"sip 地址";
+            label2.text = @"電話號碼";
             [viewphone addSubview:label2];
             _sipField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label2.frame)+5, ScreenWidth-46, 30)];
             _sipField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
             [_sipField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
+            _sipField.text = _strPhone;
+            _sipField.delegate = self;
             [viewphone addSubview:_sipField];
             
-            UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_sipField.frame)+5, 100, 30)];
-            label3.text = @"電話號碼";
-            [viewphone addSubview:label3];
-            _phoneField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label3.frame)+5, ScreenWidth-46, 30)];
-            _phoneField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
-            [_phoneField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
-            _phoneField.text = _strPhone;
-            [viewphone addSubview:_phoneField];
+//            UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_sipField.frame)+5, 100, 30)];
+//            label3.text = @"電話號碼";
+//            [viewphone addSubview:label3];
+//            _phoneField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label3.frame)+5, ScreenWidth-46, 30)];
+//            _phoneField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
+//            [_phoneField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
+//            _phoneField.text = _strPhone;
+//            [viewphone addSubview:_phoneField];
         
 
         
     }else {
-
-//        [self saveContact:_mmField.text givenName:@"" phoneNumber:_phoneField.text];
 
         //删除子View
         [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
@@ -216,6 +227,26 @@
     }
     
 }
+- (void)changeTextfieldFrame:(NSNotification *)info{
+    
+    //获取通知中传来的信息，Keyboard 的 frame 信息保存在 UIKeyboardFrameEndUserInfoKey 这个 key 里
+    CGRect endFrame = [info.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    
+    //动画展示平移效果
+    [UIView animateWithDuration:0.5 animations:^{
+        
+        //用键盘的Y值减去屏幕高度获得偏移量
+        //当键盘弹出时 键盘Y值小于屏幕高度 所以translationY为负值 view得以向上偏移
+        //当键盘隐藏时 键盘Y值等于屏幕高度 所以translationY值为零 view得以平移回去
+        CGFloat translationY = endFrame.origin.y - self.view.frame.size.height;
+        self.view.transform = CGAffineTransformMakeTranslation(0, translationY);
+        
+    }];
+
+}
+
+
+
 -(void)saveContact:(NSString*)familyName givenName:(NSString*)givenName phoneNumber:(NSString*)phoneNumber {
     CNMutableContact *mutableContact = [[CNMutableContact alloc] init];
     
@@ -231,7 +262,16 @@
     
 }
 
+//移除通知 收回键盘
+-(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
 
+{
+    
+    [self.view endEditing:YES];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    
+}
 - (void)clickbackphone:(UIBarButtonItem *)but {
     PhoneViewController *meVc = [[PhoneViewController alloc]init];
     meVc.strPhone = _strPhone;
