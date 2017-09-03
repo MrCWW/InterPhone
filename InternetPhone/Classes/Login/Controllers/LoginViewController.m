@@ -18,8 +18,7 @@
     Here_Save_UserName(self.Loginaccount.text);
     Here_Save_passWord(self.Loginpasswd.text);
     
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+
     NSDictionary *dict = @{@"username": self.Loginaccount.text, @"password" : self.Loginpasswd.text, @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
 [AFNTool postPhone:Phone_URL_login_php Body:dict success:^(id result) {
     NSLog(@"%@", result);
@@ -28,15 +27,19 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:dic forKey:@"username"];
+        [userDefaults synchronize];
 
-        [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
-    }else {
-        [MBProgressHUD showText:@"登錄失败" toView:nil];
+        [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
     }
-
 } failure:^(NSError *error) {
     [MBProgressHUD showText:@"登錄失败" toView:nil];
 }];
+    
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
 //    [manager POST:@"http://175.41.52.241/api/login.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        NSLog(@"%@", responseObject);
 //        
