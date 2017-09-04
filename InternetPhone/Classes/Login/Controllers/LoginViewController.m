@@ -27,6 +27,7 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
+
         NSLog(@"%@",model.sip_ip);
         NSLog(@"%@",model.sip_port);
         NSLog(@"%@",model.sip_ip);
