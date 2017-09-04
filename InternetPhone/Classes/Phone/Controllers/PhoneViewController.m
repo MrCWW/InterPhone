@@ -24,7 +24,7 @@
 @property (nonatomic, strong) HomePageHeaderCateforyView *headerCategoryView;
 @property (nonatomic, strong) NSMutableArray *dataNumberArr;
 //@property (nonatomic, strong) NSMutableArray *dataSaveNumberArr;//存储数字
-@property (nonatomic, strong) NSMutableString *saveNumStr;//存储数字
+//@property (nonatomic, strong) NSMutableString *saveNumStr;//存储数字
 @end
 
 @implementation PhoneViewController
@@ -41,6 +41,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(callUpdateEvent:)
+                                                 name:kUCSCallUpdate
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(coreUpdateEvent:)
+                                                 name:kUCSCoreUpdate
+                                               object:nil];
+
+    
+    
     self.view.backgroundColor = [UIColor redColor];
     //button长按事件
     [self.deleteBtn setImage:[UIImage imageNamed:@"20170720-中華電信-號碼刪除鍵-灰"] forState:UIControlStateHighlighted];
@@ -50,6 +62,29 @@
     [self creatNumberView];
     
 }
+#pragma mark - Event Functions
+
+- (void)callUpdateEvent:(NSNotification*)notif {
+    //    LinphoneCall *call = [[notif.userInfo objectForKey: @"call"] pointerValue];
+    //    LinphoneCallState state = [[notif.userInfo objectForKey: @"state"] intValue];
+    //    [self callUpdate:call state:state];
+}
+//
+- (void)coreUpdateEvent:(NSNotification*)notif {
+    //    if([LinphoneManager runningOnIpad]) {
+    //        LinphoneCore* lc = [LinphoneManager getLc];
+    //        if(linphone_core_video_enabled(lc) && linphone_core_video_preview_enabled(lc)) {
+    //            linphone_core_set_native_preview_window_id(lc, (unsigned long)videoPreview);
+    //            [backgroundView setHidden:FALSE];
+    //            [videoCameraSwitch setHidden:FALSE];
+    //        } else {
+    //            linphone_core_set_native_preview_window_id(lc, (unsigned long)NULL);
+    //            [backgroundView setHidden:TRUE];
+    //            [videoCameraSwitch setHidden:TRUE];
+    //        }
+    //    }
+}
+
 //创建拨号界面
 - (void)creatNumberView {
     NSArray *imageArr = @[@"20170720-中華電信-數字1",@"20170720-中華電信-數字2",@"20170720-中華電信-數字3",@"20170720-中華電信-數字4",@"20170720-中華電信-數字5",@"20170720-中華電信-數字6",@"20170720-中華電信-數字7",@"20170720-中華電信-數字8",@"20170720-中華電信-數字9",@"20170720-中華電信-米字鍵",@"20170720-中華電信-數字0",@"20170720-中華電信-井字鍵"];
@@ -155,18 +190,24 @@
         model.updatedate = today;
         //插入到数据库
         [CoreDataAPI insertPhoneRecored:model];
-
+        //拨打电话
+        [self callBtn];
     }else {
         [MBProgressHUD showText:@"請輸入號碼" toView:self.view];
     }
-    
-
-    
-
 }
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 //    [self.view endEditing:YES];
 //}
+#pragma mark - 拨打电话
+- (void)callBtn {
+    if (![[UCSIPCCManager instance] isUCSReady]) {
+        return;
+    }
+//    [UCSUserDefaultManager SetLocalDataString:_numberTextFiled.text key:@"Last_Call_Address"];
+////    [[UCSIPCCManager instance] call:_numberTextFiled.text displayName:@"123" transfer:NO];
+ [[UCSIPCCManager instance] call:[_numberTextFiled text] displayName:nil transfer:YES];
+}
 #pragma mark - UITextFieldDelegate
 -(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
     [textField resignFirstResponder];
@@ -213,12 +254,10 @@
             self.numberTextFiled.text = self.saveNumStr;
 //
            [self.numberTextFiled setSelectedRange:NSMakeRange(indexRange+1, 0)];
+       
 //            self.saveNumStr = numStr;
-            
-            
-            
         }
-
+     Here_Set_soundPhone(self.numberTextFiled.text);
 }
 //判断周几
 -(NSString *)judegWeekDay:(NSInteger)weekDay{

@@ -12,4 +12,5 @@
 @property(nonatomic,strong)NSString *strPhone;//手机号
 @property(nonatomic,strong)NSString *strName;//姓名
 @property (weak, nonatomic) IBOutlet UITextField *numberTextFiled;
+@property (nonatomic, strong) NSMutableString *saveNumStr;//存储数字
 @end

@@ -143,6 +143,7 @@
     self.phoneVC.numberTextFiled.text = @"";
     self.phoneVC.strPhone = @"";
     self.phoneVC.strName = @"";
+    self.phoneVC.saveNumStr = @"";
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.phoneLabel;
     self.selectPic = self.phonePic;

@@ -102,7 +102,7 @@
                                 <constraint firstItem="97g-nX-aUz" firstAttribute="centerY" secondItem="4gt-Id-DBR" secondAttribute="centerY" id="xXd-Hp-Nxd"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-Xr-NGg">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-Xr-NGg" customClass="UICallButton">
                             <rect key="frame" x="40" y="597" width="295" height="45"/>
                             <color key="backgroundColor" red="0.47843137254901957" green="0.73725490196078436" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>

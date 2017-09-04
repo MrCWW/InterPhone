@@ -71,15 +71,17 @@
     if (![[UCSIPCCManager instance] isUCSReady]) {
         return;
     }
-    
-    NSString *address = [addressField text];
-    
+    //原来的
+//    NSString *address = [addressField text];
+    //现在的，获取输入框的内容
+        NSString *address = Here_Is_soundPhone;
+    NSLog(@"%@",address);
     // 获取昵称
     NSString *displayName = nil;
 
     if( [address length] == 0){
         addressField.text = [UCSUserDefaultManager GetLocalDataString:@"Last_Call_Address"];
-        return;
+      return;
     }
 
     if( [address length] > 0){
