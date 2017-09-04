@@ -24,6 +24,7 @@
 		2474715F1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2474715D1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.m */; };
 		247471601F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2474715E1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib */; };
 		247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */; };
+		24896DFC1F5D0694001D39A4 /* PhoneRecoredModelCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896DFB1F5D0694001D39A4 /* PhoneRecoredModelCount.m */; };
 		249104261F22DADB00B370F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249104251F22DADB00B370F5 /* main.m */; };
 		2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491042D1F22DADB00B370F5 /* Main.storyboard */; };
 		249104311F22DADB00B370F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249104301F22DADB00B370F5 /* Assets.xcassets */; };
@@ -226,6 +227,8 @@
 		2474715E1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		247471651F24E9FE0008B066 /* UITextField+WWExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WWExtentRange.h"; sourceTree = "<group>"; };
 		247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WWExtentRange.m"; sourceTree = "<group>"; };
+		24896DFA1F5D0694001D39A4 /* PhoneRecoredModelCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRecoredModelCount.h; sourceTree = "<group>"; };
+		24896DFB1F5D0694001D39A4 /* PhoneRecoredModelCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRecoredModelCount.m; sourceTree = "<group>"; };
 		249104211F22DADB00B370F5 /* InternetPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternetPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249104251F22DADB00B370F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2491042E1F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1188,6 +1191,8 @@
 				24B4EE851F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m */,
 				24B4EE881F5B905500C063E7 /* PhoneRecoredModel.h */,
 				24B4EE891F5B905600C063E7 /* PhoneRecoredModel.m */,
+				24896DFA1F5D0694001D39A4 /* PhoneRecoredModelCount.h */,
+				24896DFB1F5D0694001D39A4 /* PhoneRecoredModelCount.m */,
 				24B4EE8B1F5B90E400C063E7 /* CoreDataAPI.h */,
 				24B4EE8C1F5B90E400C063E7 /* CoreDataAPI.m */,
 			);
@@ -1589,6 +1594,7 @@
 				EA6D73B11F4174EA00DCB6F3 /* DTAlertView.m in Sources */,
 				249105BD1F22F20A00B370F5 /* AFURLRequestSerialization.m in Sources */,
 				249105BF1F22F20A00B370F5 /* AFURLSessionManager.m in Sources */,
+				24896DFC1F5D0694001D39A4 /* PhoneRecoredModelCount.m in Sources */,
 				249105F11F22F20A00B370F5 /* UIView+WebCacheOperation.m in Sources */,
 				EAEE5A461F302758003F6583 /* contTableViewCell.m in Sources */,
 				249105C91F22F20A00B370F5 /* UIWebView+AFNetworking.m in Sources */,

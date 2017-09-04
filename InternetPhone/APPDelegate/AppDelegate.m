@@ -50,8 +50,8 @@
     [self.window makeKeyAndVisible];
     [self setNotification];
     //    [self regiestNotif];
-    self.dialerVC = [[AHomePageViewController alloc] init];
-    [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
+//    self.dialerVC = [[AHomePageViewController alloc] init];
+//    [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
     return YES;
 }
 
