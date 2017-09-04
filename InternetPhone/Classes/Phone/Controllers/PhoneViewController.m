@@ -154,6 +154,7 @@
         format.dateFormat = @"yyyy年MM月dd号";
         //日期字符串
         NSString *string = [format stringFromDate:today];
+        NSLog(@"%@",string);
         PhoneRecoredModel *model = [[PhoneRecoredModel alloc] init];
         model.name = _strName;
         model.phone = _numberTextFiled.text;
@@ -161,6 +162,7 @@
         model.updatedate = today;
         //插入到数据库
         [CoreDataAPI insertPhoneRecored:model];
+
     }else {
         [MBProgressHUD showText:@"請輸入號碼" toView:self.view];
     }
@@ -220,9 +222,6 @@
             
             
         }
-        //
-    
-
 
 }
 
