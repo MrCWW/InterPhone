@@ -35,49 +35,32 @@
     [self.view addSubview:_dlbutton];
     
 
-//    NSMutableDictionary *dic =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
-//    NSString *str2 = [dic objectForKey:@"username"];
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-//    
-//    NSDictionary *dict = @{@"username": str2, @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
-//    // 网络访问是异步的,回调是主线程的,因此程序员不用管在主线程更新UI的事情
-//    [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"%@", responseObject);
-//
-//        NSLog(@"%@", [NSThread currentThread]);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"%@", error);
-//    }];
-//
-
     NSMutableDictionary *dic =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     NSString *str2 = [dic objectForKey:@"username"];
     
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-//    NSDictionary *dict = @{@"username":str2,  @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
-//    [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"%@", responseObject);
-//        _zhanghao.text = [responseObject objectForKey:@"username"];
-//        NSString *nssing1 = [responseObject objectForKey:@"balance"];
-//        NSString *nssing2 = @"帳戶剩餘 ";
-//        
-//        NSString * string3 = [NSString stringWithFormat:@"%@  %@ 分鐘", nssing2, nssing1];
-//        NSMutableAttributedString * attriStr=[[NSMutableAttributedString alloc]initWithString:string3];
-//        NSRange range = [string3 rangeOfString:@"帳戶剩餘"];
-//        [attriStr addAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:range];
-//        _balabce.attributedText=attriStr;
-//        NSString *nssing4 = @"語音失效日期 ";
-//        NSString * string5 = [NSString stringWithFormat:@"%@  %@ ", nssing4, [responseObject objectForKey:@"expiry_date"]];
-//
-//        _dates.text = string5;
-//        NSLog(@"%@", [NSThread currentThread]);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"%@", error);
-//    }];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+    NSDictionary *dict = @{@"username":str2,  @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
+    [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", responseObject);
+        _zhanghao.text = [responseObject objectForKey:@"username"];
+        NSString *nssing1 = [responseObject objectForKey:@"balance"];
+        NSString *nssing2 = @"帳戶剩餘 ";
+        
+        NSString * string3 = [NSString stringWithFormat:@"%@  %@ 分鐘", nssing2, nssing1];
+        NSMutableAttributedString * attriStr=[[NSMutableAttributedString alloc]initWithString:string3];
+        NSRange range = [string3 rangeOfString:@"帳戶剩餘"];
+        [attriStr addAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:range];
+        _balabce.attributedText=attriStr;
+        NSString *nssing4 = @"語音失效日期 ";
+        NSString * string5 = [NSString stringWithFormat:@"%@  %@ ", nssing4, [responseObject objectForKey:@"expiry_date"]];
+
+        _dates.text = string5;
+        NSLog(@"%@", [NSThread currentThread]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 
 }
 

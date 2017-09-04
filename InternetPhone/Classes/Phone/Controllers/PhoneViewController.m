@@ -16,6 +16,7 @@
 //@property (weak, nonatomic) IBOutlet UITextField *numberTextFiled;
 @property (weak, nonatomic) IBOutlet UILabel *qianzhuiLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
+@property (weak, nonatomic) IBOutlet UIButton *callbutton;
 //城市
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @property (nonatomic, strong) PopUpView *showView;
@@ -43,11 +44,11 @@
     [super viewWillAppear:animated];
     
     
-//    [callBtnAction setEnabled:TRUE];
+    [_callbutton setEnabled:TRUE];
     
     [_numberTextFiled setText:@""];
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0 // attributed string only available since iOS6
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
         // fix placeholder bar color in iOS7
         UIColor *color = [UIColor grayColor];
