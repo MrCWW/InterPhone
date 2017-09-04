@@ -25,6 +25,9 @@
 		247471601F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2474715E1F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib */; };
 		247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */; };
 		24896DFC1F5D0694001D39A4 /* PhoneRecoredModelCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896DFB1F5D0694001D39A4 /* PhoneRecoredModelCount.m */; };
+		24896E081F5D44FB001D39A4 /* CallRecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */; };
+		24896E091F5D44FB001D39A4 /* CallRecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */; };
+		24896E0F1F5D5AE1001D39A4 /* NSDate+judgeToday.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */; };
 		249104261F22DADB00B370F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249104251F22DADB00B370F5 /* main.m */; };
 		2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491042D1F22DADB00B370F5 /* Main.storyboard */; };
 		249104311F22DADB00B370F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249104301F22DADB00B370F5 /* Assets.xcassets */; };
@@ -229,6 +232,11 @@
 		247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WWExtentRange.m"; sourceTree = "<group>"; };
 		24896DFA1F5D0694001D39A4 /* PhoneRecoredModelCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRecoredModelCount.h; sourceTree = "<group>"; };
 		24896DFB1F5D0694001D39A4 /* PhoneRecoredModelCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRecoredModelCount.m; sourceTree = "<group>"; };
+		24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecordsTableViewCell.h; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecordsTableViewCell.m; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecordsTableViewCell.xib; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		24896E0D1F5D5AE1001D39A4 /* NSDate+judgeToday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+judgeToday.h"; sourceTree = "<group>"; };
+		24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+judgeToday.m"; sourceTree = "<group>"; };
 		249104211F22DADB00B370F5 /* InternetPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternetPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249104251F22DADB00B370F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2491042E1F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -728,6 +736,9 @@
 		249104631F22EFF700B370F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */,
+				24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */,
+				24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -860,6 +871,8 @@
 				249106201F22F3DD00B370F5 /* UIView+Extension.m */,
 				249106211F22F3DD00B370F5 /* UIView+IBExtension.h */,
 				249106221F22F3DD00B370F5 /* UIView+IBExtension.m */,
+				24896E0D1F5D5AE1001D39A4 /* NSDate+judgeToday.h */,
+				24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1470,6 +1483,7 @@
 				2442F4341F3FE667008BC593 /* AnswerCallViewController.xib in Resources */,
 				247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */,
 				249104311F22DADB00B370F5 /* Assets.xcassets in Resources */,
+				24896E091F5D44FB001D39A4 /* CallRecordsTableViewCell.xib in Resources */,
 				249106591F22F7C800B370F5 /* CallRecordsViewController.xib in Resources */,
 				249105DC1F22F20A00B370F5 /* MJRefresh.bundle in Resources */,
 				EA6D73AF1F4174EA00DCB6F3 /* DialerViewController.xib in Resources */,
@@ -1505,6 +1519,7 @@
 				EA6D73AE1F4174EA00DCB6F3 /* DialerViewController.m in Sources */,
 				249105C51F22F20A00B370F5 /* UIButton+AFNetworking.m in Sources */,
 				249105DE1F22F20A00B370F5 /* NSBundle+MJRefresh.m in Sources */,
+				24896E0F1F5D5AE1001D39A4 /* NSDate+judgeToday.m in Sources */,
 				EA6D73B31F4174EA00DCB6F3 /* UIAddressTextField.m in Sources */,
 				249105CC1F22F20A00B370F5 /* MBProgressHUD.m in Sources */,
 				249105C81F22F20A00B370F5 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1543,6 +1558,7 @@
 				EA6D73AC1F4174EA00DCB6F3 /* CallOutgoingView.m in Sources */,
 				EA6D73B21F4174EA00DCB6F3 /* TPMultiLayoutViewController.m in Sources */,
 				2442F4331F3FE667008BC593 /* AnswerCallViewController.m in Sources */,
+				24896E081F5D44FB001D39A4 /* CallRecordsTableViewCell.m in Sources */,
 				249106261F22F3DD00B370F5 /* NSString+CalculatorHeight.m in Sources */,
 				249106241F22F3DD00B370F5 /* MBProgressHUD+AddHud.m in Sources */,
 				249105F01F22F20A00B370F5 /* UIImageView+WebCache.m in Sources */,

@@ -253,6 +253,8 @@
         modelCount.timedate = model.timedate;
         modelCount.updatedate = model.updatedate;
         modelCount.countPhone = count;
+        modelCount.isShowDetial = YES;
+        modelCount.isSelectDelete = NO;
         [phoneRecoredModelCountArr addObject:modelCount];//按照日期排序
     }
     

@@ -149,16 +149,23 @@
     if (_numberTextFiled.text.length) {
         //存储日期
          NSDate *today = [NSDate date];
+        NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+        NSDateComponents *comps = [[NSDateComponents alloc] init];
+        NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
+        NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+        
+        comps = [calendar components:unitFlags fromDate:today];//判断是周几
+     NSString *timeWeekStr =  [self judegWeekDay:[comps weekday]];
 //        NSDate * date = p.updatedate;
         NSDateFormatter *format = [[NSDateFormatter alloc] init];
-        format.dateFormat = @"yyyy年MM月dd号";
+        format.dateFormat = @"MM月dd号";
         //日期字符串
         NSString *string = [format stringFromDate:today];
         NSLog(@"%@",string);
         PhoneRecoredModel *model = [[PhoneRecoredModel alloc] init];
         model.name = _strName;
         model.phone = _numberTextFiled.text;
-        model.timedate = string;
+        model.timedate = [NSString stringWithFormat:@"%@ %@",timeWeekStr,string];
         model.updatedate = today;
         //插入到数据库
         [CoreDataAPI insertPhoneRecored:model];
@@ -167,6 +174,9 @@
         [MBProgressHUD showText:@"請輸入號碼" toView:self.view];
     }
     
+
+    
+
 }
 //-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 //    [self.view endEditing:YES];
@@ -224,7 +234,52 @@
         }
 
 }
-
+//判断周几
+-(NSString *)judegWeekDay:(NSInteger)weekDay{
+    //在这里需要注意的是：星期日是数字1，星期一时数字2，以此类推。。。
+    NSString *strWeek;
+    switch (weekDay) {
+        case 1:
+        {
+        strWeek = @"周日";
+        }
+            break;
+        case 2:
+        {
+            strWeek = @"周一";
+        }
+            break;
+        case 3:
+        {
+            strWeek = @"周二";
+        }
+            break;
+   
+        case 4:
+        {
+            strWeek = @"周三";
+        }
+            break;
+        case 5:
+        {
+            strWeek = @"周四";
+        }
+            break;
+        case 6:
+        {
+            strWeek = @"周五";
+        }
+            break;
+        case 7:
+        {
+            strWeek = @"周六";
+        }
+            break;
+        default:
+            break;
+    }
+    return strWeek;
+}
 /*
 #pragma mark - Navigation
 
