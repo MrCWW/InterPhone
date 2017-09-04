@@ -52,7 +52,7 @@ static NSTimer *timer;
 
 - (void)viewDidLoad {
     self.speakButton.hidden = YES;
-    
+    self.nameLabel = Here_Is_soundPhone;
     NSString *remoteAddress = [[UCSIPCCManager instance] getRemoteAddress];
     NSString *remoteDisplayName = [[UCSIPCCManager instance] getRemoteDisplayName];
     self.addressLabel.text = remoteDisplayName.length == 0 ? remoteAddress : remoteDisplayName;

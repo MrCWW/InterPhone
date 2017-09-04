@@ -11,6 +11,8 @@
 #import "HBaseNavigationController.h"
 #import "AHomePageViewController.h"
 #import "LoginModel.h"
+#import "CallOutgoingView.h"
+#import "CallIncomingView.h"
 @interface AppDelegate ()<UCSIPCCDelegate>
 @property (nonatomic, strong) AHomePageViewController *dialerVC;
 @property (nonatomic, strong) LoginViewController *vc;
@@ -271,6 +273,30 @@
     
     [self.dialerVC onRegisterStateChange:state message:message];
 }
+//发起电话回调
+- (void)onOutgoingCall:(UCSCall *)call withState:(UCSCallState)state withMessage:(NSDictionary *)message
+{
+    CallOutgoingView *vc = [CallOutgoingView new];
+    [self.window.rootViewController presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
 
+- (void)onIncomingCall:(UCSCall *)call withState:(UCSCallState)state withMessage:(NSDictionary *)message
+{
+    CallIncomingView *vc = [CallIncomingView new];
+    vc.call = call;
+    [self.window.rootViewController presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
 
+- (void)onDialFailed:(UCSCallState)state withMessage:(NSDictionary *)message {
+    [SVProgressHUD showErrorWithStatus:@"请输入正确的号码"];
+}
+
+- (void)onHangUp:(UCSCall *)call withState:(UCSCallState)state withMessage:(NSDictionary *)message
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UCS_Call_Released" object:nil userInfo:nil];
+}
 @end

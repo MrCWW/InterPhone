@@ -58,6 +58,8 @@ static UICompositeViewDescription *compositeDescription = nil;
 }
 
 - (void)viewDidLoad {
+    self.nameLabel.text = Here_Is_soundPhone;
+    NSLog(@"%@",Here_Is_soundPhone);
     NSString *remoteAddress = [[UCSIPCCManager instance] getRemoteAddress];
     self.detailLabel.text = remoteAddress;
 }
@@ -93,6 +95,11 @@ static UICompositeViewDescription *compositeDescription = nil;
     sender.selected = !sender.selected;
     [[UCSIPCCManager instance] setSpeakerEnabled:sender.selected];
 }
+//静音
+- (IBAction)jingyinAction:(UIButton *)sender {
+    sender.selected = !sender.selected;
+}
+
 
 - (void)callReleasedEvent {
     [self dismissViewControllerAnimated:YES completion:nil];

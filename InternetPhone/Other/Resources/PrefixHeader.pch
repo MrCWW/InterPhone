@@ -48,10 +48,10 @@
 #define HCGRECT(x,y,w,h) CGRectMake(x, y, w, h)
 #define TimeLineCellHighlightedColor [UIColor colorWithRed:92/255.0 green:140/255.0 blue:193/255.0 alpha:1.0]
 #define RGB_COLOR(r,g,b)     [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-
-#define Here_Set_sound(sound) [[NSUserDefaults standardUserDefaults] setObject:(sound) forKey:@"sound"];\
+//手机号输入框内容
+#define Here_Set_soundPhone(sound) [[NSUserDefaults standardUserDefaults] setObject:(sound) forKey:@"sound"];\
 [[NSUserDefaults standardUserDefaults] synchronize];
-#define Here_Is_sound [[NSUserDefaults standardUserDefaults] objectForKey:@"sound"]
+#define Here_Is_soundPhone [[NSUserDefaults standardUserDefaults] objectForKey:@"sound"]
 
 #define Here_Set_gravity(gravity) [[NSUserDefaults standardUserDefaults] setObject:(gravity) forKey:@"gravity"];\
 [[NSUserDefaults standardUserDefaults] synchronize];
@@ -95,6 +95,7 @@
 #import "UCSUserDefaultManager.h"
 #import "SVProgressHUD.h"
 #import "UIView+Convenience.h"
+
 //CoreDate
 #import "CoreDataAPI.h"
 #import "PhoneRecoredModel.h"
