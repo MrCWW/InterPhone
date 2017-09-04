@@ -27,6 +27,7 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
+
 //sip用户名 密码登录
              [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
     }else {
