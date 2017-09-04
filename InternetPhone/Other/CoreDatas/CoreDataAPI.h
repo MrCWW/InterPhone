@@ -15,7 +15,7 @@
 /**插入数据*/
 +(BOOL)insertPhoneRecored:(PhoneRecoredModel *)phoneModel;
 
-/**查询所有通话记录 ,key1通话的日期数组分区数组，key2通话日期下数组，cell数组*/
+/**查询所有通话记录 ,timeArr通话的日期数组分区数组，totalArr通话日期下数组，cell数组*/
 +(NSDictionary *)searchPhoneRecored;
 
 /**根据手机号查询通话记录*/

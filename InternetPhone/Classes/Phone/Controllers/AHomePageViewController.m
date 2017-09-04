@@ -66,6 +66,9 @@
     }
     return _setVC;
 }
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.selectPic = self.phonePic;
@@ -179,10 +182,11 @@
     self.selectLabel = self.callRecordsLabel;
     self.selectPic = self.callRecordsPic;
     self.scrollView.contentOffset = CGPointMake(ScreenWidth*2, 0);
+    //发送通知，查询数据库
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"callRecoredDataNoti" object:nil];
     if (!_callRecordsVC) {
         [self addChildViewController:self.callRecordsVC];
         [self.scrollView addSubview:self.callRecordsVC.view];
-        
     }
 }
 //设定
