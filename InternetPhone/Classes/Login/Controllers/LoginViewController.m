@@ -45,6 +45,10 @@
     
 
 }
+//注册
+- (IBAction)rgistration:(id)sender {
+    
+}
 //服务条款
 - (IBAction)servicebutton:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.eznippon.com/clause/"]]];

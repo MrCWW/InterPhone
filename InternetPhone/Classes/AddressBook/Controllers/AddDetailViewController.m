@@ -203,15 +203,6 @@
             _sipField.text = _strPhone;
             _sipField.delegate = self;
             [viewphone addSubview:_sipField];
-            
-//            UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_sipField.frame)+5, 100, 30)];
-//            label3.text = @"電話號碼";
-//            [viewphone addSubview:label3];
-//            _phoneField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label3.frame)+5, ScreenWidth-46, 30)];
-//            _phoneField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
-//            [_phoneField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
-//            _phoneField.text = _strPhone;
-//            [viewphone addSubview:_phoneField];
         
 
         
@@ -269,20 +260,9 @@
     
     [self.view endEditing:YES];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-
     
 }
 - (void)clickbackphone:(UIBarButtonItem *)but {
-//    PhoneViewController *meVc = [[PhoneViewController alloc]init];
-//    meVc.strPhone = _strPhone;
-//    [self.navigationController pushViewController:meVc animated:YES];
-//    NSInteger scrollHeight = self.scrollView.height;
-//    PhoneViewController *aVC = [[PhoneViewController alloc] init];
-//    aVC.strPhone = _strPhone;
-//    [self addChildViewController:aVC];
-//    aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
-//    aVC.view.backgroundColor  = [UIColor whiteColor];
-//    [self.scrollView addSubview:aVC.view];
     
     [self clickbacktwo:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"callActionNoti" object:@{@"phone":_strPhone,@"name":_strname}];

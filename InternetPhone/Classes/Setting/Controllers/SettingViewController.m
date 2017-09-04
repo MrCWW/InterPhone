@@ -51,7 +51,7 @@
         NSString * string3 = [NSString stringWithFormat:@"%@  %@ 分鐘", nssing2, nssing1];
         NSMutableAttributedString * attriStr=[[NSMutableAttributedString alloc]initWithString:string3];
         NSRange range = [string3 rangeOfString:@"帳戶剩餘"];
-        [attriStr addAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:range];
+        [attriStr addAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:84.0/255 green:148.0/255  blue:200.0/255 alpha:1.0f]} range:range];
         _balabce.attributedText=attriStr;
         NSString *nssing4 = @"語音失效日期 ";
         NSString * string5 = [NSString stringWithFormat:@"%@  %@ ", nssing4, [responseObject objectForKey:@"expiry_date"]];
