@@ -67,6 +67,7 @@
                                     <constraint firstAttribute="width" constant="40" id="FSS-k5-2jw"/>
                                 </constraints>
                                 <state key="normal" image="checkbox_unchecked"/>
+                                <state key="selected" image="checkbox_checked"/>
                                 <connections>
                                     <action selector="deleteBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J4b-k7-s41"/>
                                 </connections>
@@ -105,6 +106,7 @@
     <resources>
         <image name="5@3x20170720" width="150" height="150"/>
         <image name="call_status_outgoing" width="29" height="28"/>
+        <image name="checkbox_checked" width="17" height="17"/>
         <image name="checkbox_unchecked" width="17" height="17"/>
         <image name="list_details_default" width="34" height="34"/>
     </resources>

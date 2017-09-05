@@ -52,6 +52,7 @@
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if (self) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callBtnAction) name:@"callBtnActionRecoredView" object:nil];
 		[self initUICallButton];
 	}
     return self;
@@ -61,8 +62,13 @@
 //	[addressField release];
 //    
 //    [super dealloc];
+//    [super dealloc];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"callBtnActionRecoredView" object:nil];
 }
-
+//拨打电话通知
+- (void)callBtnAction{
+    [self touchUp:nil];
+}
 
 #pragma mark -
 
@@ -80,6 +86,7 @@
     NSString *displayName = nil;
 
     if( [address length] == 0){
+//        [MBProgressHUD showText:@"請輸入號碼" toView:<#(UIView *)#>]
         addressField.text = [UCSUserDefaultManager GetLocalDataString:@"Last_Call_Address"];
       return;
     }

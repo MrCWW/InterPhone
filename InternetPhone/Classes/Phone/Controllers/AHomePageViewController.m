@@ -80,7 +80,7 @@
     
     [self creatScrollView];
 }
-#pragma mark - 切换到电话界面通知
+#pragma mark - 切换到拨打电话界面通知
 - (void)callActionNoti:(NSNotification *)sender {
     NSDictionary *dic = sender.object;
     NSLog(@"%@",dic);
@@ -88,6 +88,7 @@
     self.selectLabel.textColor = [UIColor colorWithRGB:0x282828];
     self.phonePic.image = [UIImage imageNamed:@"20170720-中華電信-電話符號-藍"];
     self.phoneVC.numberTextFiled.text = dic[@"phone"];
+    Here_Set_soundPhone(self.phoneVC.numberTextFiled.text)
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.phoneLabel;
     self.selectPic = self.phonePic;
@@ -144,6 +145,7 @@
     self.phoneVC.strPhone = @"";
     self.phoneVC.strName = @"";
     self.phoneVC.saveNumStr = @"";
+    Here_Set_soundPhone(@"");
     self.selectPic.image = [self imageNameWithTag:self.selectLabel.tag];
     self.selectLabel = self.phoneLabel;
     self.selectPic = self.phonePic;
@@ -183,6 +185,7 @@
     self.selectLabel = self.callRecordsLabel;
     self.selectPic = self.callRecordsPic;
     self.scrollView.contentOffset = CGPointMake(ScreenWidth*2, 0);
+  
     //发送通知，查询数据库
     [[NSNotificationCenter defaultCenter] postNotificationName:@"callRecoredDataNoti" object:nil];
     if (!_callRecordsVC) {

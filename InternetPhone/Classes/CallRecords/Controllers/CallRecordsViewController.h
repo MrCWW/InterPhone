@@ -9,6 +9,9 @@
 #import "HBaseViewController.h"
 
 @interface CallRecordsViewController : HBaseViewController
-
+{
+    BOOL _isEditAction;//是否编辑操作，默认NO
+}
+@property (weak, nonatomic) IBOutlet UIScrollView *bigScrollView;
 
 @end

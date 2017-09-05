@@ -102,6 +102,7 @@ static UICompositeViewDescription *compositeDescription = nil;
 
 
 - (void)callReleasedEvent {
+    Here_Set_soundPhone(@"")//界面消失，清空记录
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

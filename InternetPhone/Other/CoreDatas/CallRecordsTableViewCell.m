@@ -36,6 +36,10 @@
             _nameLabel.text = [NSString stringWithFormat:@"%@(%@)",model.phone,model.countPhone];
         }
     }
+    self.detialBtn.hidden = !model.isShowDetial;//是否显示
+    self.deleteBtn.hidden = model.isShowDetial;
+    self.deleteBtn.selected = model.isSelectDelete;
+
 }
 - (IBAction)detialBtnAction:(id)sender {
     if (self.detialBlock) {
@@ -43,7 +47,11 @@
     }
 }
 - (IBAction)deleteBtnAction:(id)sender {
-    
+    if (self.deteleBlock) {
+        self.deteleBlock(self.indexPath);
+    }
+//    UIButton *btn = (UIButton *)sender;
+//    btn.selected = self.model.isSelectDelete;//btn选中状态
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

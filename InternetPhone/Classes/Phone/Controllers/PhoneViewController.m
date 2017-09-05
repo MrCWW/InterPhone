@@ -198,6 +198,7 @@
 #pragma mark - 拨号按钮触发方法
 - (IBAction)callBtnAction:(id)sender {
     if (_numberTextFiled.text.length) {
+        self.saveNumStr = @"";
         //存储日期
          NSDate *today = [NSDate date];
         NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
@@ -221,7 +222,7 @@
         //插入到数据库
         [CoreDataAPI insertPhoneRecored:model];
         //拨打电话
-        [self callBtn];
+//        [self callBtn];
     }else {
         [MBProgressHUD showText:@"請輸入號碼" toView:self.view];
     }
@@ -236,7 +237,8 @@
     }
 //    [UCSUserDefaultManager SetLocalDataString:_numberTextFiled.text key:@"Last_Call_Address"];
 ////    [[UCSIPCCManager instance] call:_numberTextFiled.text displayName:@"123" transfer:NO];
- [[UCSIPCCManager instance] call:[_numberTextFiled text] displayName:nil transfer:YES];
+    
+// [[UCSIPCCManager instance] call:[_numberTextFiled text] displayName:nil transfer:YES];
 }
 #pragma mark - UITextFieldDelegate
 -(BOOL)textFieldShouldBeginEditing:(UITextField*)textField{
