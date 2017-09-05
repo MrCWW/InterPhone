@@ -102,7 +102,7 @@
     //创建查询请求对象
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:PhoneRecoredMark];
     //按更新时间排列
-    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"updatedate" ascending:YES];
+    NSSortDescriptor *sort=[NSSortDescriptor sortDescriptorWithKey:@"updatedate" ascending:NO];
     
     NSArray *sortDescriptors=[NSArray arrayWithObject:sort];
     [request setSortDescriptors:sortDescriptors];

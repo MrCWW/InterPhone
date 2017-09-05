@@ -74,10 +74,10 @@
     self.selectPic = self.phonePic;
     self.selectLabel = self.phoneLabel;
     // Do any additional setup after loading the view from its nib.
-    
+    //打电话界面通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callActionNoti:) name:@"callActionNoti" object:nil];
-    
-    
+    //去通讯录界面通知
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goAddressBooksNoti:) name:@"goAddressBooksNoti" object:nil];
     [self creatScrollView];
 }
 #pragma mark - 切换到拨打电话界面通知
@@ -95,6 +95,10 @@
     self.phoneVC.strPhone = dic[@"phone"];
     self.phoneVC.strName = dic[@"name"];
     self.scrollView.contentOffset = CGPointMake(0, 0);
+}
+//去通讯录界面通知
+- (void)goAddressBooksNoti:(NSNotification *)sender {
+    [self addressBookAction:nil];
 }
 - (void)creatScrollView {
 

@@ -28,6 +28,10 @@
 		24896E081F5D44FB001D39A4 /* CallRecordsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */; };
 		24896E091F5D44FB001D39A4 /* CallRecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */; };
 		24896E0F1F5D5AE1001D39A4 /* NSDate+judgeToday.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */; };
+		24896E351F5EB357001D39A4 /* CallRecoredDetialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */; };
+		24896E371F5EB3B7001D39A4 /* CallRecoredDetialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */; };
+		24896E3B1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */; };
+		24896E3C1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */; };
 		249104261F22DADB00B370F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249104251F22DADB00B370F5 /* main.m */; };
 		2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491042D1F22DADB00B370F5 /* Main.storyboard */; };
 		249104311F22DADB00B370F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249104301F22DADB00B370F5 /* Assets.xcassets */; };
@@ -237,6 +241,12 @@
 		24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecordsTableViewCell.xib; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		24896E0D1F5D5AE1001D39A4 /* NSDate+judgeToday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+judgeToday.h"; sourceTree = "<group>"; };
 		24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+judgeToday.m"; sourceTree = "<group>"; };
+		24896E331F5EB357001D39A4 /* CallRecoredDetialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredDetialView.h; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredDetialView.h; sourceTree = SOURCE_ROOT; };
+		24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredDetialView.m; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredDetialView.m; sourceTree = SOURCE_ROOT; };
+		24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredDetialView.xib; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredDetialView.xib; sourceTree = SOURCE_ROOT; };
+		24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredsDetialTableViewCell.h; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredsDetialTableViewCell.m; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredsDetialTableViewCell.xib; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		249104211F22DADB00B370F5 /* InternetPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternetPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249104251F22DADB00B370F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2491042E1F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -739,6 +749,12 @@
 				24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */,
 				24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */,
 				24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */,
+				24896E331F5EB357001D39A4 /* CallRecoredDetialView.h */,
+				24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */,
+				24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */,
+				24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */,
+				24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */,
+				24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1471,6 +1487,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24896E371F5EB3B7001D39A4 /* CallRecoredDetialView.xib in Resources */,
 				EA6D73C01F4174EA00DCB6F3 /* LICENSE.txt in Resources */,
 				EA6D73AD1F4174EA00DCB6F3 /* CallOutgoingView.xib in Resources */,
 				247471491F24BF820008B066 /* CallRecordsDetailViewController.xib in Resources */,
@@ -1492,6 +1509,7 @@
 				249105C01F22F20A00B370F5 /* LICENSE in Resources */,
 				2491066D1F22FBD300B370F5 /* LoginViewController.xib in Resources */,
 				EAEE5A451F302758003F6583 /* contTableViewCell.xib in Resources */,
+				24896E3C1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib in Resources */,
 				2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */,
 				EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */,
 			);
@@ -1538,6 +1556,7 @@
 				249105D31F22F20A00B370F5 /* MJRefreshAutoGifFooter.m in Sources */,
 				EA6D73BC1F4174EA00DCB6F3 /* UILongTouchButton.m in Sources */,
 				2474715A1F24D55C0008B066 /* HomePageHeaderCateforyView.m in Sources */,
+				24896E351F5EB357001D39A4 /* CallRecoredDetialView.m in Sources */,
 				2491062E1F22F3DD00B370F5 /* UILabel+Extension.m in Sources */,
 				EA6D73C51F4174EA00DCB6F3 /* UCSUserDefaultManager.m in Sources */,
 				249105B71F22F20A00B370F5 /* AFHTTPRequestOperation.m in Sources */,
@@ -1569,6 +1588,7 @@
 				249105DA1F22F20A00B370F5 /* MJRefreshNormalHeader.m in Sources */,
 				249105D11F22F20A00B370F5 /* MJRefreshFooter.m in Sources */,
 				24B4EE871F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m in Sources */,
+				24896E3B1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m in Sources */,
 				247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */,
 				249105E41F22F20A00B370F5 /* SDImageCache.m in Sources */,
 				249106281F22F3DD00B370F5 /* UIBarButtonItem+Extension.m in Sources */,

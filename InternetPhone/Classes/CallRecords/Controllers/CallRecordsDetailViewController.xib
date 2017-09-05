@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,7 +18,57 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5@3x20170720" translatesAutoresizingMaskIntoConstraints="NO" id="Gnd-QJ-kb5">
+                    <rect key="frame" x="137.5" y="10" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Grj-k3-jyZ"/>
+                        <constraint firstAttribute="height" constant="100" id="gGW-5P-gJH"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRZ-tf-85w">
+                    <rect key="frame" x="10" y="118" width="355" height="24"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="yQz-ek-Gt1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlP-Hg-9Fn">
+                    <rect key="frame" x="167.5" y="162" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="B1o-zc-bUf"/>
+                        <constraint firstAttribute="height" constant="40" id="kyM-op-Ewy"/>
+                    </constraints>
+                    <state key="normal" image="call_start_body_default"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Gnd-QJ-kb5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7RQ-Oi-UwA"/>
+                <constraint firstItem="Gnd-QJ-kb5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="8lI-YI-yzW"/>
+                <constraint firstAttribute="trailing" secondItem="SRZ-tf-85w" secondAttribute="trailing" constant="10" id="ELN-a8-7HY"/>
+                <constraint firstItem="dlP-Hg-9Fn" firstAttribute="top" secondItem="SRZ-tf-85w" secondAttribute="bottom" constant="20" id="Ma1-zb-919"/>
+                <constraint firstItem="dlP-Hg-9Fn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dEb-uD-RmJ"/>
+                <constraint firstItem="SRZ-tf-85w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="jpZ-6X-36W"/>
+                <constraint firstItem="SRZ-tf-85w" firstAttribute="top" secondItem="Gnd-QJ-kb5" secondAttribute="bottom" constant="8" id="jta-NH-eR3"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="5@3x20170720" width="150" height="150"/>
+        <image name="call_start_body_default" width="51" height="51"/>
+    </resources>
 </document>

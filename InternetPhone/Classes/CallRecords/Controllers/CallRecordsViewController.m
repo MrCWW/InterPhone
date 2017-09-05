@@ -14,6 +14,8 @@
 #import "CallRecordsTableViewCell.h"
 #import "NSDate+judgeToday.h"
 #import "PhoneRecoredModel.h"
+#import "CallRecordsDetailViewController.h"
+#import "CallRecoredDetialView.h"
 #import "ShowAlter.h"
 #define OneCell @"oneCell"
 @interface CallRecordsViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
@@ -134,7 +136,7 @@
 }
 //去通讯录
 - (IBAction)goAddressBookAction:(id)sender {
-
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"goAddressBooksNoti" object:nil];
 }
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -167,7 +169,6 @@
     self.lineView = [[UIView alloc] initWithFrame:HCGRECT(0, 48, 70, 2)];
     _lineView.backgroundColor = [UIColor blueColor];
     [self.headerView addSubview:_lineView];// 暂时去掉
-    
         //创建tableView
         self.tableView = [[UITableView alloc] initWithFrame:HCGRECT(0, 50, ScreenWidth, ScreenHeight - 179) style:UITableViewStylePlain];
         self.tableView.delegate = self;
@@ -176,35 +177,12 @@
         //    self.tableView.backgroundColor = [UIColor colorWithRGB:0xf2f2f2];
         self.tableView.showsVerticalScrollIndicator = NO;//隐藏滚动条
         [self.tableView registerNib:[UINib nibWithNibName:@"CallRecordsTableViewCell" bundle:nil] forCellReuseIdentifier:OneCell];
+//    self.tableView.backgroundColor = [UIColor blueColor];
          [self.bigScrollView addSubview:self.tableView];
         
-
-  
-//    self.scrollView = [[UIScrollView alloc]initWithFrame:HCGRECT(0, 50, ScreenWidth, ScreenHeight - 179)];
-//    NSInteger scrollHeight = self.scrollView.height;
-//    //    self.scrollView.showsHorizontalScrollIndicator = NO;
-//    self.scrollView.showsVerticalScrollIndicator = NO;
-//    self.scrollView.delegate = self;
-//    self.scrollView.pagingEnabled = YES;
-//    self.scrollView.bounces = NO;
-//    //    self.scrollView.directionalLockEnabled = YES;
-//    self.scrollView.contentSize = CGSizeMake(ScreenWidth*2, scrollHeight );
-//    [self.bigScrollView addSubview:self.scrollView];
-//    
-//    AnswerCallViewController *aVC = [[AnswerCallViewController alloc] init];
-//    
-//    [self addChildViewController:aVC];
-//    aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
-//    aVC.view.backgroundColor  = [UIColor redColor];
-//    [self.scrollView addSubview:aVC.view];
-//    
-//    MissedCallViewController *bVC = [[MissedCallViewController alloc] init];
-//    
-//    [self addChildViewController:bVC];
-//    bVC.view.frame = HCGRECT(ScreenWidth, 0, ScreenWidth, scrollHeight);
-//    [self.scrollView addSubview:bVC.view];
-    
-    
+     //通话记录详情界面
+    CallRecoredDetialView *viewCall = [[CallRecoredDetialView alloc] initWithFrame:HCGRECT(ScreenWidth, 50, ScreenWidth, ScreenHeight - 179)];
+    [self.bigScrollView addSubview:viewCall];
     
 }
 #pragma mark -- <UITableViewDataSource,UITableViewDelegate>
@@ -230,6 +208,7 @@
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:HCGRECT(0, 0, ScreenWidth, 44)];
+    view.backgroundColor = [UIColor whiteColor];
     UILabel *lable = [[UILabel alloc] initWithFrame:HCGRECT(0, 0, ScreenWidth, 44)];
     lable.textAlignment = NSTextAlignmentCenter;
 //    lable.text = self.dataTimeArray[section];
@@ -268,6 +247,7 @@
     cell.detialBlock = ^(NSIndexPath *indexPath) {
         //点击详情
           [self.bigScrollView setContentOffset:CGPointMake(ScreenWidth, 0)];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"getCallRecoredDetialNoti" object:@{@"phone":model}];
     };
     //删除选中
     cell.deteleBlock = ^(NSIndexPath *indexPath) {
