@@ -293,8 +293,89 @@
 - (void)clickbackphone:(UIBarButtonItem *)but {
     
     [self clickbacktwo:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"callActionNoti" object:@{@"phone":_strPhone,@"name":_strname}];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"callActionNoti" object:@{@"phone":_strPhone,@"name":_strname}];
+    //拨号通知
+    Here_Set_soundPhone(_strPhone);//设置拨号number
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"callBtnActionRecoredView" object:nil];
+    // 插入数据库
+    [self insertCoredata];
 }
+#pragma mark - 点击拨号，插入到数据库&更新界面
+- (void)insertCoredata {
+    //存储日期
+    NSDate *today = [NSDate date];
+    NSCalendar *calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
+    NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    
+    comps = [calendar components:unitFlags fromDate:today];//判断是周几
+    NSString *timeWeekStr =  [self judegWeekDay:[comps weekday]];
+    //        NSDate * date = p.updatedate;
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    format.dateFormat = @"MM月dd号";
+    //日期字符串
+    NSString *string = [format stringFromDate:today];
+    NSLog(@"%@",string);
+    PhoneRecoredModel *modelRecored = [[PhoneRecoredModel alloc] init];
+    modelRecored.name = _strname;
+    modelRecored.phone = _strPhone;
+    modelRecored.timedate = [NSString stringWithFormat:@"%@ %@",timeWeekStr,string];
+    modelRecored.updatedate = today;
+    //插入到数据库
+    [CoreDataAPI insertPhoneRecored:modelRecored];
+//    //重新获取数据源，刷新界面, 发送通知
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"callRecoredDataNoti" object:nil];
+    
+}
+
+//判断周几
+-(NSString *)judegWeekDay:(NSInteger)weekDay{
+    //在这里需要注意的是：星期日是数字1，星期一时数字2，以此类推。。。
+    NSString *strWeek;
+    switch (weekDay) {
+        case 1:
+        {
+            strWeek = @"周日";
+        }
+            break;
+        case 2:
+        {
+            strWeek = @"周一";
+        }
+            break;
+        case 3:
+        {
+            strWeek = @"周二";
+        }
+            break;
+            
+        case 4:
+        {
+            strWeek = @"周三";
+        }
+            break;
+        case 5:
+        {
+            strWeek = @"周四";
+        }
+            break;
+        case 6:
+        {
+            strWeek = @"周五";
+        }
+            break;
+        case 7:
+        {
+            strWeek = @"周六";
+        }
+            break;
+        default:
+            break;
+    }
+    return strWeek;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
