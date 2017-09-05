@@ -131,9 +131,11 @@
 //
 - (void)clickbacktwo:(UIBarButtonItem *)but {
     if ((self.btnone.selected = !self.btnone.selected)) {
-        AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
-        [self addChildViewController:aVC];
-        [self.scrollView addSubview:aVC.view];
+//        AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
+//        [self addChildViewController:aVC];
+//        [self.scrollView addSubview:aVC.view];
+        [self.view removeFromSuperview];
+        [self removeFromParentViewController];
 
     }else{
         [self.view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
