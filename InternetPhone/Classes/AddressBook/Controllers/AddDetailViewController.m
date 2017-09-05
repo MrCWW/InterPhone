@@ -162,7 +162,8 @@
         }else if(buttonIndex == 1){
             //删除联系人
             
-            CNContactStore * store = [[CNContactStore alloc]init];
+            CNContactStore *store = [CNContactStore new];
+
             //检索条件，检索所有联系人
             NSPredicate * predicate = [CNContact predicateForContactsMatchingName:_strname];
             NSLog(@"%@",predicate);
@@ -170,31 +171,25 @@
             //提取数据
             NSArray * contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:@[CNContactGivenNameKey] error:nil];
             NSLog(@"%@",contacts);
-            CNMutableContact* contact = [contacts objectAtIndex:buttonIndex];
-            [self deleteContact:contact];
             
+            CNContact *cont = [contacts lastObject];
+            CNMutableContact *contact = [cont mutableCopy];
 
+            CNSaveRequest *deleteRequest = [[CNSaveRequest alloc] init];
+            [deleteRequest deleteContact:contact];
+            if(![store executeSaveRequest:deleteRequest error:nil])
+            {
+                NSLog(@"can't be updated");
+            }
+            AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
+            [self addChildViewController:aVC];
+            [self.scrollView addSubview:aVC.view];
+            
+                
         }
     }
 }
-- (void)deleteContact:(CNMutableContact *)contact{
-    
-    CNMutableContact *mutableContact = contact.mutableCopy;
-    CNContactStore *store = [[CNContactStore alloc] init];
-    CNSaveRequest *deleteRequest = [[CNSaveRequest alloc] init];
-    [deleteRequest deleteContact:mutableContact];
-    
-    NSError *error;
-    if([store executeSaveRequest:deleteRequest error:&error]) {
-        NSLog(@"delete complete");
-        AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
-        [self addChildViewController:aVC];
-        [self.scrollView addSubview:aVC.view];
 
-    }else {
-        NSLog(@"delete error : %@", [error description]);
-    }
-}
 
 
 //修改
@@ -253,31 +248,25 @@
         
     }else {
 
-        CNContactStore * store = [[CNContactStore alloc]init];
+        CNContactStore *store = [CNContactStore new];
         //检索条件，检索所有名字中有zhang的联系人
         NSPredicate * predicate = [CNContact predicateForContactsMatchingName:_strname];
-        NSLog(@"%@",predicate);
-
         //提取数据
         NSArray * contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:@[CNContactGivenNameKey] error:nil];
-        NSLog(@"%@",contacts);
 
-        
-        CNMutableContact *contact2 = [[contacts objectAtIndex:0] mutableCopy];
-
-        NSLog(@"%@",contact2);
-
+        CNContact *cont = [contacts lastObject];
+        CNMutableContact *contact2 = [cont mutableCopy];
 
         //修改联系人的属性
-        
         contact2.givenName = _mmField.text;
-        NSLog(@"%@",_mmField.text);
         //实例化一个CNSaveRequest
         CNSaveRequest * saveRequest = [[CNSaveRequest alloc]init];
         [saveRequest updateContact:contact2];
-        
-        [store executeSaveRequest:saveRequest error:nil];
-        
+        NSLog(@"%@",saveRequest);
+        if(![store executeSaveRequest:saveRequest error:nil])
+        {
+            NSLog(@"can't be updated");
+        }
         //
         AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
         [self addChildViewController:aVC];
@@ -285,40 +274,7 @@
     }
     
 }
-- (void)changeTextfieldFrame:(NSNotification *)info{
-    
-    //获取通知中传来的信息，Keyboard 的 frame 信息保存在 UIKeyboardFrameEndUserInfoKey 这个 key 里
-    CGRect endFrame = [info.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    
-    //动画展示平移效果
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        //用键盘的Y值减去屏幕高度获得偏移量
-        //当键盘弹出时 键盘Y值小于屏幕高度 所以translationY为负值 view得以向上偏移
-        //当键盘隐藏时 键盘Y值等于屏幕高度 所以translationY值为零 view得以平移回去
-        CGFloat translationY = endFrame.origin.y - self.view.frame.size.height;
-        self.view.transform = CGAffineTransformMakeTranslation(0, translationY);
-        
-    }];
 
-}
-
-
-
--(void)saveContact:(NSString*)familyName givenName:(NSString*)givenName phoneNumber:(NSString*)phoneNumber {
-    CNMutableContact *mutableContact = [[CNMutableContact alloc] init];
-    
-    mutableContact.givenName = givenName;
-    mutableContact.familyName = familyName;
-    CNPhoneNumber * phone =[CNPhoneNumber phoneNumberWithStringValue:phoneNumber];
-    
-    mutableContact.phoneNumbers = [[NSArray alloc] initWithObjects:[CNLabeledValue labeledValueWithLabel:CNLabelPhoneNumberiPhone value:phone], nil];
-    CNContactStore *store = [[CNContactStore alloc] init];
-    CNSaveRequest *saveRequest = [[CNSaveRequest alloc] init];
-    
-    [saveRequest addContact:mutableContact toContainerWithIdentifier:store.defaultContainerIdentifier];
-    
-}
 
 //移除通知 收回键盘
 -(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
