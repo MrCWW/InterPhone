@@ -255,6 +255,7 @@
         NSPredicate * predicate = [CNContact predicateForContactsMatchingName:_strname];
         //提取数据
         NSArray * contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:@[CNContactGivenNameKey] error:nil];
+        NSLog(@"%@",contacts);
 
         CNContact *cont = [contacts lastObject];
         CNMutableContact *contact2 = [cont mutableCopy];

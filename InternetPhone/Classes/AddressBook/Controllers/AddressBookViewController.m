@@ -247,8 +247,8 @@
         NSInteger scrollHeight = self.scrollView.height;
         AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
         CNContact* contact = [cities objectAtIndex:indexPath.row];
-        aVC.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
-        aVC.name = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+        aVC.strname = [NSString stringWithFormat:@"%@", contact.familyName];
+        aVC.name = [NSString stringWithFormat:@"%@",  contact.givenName];
 
         aVC.arraytxl = [cities objectAtIndex:indexPath.row];
         NSString *phoneNumber = @"";
