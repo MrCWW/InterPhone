@@ -161,14 +161,38 @@
             
         }else if(buttonIndex == 1){
             //删除联系人
-            AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
-            [self addChildViewController:aVC];
-            aVC.name = _strname;
-            [self.scrollView addSubview:aVC.view];
+            
+            CNContactStore * store = [[CNContactStore alloc]init];
+            //检索条件，检索所有联系人
+            NSPredicate * predicate = [CNContact predicateForContactsMatchingName:_strname];
+            NSLog(@"%@",predicate);
 
-
+            //提取数据
+            NSArray * contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:@[CNContactGivenNameKey] error:nil];
+            NSLog(@"%@",contacts);
+            CNMutableContact* contact = [contacts objectAtIndex:buttonIndex];
+            [self deleteContact:contact];
+            
 
         }
+    }
+}
+- (void)deleteContact:(CNMutableContact *)contact{
+    
+    CNMutableContact *mutableContact = contact.mutableCopy;
+    CNContactStore *store = [[CNContactStore alloc] init];
+    CNSaveRequest *deleteRequest = [[CNSaveRequest alloc] init];
+    [deleteRequest deleteContact:mutableContact];
+    
+    NSError *error;
+    if([store executeSaveRequest:deleteRequest error:&error]) {
+        NSLog(@"delete complete");
+        AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
+        [self addChildViewController:aVC];
+        [self.scrollView addSubview:aVC.view];
+
+    }else {
+        NSLog(@"delete error : %@", [error description]);
     }
 }
 
@@ -176,7 +200,8 @@
 //修改
 - (void)clickbackxg:(UIBarButtonItem *)but {
     if ((self.btnone.selected = !self.btnone.selected)) {
-        
+        _mmField.text = nil;
+        _sipField.text = nil;
         [_btnone setImage:[UIImage imageNamed:@"valid_default"] forState:UIControlStateNormal];
         [_btnTwo setImage:[UIImage imageNamed:@"cancel_edit_default"] forState:UIControlStateNormal];
         self.btnone.userInteractionEnabled = YES;
@@ -191,20 +216,22 @@
             _mmField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
             [_mmField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
             _mmField.text = _strname;
-            _mmField.delegate = self;
-            [viewphone addSubview:_mmField];
-            
+
+        [viewphone addSubview:_mmField];
             UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth/2-20,CGRectGetMaxY(_mmField.frame)+5, 100, 30)];
             label2.text = @"電話號碼";
             [viewphone addSubview:label2];
             _sipField= [[UITextField alloc] initWithFrame:CGRectMake(15, CGRectGetMaxY(label2.frame)+5, ScreenWidth-46, 30)];
             _sipField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
             [_sipField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
-            _sipField.text = _strPhone;
-            _sipField.delegate = self;
-            [viewphone addSubview:_sipField];
+        _sipField.text = _strPhone;
+//        NSMutableDictionary *dict1 = [NSMutableDictionary dictionary];
+//        dict1[NSForegroundColorAttributeName] = [UIColor blackColor];
+//        NSAttributedString *attribute1 = [[NSAttributedString alloc] initWithString:_sipField.placeholder attributes:dict1];
+//        [_sipField setAttributedPlaceholder:attribute1];
+        [viewphone addSubview:_sipField];
+       
         
-
         
     }else {
 
@@ -215,6 +242,46 @@
         self.btnTwo.userInteractionEnabled = YES;
         [self createUI];
 
+        [self clickbacktz];
+    }
+    
+}
+- (void)clickbacktz{
+
+
+    if (_mmField.text == nil|| [_mmField.text length] == 0||_sipField.text == nil|| [_sipField.text length] == 0) {
+        
+    }else {
+
+        CNContactStore * store = [[CNContactStore alloc]init];
+        //检索条件，检索所有名字中有zhang的联系人
+        NSPredicate * predicate = [CNContact predicateForContactsMatchingName:_strname];
+        NSLog(@"%@",predicate);
+
+        //提取数据
+        NSArray * contacts = [store unifiedContactsMatchingPredicate:predicate keysToFetch:@[CNContactGivenNameKey] error:nil];
+        NSLog(@"%@",contacts);
+
+        
+        CNMutableContact *contact2 = [[contacts objectAtIndex:0] mutableCopy];
+
+        NSLog(@"%@",contact2);
+
+
+        //修改联系人的属性
+        
+        contact2.givenName = _mmField.text;
+        NSLog(@"%@",_mmField.text);
+        //实例化一个CNSaveRequest
+        CNSaveRequest * saveRequest = [[CNSaveRequest alloc]init];
+        [saveRequest updateContact:contact2];
+        
+        [store executeSaveRequest:saveRequest error:nil];
+        
+        //
+        AddRessBookViewController *aVC = [[AddRessBookViewController alloc] init];
+        [self addChildViewController:aVC];
+        [self.scrollView addSubview:aVC.view];
     }
     
 }
