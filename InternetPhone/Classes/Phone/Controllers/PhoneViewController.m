@@ -38,36 +38,6 @@
     return _saveNumStr;
 }
 
-#pragma mark - ViewController Functions
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    
-    [_callbutton setEnabled:TRUE];
-    
-    [_numberTextFiled setText:@""];
-    
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
-        // fix placeholder bar color in iOS7
-        UIColor *color = [UIColor grayColor];
-        NSAttributedString* placeHolderString = [[NSAttributedString alloc]
-                                                 initWithString:NSLocalizedString(@"请输入号码", @"请输入号码")
-                                                 attributes:@{NSForegroundColorAttributeName: color}];
-        _numberTextFiled.attributedPlaceholder = placeHolderString;
-        
-    }
-#endif
-    
-    
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

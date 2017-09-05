@@ -1806,6 +1806,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/InternetPhone/Other/ucsipccsdk/liblinphone-sdk/apple-darwin/lib",
+					"$(PROJECT_DIR)/InternetPhone/Other/ucsipccsdk/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
 				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = YuTongZi.Hei.InternetPhone;
@@ -1827,6 +1829,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/InternetPhone/Other/ucsipccsdk/liblinphone-sdk/apple-darwin/lib",
+					"$(PROJECT_DIR)/InternetPhone/Other/ucsipccsdk/liblinphone-sdk/apple-darwin/lib/mediastreamer/plugins",
 				);
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = YuTongZi.Hei.InternetPhone;

@@ -130,18 +130,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-//    if (_name != nil) {
-//        NSMutableArray *array = [[NSMutableArray alloc] init];
-//        NSString *str = _name;
-//        NSUInteger len = [str length];
-//        for(NSUInteger i=0; i<len; i++)
-//        {
-//            [array addObject:[NSNumber numberWithChar:[str characterAtIndex:i]]];
-//        }
-//        cities = array;
-//        CNContact* contact = [cities objectAtIndex:indexPath.row];
-//        [self deleteContact:contact];
-//    }
     
 
     _myTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -174,6 +162,7 @@
         UIGraphicsEndImageContext();
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+    
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
@@ -287,9 +276,10 @@
 -(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
 
 {
-    
+    [_mysearchbar resignFirstResponder];
     [self.view endEditing:YES];
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
