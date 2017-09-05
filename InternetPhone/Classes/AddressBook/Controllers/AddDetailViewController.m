@@ -19,6 +19,7 @@
 @property (nonatomic,copy) UITextField *mxmField;
 @property (nonatomic,copy) UITextField *sipField;
 @property (nonatomic,copy) UITextField *phoneField;
+
 @property (strong,nonatomic) UILabel *labelone;
 
 
