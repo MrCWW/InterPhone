@@ -164,6 +164,17 @@
     return cell;
     
 }
+// 将点击tableviewcell的时候收回 searchBar 键盘
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [_mysearchbar resignFirstResponder];
+    return indexPath;
+}
+// 滑动的时候 searchBar 回收键盘
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [_mysearchbar resignFirstResponder];
+}
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
@@ -222,6 +233,7 @@
         NSInteger scrollHeight = self.scrollView.height;
         AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
         aVC.strname = [_filteredCities objectAtIndex:indexPath.row];
+        aVC.name = [_filteredCities objectAtIndex:indexPath.row];
         aVC.strPhone = [_PHONE objectAtIndex:indexPath.row];
         [self addChildViewController:aVC];
         aVC.view.frame = HCGRECT(0, 0, ScreenWidth, scrollHeight);
@@ -236,6 +248,8 @@
         AddDetailViewController *aVC = [[AddDetailViewController alloc] init];
         CNContact* contact = [cities objectAtIndex:indexPath.row];
         aVC.strname = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+        aVC.name = [NSString stringWithFormat:@"%@%@", contact.familyName, contact.givenName];
+
         aVC.arraytxl = [cities objectAtIndex:indexPath.row];
         NSString *phoneNumber = @"";
         
