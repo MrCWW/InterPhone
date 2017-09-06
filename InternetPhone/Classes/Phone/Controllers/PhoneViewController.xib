@@ -109,7 +109,7 @@
                                 <constraint firstAttribute="height" constant="45" id="uoC-Ue-6nb"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="撥號" image="1@3x20170720"/>
+                            <state key="normal" title="撥號" image="call"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                     <real key="value" value="5"/>
@@ -141,7 +141,7 @@
         </view>
     </objects>
     <resources>
-        <image name="1@3x20170720" width="60" height="60"/>
         <image name="backspace_default" width="36" height="19"/>
+        <image name="call" width="36" height="36"/>
     </resources>
 </document>

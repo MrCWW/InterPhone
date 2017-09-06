@@ -20,9 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qi-tT-dgJ">
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8qi-tT-dgJ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zW7-07-BUp"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="1S8-oM-V2T"/>
@@ -30,6 +32,11 @@
                 </searchBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8qi-tT-dgJ" secondAttribute="trailing" id="MdV-Wb-Rim"/>
+                <constraint firstItem="8qi-tT-dgJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UKR-aB-BD0"/>
+                <constraint firstItem="8qi-tT-dgJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="f5h-Br-FCB"/>
+            </constraints>
             <point key="canvasLocation" x="34.5" y="141.5"/>
         </view>
     </objects>
