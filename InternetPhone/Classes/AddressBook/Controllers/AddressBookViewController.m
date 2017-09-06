@@ -40,7 +40,7 @@
 - (void)callRecoredDataNoti:(NSNotification *)sender {
     
     [self reloadContactList];
-    
+    [super viewDidLoad];
 
 }
 - (void)viewDidLoad {
@@ -51,8 +51,6 @@
     _filteredCities = [[NSMutableArray alloc] init];
     _PHONE = [[NSMutableArray alloc] init];
     _arrayname = [[NSMutableArray alloc] init];
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
     [self loadContactList];
     [self creatScrollView];
 
@@ -198,6 +196,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [_mysearchbar resignFirstResponder];
+
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
@@ -314,9 +313,7 @@
 -(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
 
 {
-    [_mysearchbar resignFirstResponder];
     [self.view endEditing:YES];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 }
 - (void)didReceiveMemoryWarning {

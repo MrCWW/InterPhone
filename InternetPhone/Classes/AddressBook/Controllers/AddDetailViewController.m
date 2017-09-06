@@ -139,15 +139,15 @@
 
         [self.view removeFromSuperview];
         [self removeFromParentViewController];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"phoneRecoredDataNoti" object:nil];
 
 
     }else{
 
         [_btnone setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
         [_btnTwo setImage:[UIImage imageNamed:@"btn_backBlack"] forState:UIControlStateNormal];
-//        [self.viewphone.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [self.viewphone removeFromSuperview];
-//        [self removeFromParentViewController];
+        
     }
    
 }
@@ -247,7 +247,6 @@
 
         //删除子View
         [self.viewphone removeFromSuperview];
-//        [self removeFromParentViewController];
         [_btnone setImage:[UIImage imageNamed:@"edit_default"] forState:UIControlStateNormal];
         [_btnTwo setImage:[UIImage imageNamed:@"btn_backBlack"] forState:UIControlStateNormal];
         self.btnTwo.userInteractionEnabled = YES;
@@ -280,19 +279,11 @@
 
         //修改联系人的属性
         contact2.familyName = _mmField.text;
-        NSString *appendString = _sipField.text;
-        NSArray* array = [appendString componentsSeparatedByString:@";"];
-        NSLog(@"%@",array);
+        //修改手机号
+        CNPhoneNumber *mobileNumber = [[CNPhoneNumber alloc] initWithStringValue:_sipField.text];
+        CNLabeledValue *mobilePhone = [[CNLabeledValue alloc] initWithLabel:CNLabelPhoneNumberMobile value:mobileNumber];
+        contact2.phoneNumbers = @[mobilePhone];
 
-        if (array.count == 0) {
-            return;
-        }
-        [array indexOfObject:@"digits"];
-        NSLog(@"%@",array);
-        
-//        contact2.phoneNumbers = array;
-//        [[[contact2.phoneNumbers firstObject] value] stringValue];
-        
         //实例化一个CNSaveRequest
         CNSaveRequest * saveRequest = [[CNSaveRequest alloc]init];
         [saveRequest updateContact:contact2];
@@ -303,7 +294,7 @@
         }
         //
         [self.viewphone removeFromSuperview];
-//        [self removeFromParentViewController];
+        
 
     }
     
