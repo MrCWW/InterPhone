@@ -239,6 +239,7 @@
         _sipField.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
         [_sipField setValue:[UIFont boldSystemFontOfSize:16] forKeyPath:@"_placeholderLabel.font"];
         _sipField.text = _strPhone;
+        _sipField.delegate = self;
         [_viewphone addSubview:_sipField];
        
         
@@ -254,6 +255,40 @@
     }
     
 }
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{ //当点触textField内部，开始编辑都会调用这个方法。textField将成为first responder
+    NSTimeInterval animationDuration = 0.30f;
+    CGRect frame = self.view.frame;
+//    if (frame.orign.y < 0){
+//        return;
+//    }
+    frame.origin.y -=65;
+    frame.size.height +=65;
+    _viewphone.frame = frame;
+    
+    [UIView beginAnimations:@"ResizeView" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    
+    _viewphone.frame = frame;
+    [UIView commitAnimations];
+}
+- (BOOL)textFieldShouldReturn
+{//当用户按下ruturn，把焦点从textField移开那么键盘就会消失了
+    NSTimeInterval animationDuration = 0.30f;
+    CGRect frame = self.view.frame;
+    frame.origin.y +=0;
+    frame.size. height -=0;
+    _viewphone.frame = frame;
+    //self.view移回原位置
+    [UIView beginAnimations:@"ResizeView" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    _viewphone.frame = frame;
+    [UIView commitAnimations];
+    // 这里只用写textField 不用写myTextField
+    [_sipField resignFirstResponder];
+     return YES;
+}
+     
 - (void)clickbacktz{
 
 
@@ -305,9 +340,9 @@
 -(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
 
 {
-    
+    [self.viewphone resignFirstResponder ];
     [self.view endEditing:YES];
-    
+    [self textFieldShouldReturn];
 }
 - (void)clickbackphone:(UIBarButtonItem *)but {
     
