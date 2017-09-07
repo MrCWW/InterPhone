@@ -20,33 +20,54 @@
 @implementation AddRessBookViewController
 @synthesize cities;
 
-- (void)viewDidLoad {
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self reloadContactList];
     [super viewDidLoad];
 
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self reloadContactList];
+    [super viewDidLoad];
+
+}
+
+
+- (void)callRecoredDataNoti:(NSNotification *)sender {
+    
+    [self reloadContactList];
+    [super viewDidLoad];
+
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callRecoredDataNoti:) name:@"phoneRecoredDataNoti" object:nil];
+    
     cities = [[NSMutableArray alloc] init];
     _filteredCities = [[NSMutableArray alloc] init];
     _PHONE = [[NSMutableArray alloc] init];
     _arrayname = [[NSMutableArray alloc] init];
-
     [self loadContactList];
     [self creatScrollView];
 
 
 }
+
 - (void)creatScrollView {
     self.scrollView = [[UIScrollView alloc]initWithFrame:HCGRECT(0, 0, ScreenWidth, ScreenHeight - 135)];
-//    NSInteger scrollHeight = self.scrollView.height;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
     self.scrollView.pagingEnabled = YES;
     self.scrollView.bounces = NO;
-//    self.scrollView.contentSize = CGSizeMake(ScreenWidth, scrollHeight );
     [self.view addSubview:self.scrollView];
     
 
     UIView *vvv = [[UIView alloc] initWithFrame:HCGRECT(0, 0, ScreenWidth, ScreenHeight-100)];
     [self.scrollView addSubview:vvv];
-
     self.myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 45, ScreenWidth, ScreenHeight-190)];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
@@ -108,6 +129,7 @@
          }];
         
         [_myTableView reloadData];
+
     }
     
 }
@@ -174,6 +196,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [_mysearchbar resignFirstResponder];
+
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
@@ -290,9 +313,7 @@
 -(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
 
 {
-    [_mysearchbar resignFirstResponder];
     [self.view endEditing:YES];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 
 }
 - (void)didReceiveMemoryWarning {

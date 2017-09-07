@@ -169,7 +169,8 @@
     self.selectLabel = self.addressBookLabel;
     self.selectPic = self.addressBookPic;
     self.scrollView.contentOffset = CGPointMake(ScreenWidth, 0);
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"phoneRecoredDataNoti" object:nil];
+
     if (!_addressBookVC) {
         [self addChildViewController:self.addressBookVC];
         [self.scrollView addSubview:self.addressBookVC.view];

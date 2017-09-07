@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,7 +72,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.86795253370000003" green="0.87414115309999996" blue="0.89270701139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="4c4-XI-6Di" firstAttribute="leading" secondItem="4Fw-7Y-oTB" secondAttribute="trailing" constant="20" id="EHV-F8-1hA"/>
                                         <constraint firstAttribute="trailing" secondItem="6oG-vA-77B" secondAttribute="trailing" constant="20" id="FXd-Pa-CD0"/>
@@ -169,7 +169,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.86795253371979852" green="0.87414115314517893" blue="0.89270701142131981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="3I7-eR-NL4" firstAttribute="leading" secondItem="CPn-vk-oAT" secondAttribute="leading" constant="20" id="BIB-K3-N8x"/>
                                 <constraint firstAttribute="height" constant="50" id="K2s-27-RJy"/>
@@ -201,7 +201,7 @@
                 <constraint firstItem="H8c-Ex-jx7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lEU-nc-MgR"/>
                 <constraint firstAttribute="trailing" secondItem="H8c-Ex-jx7" secondAttribute="trailing" id="oMT-zp-1cJ"/>
             </constraints>
-            <point key="canvasLocation" x="33.5" y="115.5"/>
+            <point key="canvasLocation" x="-245" y="29"/>
         </view>
     </objects>
     <resources>
