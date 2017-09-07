@@ -32,6 +32,12 @@
 		24896E371F5EB3B7001D39A4 /* CallRecoredDetialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */; };
 		24896E3B1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */; };
 		24896E3C1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */; };
+		24896E4D1F5EDEF8001D39A4 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E441F5EDEF8001D39A4 /* AESCrypt.m */; };
+		24896E4E1F5EDEF8001D39A4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 24896E451F5EDEF8001D39A4 /* LICENSE */; };
+		24896E4F1F5EDEF8001D39A4 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E471F5EDEF8001D39A4 /* NSData+Base64.m */; };
+		24896E501F5EDEF8001D39A4 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E491F5EDEF8001D39A4 /* NSData+CommonCrypto.m */; };
+		24896E511F5EDEF8001D39A4 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 24896E4B1F5EDEF8001D39A4 /* NSString+Base64.m */; };
+		24896E521F5EDEF8001D39A4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 24896E4C1F5EDEF8001D39A4 /* README.md */; };
 		249104261F22DADB00B370F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249104251F22DADB00B370F5 /* main.m */; };
 		2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2491042D1F22DADB00B370F5 /* Main.storyboard */; };
 		249104311F22DADB00B370F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 249104301F22DADB00B370F5 /* Assets.xcassets */; };
@@ -247,6 +253,16 @@
 		24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredsDetialTableViewCell.h; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredsDetialTableViewCell.m; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredsDetialTableViewCell.xib; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		24896E431F5EDEF8001D39A4 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		24896E441F5EDEF8001D39A4 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		24896E451F5EDEF8001D39A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		24896E461F5EDEF8001D39A4 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		24896E471F5EDEF8001D39A4 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		24896E481F5EDEF8001D39A4 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		24896E491F5EDEF8001D39A4 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		24896E4A1F5EDEF8001D39A4 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		24896E4B1F5EDEF8001D39A4 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		24896E4C1F5EDEF8001D39A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		249104211F22DADB00B370F5 /* InternetPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InternetPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249104251F22DADB00B370F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2491042E1F22DADB00B370F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -889,6 +905,16 @@
 				249106221F22F3DD00B370F5 /* UIView+IBExtension.m */,
 				24896E0D1F5D5AE1001D39A4 /* NSDate+judgeToday.h */,
 				24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */,
+				24896E431F5EDEF8001D39A4 /* AESCrypt.h */,
+				24896E441F5EDEF8001D39A4 /* AESCrypt.m */,
+				24896E451F5EDEF8001D39A4 /* LICENSE */,
+				24896E461F5EDEF8001D39A4 /* NSData+Base64.h */,
+				24896E471F5EDEF8001D39A4 /* NSData+Base64.m */,
+				24896E481F5EDEF8001D39A4 /* NSData+CommonCrypto.h */,
+				24896E491F5EDEF8001D39A4 /* NSData+CommonCrypto.m */,
+				24896E4A1F5EDEF8001D39A4 /* NSString+Base64.h */,
+				24896E4B1F5EDEF8001D39A4 /* NSString+Base64.m */,
+				24896E4C1F5EDEF8001D39A4 /* README.md */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1489,6 +1515,7 @@
 			files = (
 				24896E371F5EB3B7001D39A4 /* CallRecoredDetialView.xib in Resources */,
 				EA6D73C01F4174EA00DCB6F3 /* LICENSE.txt in Resources */,
+				24896E4E1F5EDEF8001D39A4 /* LICENSE in Resources */,
 				EA6D73AD1F4174EA00DCB6F3 /* CallOutgoingView.xib in Resources */,
 				247471491F24BF820008B066 /* CallRecordsDetailViewController.xib in Resources */,
 				249104341F22DADB00B370F5 /* LaunchScreen.storyboard in Resources */,
@@ -1529,6 +1556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24896E501F5EDEF8001D39A4 /* NSData+CommonCrypto.m in Sources */,
 				249105EC1F22F20A00B370F5 /* UIImage+GIF.m in Sources */,
 				249105C71F22F20A00B370F5 /* UIProgressView+AFNetworking.m in Sources */,
 				249105E21F22F20A00B370F5 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1567,6 +1595,7 @@
 				249106001F22F27A00B370F5 /* HBaseView.m in Sources */,
 				249105B81F22F20A00B370F5 /* AFHTTPRequestOperationManager.m in Sources */,
 				EAEE5A511F3038E3003F6583 /* AddDetailViewController.m in Sources */,
+				24896E4F1F5EDEF8001D39A4 /* NSData+Base64.m in Sources */,
 				EA6D73B61F4174EA00DCB6F3 /* UICompositeViewController.m in Sources */,
 				249105BA1F22F20A00B370F5 /* AFNetworkReachabilityManager.m in Sources */,
 				EA6D73C21F4174EA00DCB6F3 /* SVIndefiniteAnimatedView.m in Sources */,
@@ -1589,6 +1618,7 @@
 				249105D11F22F20A00B370F5 /* MJRefreshFooter.m in Sources */,
 				24B4EE871F5B8EF400C063E7 /* PhoneRecored+CoreDataProperties.m in Sources */,
 				24896E3B1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m in Sources */,
+				24896E521F5EDEF8001D39A4 /* README.md in Sources */,
 				247471671F24E9FE0008B066 /* UITextField+WWExtentRange.m in Sources */,
 				249105E41F22F20A00B370F5 /* SDImageCache.m in Sources */,
 				249106281F22F3DD00B370F5 /* UIBarButtonItem+Extension.m in Sources */,
@@ -1625,6 +1655,7 @@
 				2491062F1F22F3DD00B370F5 /* UINavigationBar+Awesome.m in Sources */,
 				EA6D73BA1F4174EA00DCB6F3 /* UIDigitButtonLongVoiceMail.m in Sources */,
 				EA6D73B51F4174EA00DCB6F3 /* UICallCell.m in Sources */,
+				24896E511F5EDEF8001D39A4 /* NSString+Base64.m in Sources */,
 				249105FF1F22F27A00B370F5 /* HBaseModel.m in Sources */,
 				24B4EDDD1F585A7200C063E7 /* LoginModel.m in Sources */,
 				EA6D73B11F4174EA00DCB6F3 /* DTAlertView.m in Sources */,
@@ -1652,6 +1683,7 @@
 				249105C21F22F20A00B370F5 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EA6D73B01F4174EA00DCB6F3 /* DTActionSheet.m in Sources */,
 				EA6D73BD1F4174EA00DCB6F3 /* UITransferButton.m in Sources */,
+				24896E4D1F5EDEF8001D39A4 /* AESCrypt.m in Sources */,
 				249106331F22F3DD00B370F5 /* UIView+IBExtension.m in Sources */,
 				249106321F22F3DD00B370F5 /* UIView+Extension.m in Sources */,
 				249105E71F22F20A00B370F5 /* SDWebImageDownloader.m in Sources */,

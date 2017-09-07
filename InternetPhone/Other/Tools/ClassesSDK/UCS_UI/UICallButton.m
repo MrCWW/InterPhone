@@ -84,7 +84,12 @@
     NSLog(@"%@",address);
     // 获取昵称
     NSString *displayName = nil;
-
+    NSString *cityStr = Here_Is_gravity;
+    if ([cityStr isEqualToString:@"台灣"]) {
+        address = [NSString stringWithFormat:@"002886%@",address];
+    }else {
+        address = [NSString stringWithFormat:@"00281%@",address];
+    }
     if( [address length] == 0){
 //        [MBProgressHUD showText:@"請輸入號碼" toView:<#(UIView *)#>]
         addressField.text = [UCSUserDefaultManager GetLocalDataString:@"Last_Call_Address"];
@@ -93,6 +98,7 @@
 
     if( [address length] > 0){
         [UCSUserDefaultManager SetLocalDataString:address key:@"Last_Call_Address"];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"deleteTextFieldNumNoti" object:nil];
         [[UCSIPCCManager instance] call:address displayName:displayName transfer:NO];
     }
 }

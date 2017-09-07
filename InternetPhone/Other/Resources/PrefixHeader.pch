@@ -52,7 +52,7 @@
 #define Here_Set_soundPhone(sound) [[NSUserDefaults standardUserDefaults] setObject:(sound) forKey:@"sound"];\
 [[NSUserDefaults standardUserDefaults] synchronize];
 #define Here_Is_soundPhone [[NSUserDefaults standardUserDefaults] objectForKey:@"sound"]
-
+//全局拨号前缀
 #define Here_Set_gravity(gravity) [[NSUserDefaults standardUserDefaults] setObject:(gravity) forKey:@"gravity"];\
 [[NSUserDefaults standardUserDefaults] synchronize];
 #define Here_Is_gravity [[NSUserDefaults standardUserDefaults] objectForKey:@"gravity"]

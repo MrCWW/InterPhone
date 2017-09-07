@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginModel.h"
+#import "AESCrypt.h"
 @interface LoginViewController ()
 
 @end
@@ -30,7 +31,10 @@
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         [userDefaults setObject:dic forKey:@"username"];
         [userDefaults synchronize];
-
+//        NSString *srt = [InterPhoneAES aes256_decrypt:@"AES" Decrypttext:model.sip_password];
+//        NSLog(@"%@",srt);
+//        NSString *message = [AESCrypt decrypt:model.sip_password password:model.sip_password];
+//        NSLog(@"%@",message);
         NSLog(@"%@",model.sip_ip);
         NSLog(@"%@",model.sip_port);
 //sip用户名 密码登录
@@ -47,7 +51,14 @@
 }
 //注册
 - (IBAction)rgistration:(id)sender {
+//    NSString *aa = [InterPhoneAES aes256_encrypt:@"AES" Encrypttext:@"cww"];
     
+////    NSLog(@"%@",aa);
+
+    NSString *encryptedData = [AESCrypt encrypt:@"cww" password:@"1239562421193496"];
+    NSLog(@"%@",encryptedData);
+    NSString *message = [AESCrypt decrypt:@"3w8ethqVSPz1usfXiR9fwg==" password:@"1239562421193496"];
+    NSLog(@"%@",message);
 }
 //服务条款
 - (IBAction)servicebutton:(id)sender {

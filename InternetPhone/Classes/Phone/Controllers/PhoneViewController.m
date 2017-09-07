@@ -50,9 +50,20 @@
                                              selector:@selector(coreUpdateEvent:)
                                                  name:kUCSCoreUpdate
                                                object:nil];
-
-    
-    
+    //清空输入框内容
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deleteTextFieldNumNoti) name:@"deleteTextFieldNumNoti" object:nil];
+    NSString *cityStr = Here_Is_gravity;//城市标记
+    if (cityStr.length) {
+            [_cityBtn setTitle:cityStr forState:0];
+        if ([cityStr isEqualToString:@"台灣"]) {
+        self.qianzhuiLabel.text = @"+886";
+        }else {
+          self.qianzhuiLabel.text = @"+81";
+        }
+    }else {
+        Here_Set_gravity(@"台灣");
+        self.qianzhuiLabel.text = @"+886";
+    }
     self.view.backgroundColor = [UIColor redColor];
     //button长按事件
     [self.deleteBtn setImage:[UIImage imageNamed:@"20170720-中華電信-號碼刪除鍵-灰"] forState:UIControlStateHighlighted];
@@ -61,6 +72,13 @@
    [_deleteBtn addGestureRecognizer:longPress];
     [self creatNumberView];
     
+}
+- (void)deleteTextFieldNumNoti{
+    self.numberTextFiled.text = @"";
+    self.strPhone = @"";
+    self.strName = @"";
+    self.saveNumStr = @"";
+    Here_Set_soundPhone(@"");
 }
 #pragma mark - Event Functions
 
@@ -146,7 +164,7 @@
 //选择城市
 - (IBAction)cityBtnAction:(id)sender {
     self.dataArr = [NSMutableArray array];
-    NSArray *arr = @[@{@"name":@"北京"},@{@"name":@"天津"},@{@"name":@"上海"},@{@"name":@"重庆"},@{@"name":@"河北"},@{@"name":@"北京"}];
+    NSArray *arr = @[@{@"name":@"台灣"},@{@"name":@"日本"}];
     for (NSDictionary *dic in arr) {
         [_dataArr addObject:[PopModel modelWithDic:dic]];
     }
@@ -161,6 +179,12 @@
     }
     PopUpView *showView = [PopUpView initWithFrame:CGRectMake(_cityBtn.left, _cityBtn.bottom, _cityBtn.width, height) popUpFrame:rect textArr:_dataArr block:^(NSString *str) {
         [_cityBtn setTitle:str forState:0];
+         Here_Set_gravity(str);
+        if ([str isEqualToString:@"台灣"]) {
+            self.qianzhuiLabel.text = @"+886";
+        }else {
+            self.qianzhuiLabel.text = @"+81";
+        }
     }];
     self.showView = showView;
     [self.view addSubview:showView];
@@ -186,13 +210,21 @@
         NSLog(@"%@",string);
         PhoneRecoredModel *model = [[PhoneRecoredModel alloc] init];
         model.name = _strName;
-        model.phone = _numberTextFiled.text;
+        NSString *cityStr = Here_Is_gravity;
+        if ([cityStr isEqualToString:@"台灣"]) {
+            model.phone = [NSString stringWithFormat:@"002886%@",_numberTextFiled.text];
+        }else {
+            model.phone = [NSString stringWithFormat:@"00281%@",_numberTextFiled.text];
+        }
+//        model.phone = _numberTextFiled.text;
         model.timedate = [NSString stringWithFormat:@"%@ %@",timeWeekStr,string];
         model.updatedate = today;
         //插入到数据库
         [CoreDataAPI insertPhoneRecored:model];
         //拨打电话
 //        [self callBtn];
+        //每次拨号结束，清空输入框
+        [self deleteTextFieldNumNoti];
     }else {
         [MBProgressHUD showText:@"請輸入號碼" toView:self.view];
     }
