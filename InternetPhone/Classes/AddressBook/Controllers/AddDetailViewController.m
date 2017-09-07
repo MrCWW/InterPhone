@@ -374,12 +374,13 @@
     PhoneRecoredModel *modelRecored = [[PhoneRecoredModel alloc] init];
     modelRecored.name = _strname;
 //    modelRecored.phone = _strPhone;
-    NSString *cityStr = Here_Is_gravity;
-    if ([cityStr isEqualToString:@"台灣"]) {
-        modelRecored.phone = [NSString stringWithFormat:@"002886%@",_strPhone];
-    }else {
-        modelRecored.phone = [NSString stringWithFormat:@"00281%@",_strPhone];
-    }
+//    NSString *cityStr = Here_Is_gravity;
+//    if ([cityStr isEqualToString:@"台灣"]) {
+//        modelRecored.phone = [NSString stringWithFormat:@"002886%@",_strPhone];
+//    }else {
+//        modelRecored.phone = [NSString stringWithFormat:@"00281%@",_strPhone];
+//    }
+    modelRecored.phone = _strPhone;
     modelRecored.timedate = [NSString stringWithFormat:@"%@ %@",timeWeekStr,string];
     modelRecored.updatedate = today;
     //插入到数据库

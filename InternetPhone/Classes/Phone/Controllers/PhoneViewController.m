@@ -210,13 +210,13 @@
         NSLog(@"%@",string);
         PhoneRecoredModel *model = [[PhoneRecoredModel alloc] init];
         model.name = _strName;
-        NSString *cityStr = Here_Is_gravity;
-        if ([cityStr isEqualToString:@"台灣"]) {
-            model.phone = [NSString stringWithFormat:@"002886%@",_numberTextFiled.text];
-        }else {
-            model.phone = [NSString stringWithFormat:@"00281%@",_numberTextFiled.text];
-        }
-//        model.phone = _numberTextFiled.text;
+//        NSString *cityStr = Here_Is_gravity;
+//        if ([cityStr isEqualToString:@"台灣"]) {
+//            model.phone = [NSString stringWithFormat:@"002886%@",_numberTextFiled.text];
+//        }else {
+//            model.phone = [NSString stringWithFormat:@"00281%@",_numberTextFiled.text];
+//        }
+        model.phone = _numberTextFiled.text;
         model.timedate = [NSString stringWithFormat:@"%@ %@",timeWeekStr,string];
         model.updatedate = today;
         //插入到数据库
