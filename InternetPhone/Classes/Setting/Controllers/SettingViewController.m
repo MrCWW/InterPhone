@@ -35,13 +35,12 @@
     [self.view addSubview:_dlbutton];
     
 
-    NSMutableDictionary *dic =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    NSString *str2 = [dic objectForKey:@"username"];
+    LoginModel *model = kUnarchiverHomepageModel;
+
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-    NSDictionary *dict = @{@"username":str2,  @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
+    NSDictionary *dict = @{@"username":model.username,  @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
     [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@", responseObject);
         _zhanghao.text = [responseObject objectForKey:@"username"];

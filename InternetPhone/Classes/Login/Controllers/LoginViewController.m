@@ -28,9 +28,7 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:dic forKey:@"username"];
-        [userDefaults synchronize];
+      
 //        NSString *srt = [InterPhoneAES aes256_decrypt:@"AES" Decrypttext:model.sip_password];
 //        NSLog(@"%@",srt);
 //        NSString *message = [AESCrypt decrypt:model.sip_password password:model.sip_password];
@@ -51,15 +49,7 @@
 }
 //注册
 - (IBAction)rgistration:(id)sender {
-//    NSString *aa = [InterPhoneAES aes256_encrypt:@"AES" Encrypttext:@"cww"];
-    
-////    NSLog(@"%@",aa);
-
-    NSString *encryptedData = [AESCrypt encrypt:@"cww" password:@"1239562421193496"];
-    NSLog(@"%@",encryptedData);
-    NSString *message = [AESCrypt decrypt:@"3w8ethqVSPz1usfXiR9fwg==" password:@"1239562421193496"];
-    NSLog(@"%@",message);
-}
+ [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://shop.eznippon.com/member/helper/card/cht"]]];}
 //服务条款
 - (IBAction)servicebutton:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.eznippon.com/clause/"]]];
