@@ -8,6 +8,7 @@
 
 #import "SettingViewController.h"
 #import "LoginModel.h"
+#import "exchangeViewController.h"
 @interface SettingViewController ()
 @property (nonatomic,copy) UIButton *dlbutton;
 @property (nonatomic,assign) int chatType;
@@ -28,7 +29,7 @@
     _dlbutton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     _dlbutton.contentEdgeInsets = UIEdgeInsetsMake(0,20, 0, 0);
     [_dlbutton addTarget:self action:@selector(backClidtc:) forControlEvents:UIControlEventTouchUpInside];
-    UIImageView *imone  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth-40, 13, 18, 23)];
+    UIImageView *imone  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth-30, 13, 18, 23)];
     UIImage *imageone = [UIImage imageNamed:@"Icon_RightPin"];
     imone.image = imageone;
     [_dlbutton addSubview:imone];
@@ -46,7 +47,6 @@
         _zhanghao.text = [responseObject objectForKey:@"username"];
         NSString *nssing1 = [responseObject objectForKey:@"balance"];
         NSString *nssing2 = @"帳戶剩餘 ";
-        
         NSString * string3 = [NSString stringWithFormat:@"%@  %@ 分鐘", nssing2, nssing1];
         NSMutableAttributedString * attriStr=[[NSMutableAttributedString alloc]initWithString:string3];
         NSRange range = [string3 rangeOfString:@"帳戶剩餘"];
@@ -61,6 +61,10 @@
         NSLog(@"%@", error);
     }];
 
+}
+- (IBAction)addbutton:(id)sender {
+    exchangeViewController *excvc = [[exchangeViewController alloc] init];
+    [self.navigationController pushViewController:excvc animated:YES];
 }
 
 - (void)backClidtc:(UIButton *)sender{

@@ -192,6 +192,8 @@
 		EA6D73F71F41787300DCB6F3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6D73F61F41787300DCB6F3 /* OpenGLES.framework */; };
 		EA6D73F91F41787F00DCB6F3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6D73F81F41787F00DCB6F3 /* QuartzCore.framework */; };
 		EA6D73FB1F41788A00DCB6F3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6D73FA1F41788A00DCB6F3 /* SystemConfiguration.framework */; };
+		EA7421161F63DE5300D42328 /* exchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7421141F63DE5200D42328 /* exchangeViewController.m */; };
+		EA7421171F63DE5300D42328 /* exchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7421151F63DE5200D42328 /* exchangeViewController.xib */; };
 		EAEE5A451F302758003F6583 /* contTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEE5A421F302758003F6583 /* contTableViewCell.xib */; };
 		EAEE5A461F302758003F6583 /* contTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEE5A431F302758003F6583 /* contTableViewCell.m */; };
 		EAEE5A491F3027DA003F6583 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEE5A481F3027DA003F6583 /* Contacts.framework */; };
@@ -547,6 +549,9 @@
 		EA6D73F61F41787300DCB6F3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		EA6D73F81F41787F00DCB6F3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EA6D73FA1F41788A00DCB6F3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EA7421131F63DE5200D42328 /* exchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exchangeViewController.h; sourceTree = "<group>"; };
+		EA7421141F63DE5200D42328 /* exchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exchangeViewController.m; sourceTree = "<group>"; };
+		EA7421151F63DE5200D42328 /* exchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = exchangeViewController.xib; sourceTree = "<group>"; };
 		EAEE5A421F302758003F6583 /* contTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = contTableViewCell.xib; sourceTree = "<group>"; };
 		EAEE5A431F302758003F6583 /* contTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contTableViewCell.m; sourceTree = "<group>"; };
 		EAEE5A441F302758003F6583 /* contTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contTableViewCell.h; sourceTree = "<group>"; };
@@ -834,6 +839,9 @@
 				2491065F1F22F7E400B370F5 /* SettingViewController.h */,
 				249106601F22F7E400B370F5 /* SettingViewController.m */,
 				249106611F22F7E400B370F5 /* SettingViewController.xib */,
+				EA7421131F63DE5200D42328 /* exchangeViewController.h */,
+				EA7421141F63DE5200D42328 /* exchangeViewController.m */,
+				EA7421151F63DE5200D42328 /* exchangeViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1526,6 +1534,7 @@
 				247471601F24D6E40008B066 /* HomePageHeaderCollectionViewCell.xib in Resources */,
 				2442F4341F3FE667008BC593 /* AnswerCallViewController.xib in Resources */,
 				247471441F24A7B40008B066 /* AHomePageViewController.xib in Resources */,
+				EA7421171F63DE5300D42328 /* exchangeViewController.xib in Resources */,
 				249104311F22DADB00B370F5 /* Assets.xcassets in Resources */,
 				24896E091F5D44FB001D39A4 /* CallRecordsTableViewCell.xib in Resources */,
 				249106591F22F7C800B370F5 /* CallRecordsViewController.xib in Resources */,
@@ -1609,6 +1618,7 @@
 				24896E081F5D44FB001D39A4 /* CallRecordsTableViewCell.m in Sources */,
 				249106261F22F3DD00B370F5 /* NSString+CalculatorHeight.m in Sources */,
 				249106241F22F3DD00B370F5 /* MBProgressHUD+AddHud.m in Sources */,
+				EA7421161F63DE5300D42328 /* exchangeViewController.m in Sources */,
 				249105F01F22F20A00B370F5 /* UIImageView+WebCache.m in Sources */,
 				249106581F22F7C800B370F5 /* CallRecordsViewController.m in Sources */,
 				249105EB1F22F20A00B370F5 /* UIButton+WebCache.m in Sources */,

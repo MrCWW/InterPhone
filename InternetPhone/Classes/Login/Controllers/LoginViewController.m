@@ -29,14 +29,17 @@
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
       
-//        NSString *srt = [InterPhoneAES aes256_decrypt:@"AES" Decrypttext:model.sip_password];
-//        NSLog(@"%@",srt);
-//        NSString *message = [AESCrypt decrypt:model.sip_password password:model.sip_password];
-//        NSLog(@"%@",message);
+
+        NSString *encrypt = [AESCrypt encrypt:@"z8V7pp8Npt%Q*2i" password:@"1239562421193496"];
+        NSLog(@"%@",encrypt);
+
+        NSString *message = [AESCrypt decrypt:model.sip_password password:@"1239562421193496"];
+        NSLog(@"%@",message);
+        
         NSLog(@"%@",model.sip_ip);
         NSLog(@"%@",model.sip_port);
 //sip用户名 密码登录
-             [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku" displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+             [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
     }else {
         [MBProgressHUD showText:@"登錄失败" toView:nil];
         
