@@ -10,6 +10,7 @@
 
 @interface exchangeViewController ()
 @property (nonatomic,copy) UITextField *zhField;
+@property (weak, nonatomic) IBOutlet UIButton *aniubutton;
 
 @end
 
@@ -19,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor whiteColor];
-    UILabel *zhlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, ScreenWidth, 1)];
+    UILabel *zhlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 153, ScreenWidth, 1)];
     zhlabel.backgroundColor = [UIColor colorWithRed:222.0/255 green:222.0/255  blue:222.0/255 alpha:1.0f];
     [self.view addSubview:zhlabel];
     UILabel *mmlabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 107, ScreenWidth, 1)];
@@ -37,6 +38,19 @@
     tapGestureRecognizer.cancelsTouchesInView = NO;
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+- (IBAction)anbutton:(id)sender {
+    
+    if ((_aniubutton.selected = !_aniubutton.selected)) {
+        
+        [_aniubutton setImage:[UIImage imageNamed:@"checkbox_unchecked"] forState:UIControlStateNormal];
+    }else{
+        
+        
+        [_aniubutton setImage:[UIImage imageNamed:@"checkbox_checked"] forState:UIControlStateNormal];
+        
+    }
+
 }
 - (IBAction)backnutton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
