@@ -35,7 +35,7 @@
             self.dialerVC = [[AHomePageViewController alloc] init];
             [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
             //sip用户名 密码登录
-            [[UCSIPCCManager instance] addProxyConfig:@"8117002998" password:@"fA2ZL3B7Bkdi2Ku"displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+            [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
 
 
 

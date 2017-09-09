@@ -8,6 +8,7 @@
 
 #import "SettingViewController.h"
 #import "LoginModel.h"
+#import "exchangeViewController.h"
 @interface SettingViewController ()
 @property (nonatomic,copy) UIButton *dlbutton;
 @property (nonatomic,assign) int chatType;
@@ -28,26 +29,24 @@
     _dlbutton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     _dlbutton.contentEdgeInsets = UIEdgeInsetsMake(0,20, 0, 0);
     [_dlbutton addTarget:self action:@selector(backClidtc:) forControlEvents:UIControlEventTouchUpInside];
-    UIImageView *imone  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth-40, 13, 18, 23)];
+    UIImageView *imone  =[[UIImageView alloc] initWithFrame:CGRectMake(ScreenWidth-30, 13, 18, 23)];
     UIImage *imageone = [UIImage imageNamed:@"Icon_RightPin"];
     imone.image = imageone;
     [_dlbutton addSubview:imone];
     [self.view addSubview:_dlbutton];
     
 
-    NSMutableDictionary *dic =  [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    NSString *str2 = [dic objectForKey:@"username"];
+    LoginModel *model = kUnarchiverHomepageModel;
+
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
-    NSDictionary *dict = @{@"username":str2,  @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
+    NSDictionary *dict = @{@"username":model.username,  @"token" : @"8389adec-3e18-11e7-a919-92ebcb67fe33"};
     [manager POST:@"http://175.41.52.241/api/account/account_info.php" parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@", responseObject);
         _zhanghao.text = [responseObject objectForKey:@"username"];
         NSString *nssing1 = [responseObject objectForKey:@"balance"];
         NSString *nssing2 = @"帳戶剩餘 ";
-        
         NSString * string3 = [NSString stringWithFormat:@"%@  %@ 分鐘", nssing2, nssing1];
         NSMutableAttributedString * attriStr=[[NSMutableAttributedString alloc]initWithString:string3];
         NSRange range = [string3 rangeOfString:@"帳戶剩餘"];
@@ -62,6 +61,10 @@
         NSLog(@"%@", error);
     }];
 
+}
+- (IBAction)addbutton:(id)sender {
+    exchangeViewController *excvc = [[exchangeViewController alloc] init];
+    [self.navigationController pushViewController:excvc animated:YES];
 }
 
 - (void)backClidtc:(UIButton *)sender{

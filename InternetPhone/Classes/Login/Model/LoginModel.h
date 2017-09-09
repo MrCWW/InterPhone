@@ -31,4 +31,7 @@
 @property (nonatomic ,copy) NSString *sip_username;
 
 @property (nonatomic ,copy) NSString *username;
+
+@property (nonatomic ,copy) NSString *sip_new_password;
+
 @end
