@@ -81,7 +81,11 @@
 //    NSString *address = [addressField text];
     //现在的，获取输入框的内容
         NSString *address = Here_Is_soundPhone;
-    NSLog(@"%@",address);
+    //如果首字母是0，则截取字符串
+    NSString *address_sub = [address substringToIndex:1];
+    if ([address_sub isEqualToString:@"0"]) {
+        address = [address substringFromIndex:1];
+    }
     // 获取昵称
     NSString *displayName = nil;
     NSString *cityStr = Here_Is_gravity;
