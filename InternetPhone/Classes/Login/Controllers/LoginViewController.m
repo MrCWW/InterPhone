@@ -28,13 +28,7 @@
         NSDictionary *dic = result;
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
-      
-
-        NSString *encrypt = [AESCrypt encrypt:@"z8V7pp8Npt%Q*2i" password:@"1239562421193496"];
-        NSLog(@"%@",encrypt);
-
-        NSString *message = [AESCrypt decrypt:model.sip_password password:@"1239562421193496"];
-        NSLog(@"%@",message);
+    
         
         NSLog(@"%@",model.sip_ip);
         NSLog(@"%@",model.sip_port);
@@ -70,8 +64,21 @@
     [super viewDidLoad];
          [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     // Do any additional setup after loading the view from its nib.
+    //点击空白处收回键盘
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    //将触摸事件添加到当前view
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
+// 点击空白处收起键盘
+-(void)keyboardHide:(UITapGestureRecognizer *)gestureRecognizer
 
+{
+    
+    [self.view endEditing:YES];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
