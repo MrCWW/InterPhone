@@ -22,28 +22,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-        self.dialerVC = [[AHomePageViewController alloc] init];
+//        self.dialerVC = [[AHomePageViewController alloc] init];
 
     NSNumber *num = Here_Is_Login;
-    if (num == nil) {
+    if (num) {
         self.vc = [[LoginViewController alloc] init];
         self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
-    }else{
-        if ([num intValue] == 1) {
-            //     [self.window setRootViewController:[A mainPageViewController]];
-            LoginModel *model = kUnarchiverHomepageModel;
-            self.dialerVC = [[AHomePageViewController alloc] init];
-            [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
-            //sip用户名 密码登录
-            [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
-
-
-
-        }else{
+    }else {
+        
+        LoginModel *model = kUnarchiverHomepageModel;
+        if (model == nil) {
             self.vc = [[LoginViewController alloc] init];
-            self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];
+            self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];        }else{
+                //sip用户名 密码登录
+                [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"123"domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+                self.dialerVC = [[AHomePageViewController alloc] init];
+                [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
+            }
+
         }
-    }
     [self.window makeKeyAndVisible];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userloginSuc) name:@"UserLoginSuc" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userTokenIvalid) name:@"userTokenInvalidNotification" object:nil];

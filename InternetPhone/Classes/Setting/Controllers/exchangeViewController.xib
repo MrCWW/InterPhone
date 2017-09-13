@@ -23,15 +23,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95r-CJ-0ri">
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購買兌換加值碼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUP-N7-u75">
-                            <rect key="frame" x="114" y="11" width="121.5" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="21" id="qpn-Zm-u6D"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFo-5Y-n4c">
                             <rect key="frame" x="0.0" y="3" width="112" height="38"/>
                             <constraints>
@@ -42,16 +33,20 @@
                                 <action selector="backnutton:" destination="-1" eventType="touchUpInside" id="PcU-E6-hTh"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購買兌換加值碼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUP-N7-u75">
+                            <rect key="frame" x="127" y="12" width="122" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.1164910403" green="0.45169874770000001" blue="0.68214625630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="eUP-N7-u75" firstAttribute="leading" secondItem="lFo-5Y-n4c" secondAttribute="trailing" constant="2" id="0p2-0j-RIw"/>
                         <constraint firstItem="lFo-5Y-n4c" firstAttribute="leading" secondItem="95r-CJ-0ri" secondAttribute="leading" id="A0k-dU-s0U"/>
-                        <constraint firstAttribute="trailing" secondItem="eUP-N7-u75" secondAttribute="trailing" constant="139.5" id="b4k-89-QAF"/>
-                        <constraint firstItem="eUP-N7-u75" firstAttribute="leading" secondItem="lFo-5Y-n4c" secondAttribute="trailing" constant="2" id="dzJ-ux-k23"/>
+                        <constraint firstItem="eUP-N7-u75" firstAttribute="centerX" secondItem="95r-CJ-0ri" secondAttribute="centerX" id="JiR-xR-1g2"/>
                         <constraint firstItem="lFo-5Y-n4c" firstAttribute="top" secondItem="95r-CJ-0ri" secondAttribute="top" constant="3" id="j3a-bh-D7c"/>
-                        <constraint firstItem="eUP-N7-u75" firstAttribute="top" secondItem="95r-CJ-0ri" secondAttribute="top" constant="11" id="l75-HO-ke6"/>
                         <constraint firstAttribute="height" constant="44" id="vVE-mC-i8D"/>
+                        <constraint firstItem="eUP-N7-u75" firstAttribute="centerY" secondItem="lFo-5Y-n4c" secondAttribute="centerY" id="wjL-5q-KcA"/>
                     </constraints>
                 </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_back" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-N7-gAg">
