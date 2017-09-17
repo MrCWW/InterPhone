@@ -60,8 +60,8 @@ static UICompositeViewDescription *compositeDescription = nil;
 - (void)viewDidLoad {
     self.nameLabel.text = Here_Is_soundPhone;
     NSLog(@"%@",Here_Is_soundPhone);
-    NSString *remoteAddress = [[UCSIPCCManager instance] getRemoteAddress];
-    self.detailLabel.text = remoteAddress;
+//    NSString *remoteAddress = [[UCSIPCCManager instance] getRemoteAddress];
+//    self.detailLabel.text = remoteAddress;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

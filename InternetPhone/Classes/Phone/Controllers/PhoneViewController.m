@@ -10,7 +10,7 @@
 #import "PopUpView.h"
 #import "PopModel.h"
 #import "HomePageHeaderCateforyView.h"
-#define CollectionHeight ScreenHeight - 234
+#define CollectionHeight ScreenHeight - 265
 @interface PhoneViewController ()<CategorySelectDelegete,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
 //@property (weak, nonatomic) IBOutlet UITextField *numberTextFiled;
@@ -68,7 +68,7 @@
     //button长按事件
     [self.deleteBtn setImage:[UIImage imageNamed:@"20170720-中華電信-號碼刪除鍵-灰"] forState:UIControlStateHighlighted];
   UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(btnLong:)];
-   longPress.minimumPressDuration = 0.8; //定义按的时间
+   longPress.minimumPressDuration = 0.5; //定义按的时间
    [_deleteBtn addGestureRecognizer:longPress];
     [self creatNumberView];
     
@@ -107,7 +107,8 @@
 - (void)creatNumberView {
     NSArray *imageArr = @[@"20170720-中華電信-數字1",@"20170720-中華電信-數字2",@"20170720-中華電信-數字3",@"20170720-中華電信-數字4",@"20170720-中華電信-數字5",@"20170720-中華電信-數字6",@"20170720-中華電信-數字7",@"20170720-中華電信-數字8",@"20170720-中華電信-數字9",@"20170720-中華電信-米字鍵",@"20170720-中華電信-數字0",@"20170720-中華電信-井字鍵"];
     self.dataNumberArr = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"*",@"0",@"#", nil];
-    HomePageHeaderCateforyView *headerV = [[HomePageHeaderCateforyView alloc] initWithFrame:HCGRECT(0, 50, ScreenWidth, CollectionHeight) imageArr:imageArr titleArr:nil];
+    HomePageHeaderCateforyView *headerV = [[HomePageHeaderCateforyView alloc] initWithFrame:HCGRECT(20, 50, ScreenWidth-40, CollectionHeight) imageArr:imageArr titleArr:nil];
+//    headerV.backgroundColor = [UIColor yellowColor];
     NSLog(@"%.2f",CollectionHeight);
     self.headerCategoryView = headerV;
     headerV.delegate = self;
@@ -191,7 +192,7 @@
 }
 #pragma mark - 拨号按钮触发方法
 - (IBAction)callBtnAction:(id)sender {
-    if (_numberTextFiled.text.length) {
+    if (_numberTextFiled.text.length>0) {
         self.saveNumStr = @"";
         //存储日期
          NSDate *today = [NSDate date];

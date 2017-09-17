@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhoneViewController">
             <connections>
-                <outlet property="callbutton" destination="Yse-Xr-NGg" id="5l9-uv-7t7"/>
+                <outlet property="callbutton" destination="Yse-Xr-NGg" id="VAQ-rk-qFD"/>
                 <outlet property="cityBtn" destination="97g-nX-aUz" id="4Cc-yo-g1b"/>
                 <outlet property="deleteBtn" destination="fuO-nh-tIV" id="Zk5-jg-E0P"/>
                 <outlet property="numberTextFiled" destination="bQW-e3-YMj" id="9Ns-Tp-FKN"/>
@@ -43,7 +43,7 @@
                                         <constraint firstAttribute="width" constant="50" id="KiJ-UR-cLe"/>
                                         <constraint firstAttribute="height" constant="30" id="fG7-O1-DWe"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" title="台灣">
                                         <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -67,7 +67,7 @@
                                         <constraint firstAttribute="height" constant="30" id="wOG-DB-Boq"/>
                                     </constraints>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
                                         <outlet property="delegate" destination="-1" id="Uxh-88-lwA"/>
@@ -103,12 +103,12 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yse-Xr-NGg" customClass="UICallButton">
-                            <rect key="frame" x="40" y="597" width="295" height="45"/>
-                            <color key="backgroundColor" red="0.47843137254901957" green="0.73725490196078436" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="56" y="581" width="263" height="50"/>
+                            <color key="backgroundColor" red="0.46611982003279956" green="0.66251586294416243" blue="0.22007513338999385" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="45" id="uoC-Ue-6nb"/>
+                                <constraint firstAttribute="height" constant="50" id="FB1-ej-W11"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="撥號" image="call"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -116,18 +116,18 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="callBtnAction:" destination="-1" eventType="touchUpInside" id="nzR-fo-oag"/>
+                                <action selector="callBtnAction:" destination="-1" eventType="touchUpInside" id="t26-GN-asx"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Yse-Xr-NGg" secondAttribute="trailing" constant="56" id="3N9-gy-TFf"/>
                         <constraint firstItem="4gt-Id-DBR" firstAttribute="top" secondItem="iOJ-iG-V5R" secondAttribute="top" id="4mP-GI-UTB"/>
-                        <constraint firstItem="Yse-Xr-NGg" firstAttribute="leading" secondItem="iOJ-iG-V5R" secondAttribute="leading" constant="40" id="AQh-PX-qXB"/>
+                        <constraint firstItem="Yse-Xr-NGg" firstAttribute="leading" secondItem="iOJ-iG-V5R" secondAttribute="leading" constant="56" id="HDy-MS-Jk7"/>
                         <constraint firstAttribute="trailing" secondItem="4gt-Id-DBR" secondAttribute="trailing" id="Onc-3D-BLm"/>
-                        <constraint firstItem="Yse-Xr-NGg" firstAttribute="centerX" secondItem="4gt-Id-DBR" secondAttribute="centerX" id="QKv-fP-mqK"/>
-                        <constraint firstAttribute="bottom" secondItem="Yse-Xr-NGg" secondAttribute="bottom" constant="25" id="Z5Q-kB-dT2"/>
                         <constraint firstItem="4gt-Id-DBR" firstAttribute="leading" secondItem="iOJ-iG-V5R" secondAttribute="leading" id="dwk-fI-jdF"/>
+                        <constraint firstAttribute="bottom" secondItem="Yse-Xr-NGg" secondAttribute="bottom" constant="36" id="kZx-IJ-Xtz"/>
                     </constraints>
                 </view>
             </subviews>
@@ -138,6 +138,7 @@
                 <constraint firstItem="iOJ-iG-V5R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gKw-lq-gCO"/>
                 <constraint firstAttribute="trailing" secondItem="iOJ-iG-V5R" secondAttribute="trailing" id="z8D-Ni-ph1"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
     <resources>

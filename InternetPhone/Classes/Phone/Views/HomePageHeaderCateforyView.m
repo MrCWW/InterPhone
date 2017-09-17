@@ -11,7 +11,7 @@
 //#import "HomePageCategoryModel.h"
 
 #define BGViewHeight 200
-#define ItemWidth (ScreenWidth-50)/3
+#define ItemWidth (ScreenWidth-160)/3
 
 #define CellSec @"CellSec"
 @interface HomePageHeaderCateforyView()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -57,7 +57,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.frame = frame;
-        UIImageView *imageBG = [[UIImageView alloc] initWithFrame:HCGRECT(25, 25, self.width - 60, self.height - 90)];
+        UIImageView *imageBG = [[UIImageView alloc] initWithFrame:HCGRECT(20, 20, self.width - 50, self.height - 100)];
         imageBG.image = [UIImage imageNamed:@"20170720-中華電信-撥號背景圖"];
         [self addSubview:imageBG];
         if (imageArr) {
@@ -68,11 +68,11 @@
         }
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         //分区之间的间距
-        flowLayout.sectionInset = UIEdgeInsetsMake(20,20,20,20);
+        flowLayout.sectionInset = UIEdgeInsetsMake(10,30,0,30);
         //cell之间的最小间距
-        flowLayout.minimumLineSpacing = 0;//行间距
+        flowLayout.minimumLineSpacing = +10;//行间距
         flowLayout.minimumInteritemSpacing = 0;//列间距
-        self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,0, self.width, self.height) collectionViewLayout:flowLayout];
+        self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,20, self.width, self.height) collectionViewLayout:flowLayout];
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
         self.collectionView.backgroundColor = [UIColor clearColor];
