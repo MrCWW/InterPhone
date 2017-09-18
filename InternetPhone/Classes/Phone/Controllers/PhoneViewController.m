@@ -10,10 +10,12 @@
 #import "PopUpView.h"
 #import "PopModel.h"
 #import "HomePageHeaderCateforyView.h"
+#import <BRPickerView.h>
+
+
 #define CollectionHeight ScreenHeight - 265
 @interface PhoneViewController ()<CategorySelectDelegete,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *cityBtn;
-//@property (weak, nonatomic) IBOutlet UITextField *numberTextFiled;
 @property (weak, nonatomic) IBOutlet UILabel *qianzhuiLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteBtn;
 @property (weak, nonatomic) IBOutlet UIButton *callbutton;
@@ -25,6 +27,9 @@
 @property (nonatomic, strong) NSMutableArray *dataNumberArr;
 //@property (nonatomic, strong) NSMutableArray *dataSaveNumberArr;//存储数字
 //@property (nonatomic, strong) NSMutableString *saveNumStr;//存储数字
+@property (nonatomic, strong) UILabel *genderTF;
+
+
 @end
 
 @implementation PhoneViewController
@@ -71,7 +76,10 @@
    longPress.minimumPressDuration = 0.5; //定义按的时间
    [_deleteBtn addGestureRecognizer:longPress];
     [self creatNumberView];
+
+
     
+
 }
 - (void)deleteTextFieldNumNoti{
     self.numberTextFiled.text = @"";
@@ -164,32 +172,51 @@
 }
 //选择城市
 - (IBAction)cityBtnAction:(id)sender {
-    self.dataArr = [NSMutableArray array];
-    NSArray *arr = @[@{@"name":@"台灣"},@{@"name":@"日本"}];
-    for (NSDictionary *dic in arr) {
-        [_dataArr addObject:[PopModel modelWithDic:dic]];
-    }
+//    self.dataArr = [NSMutableArray array];
+//    NSArray *arr = @[@{@"name":@"台灣"},@{@"name":@"日本"}];
+//    for (NSDictionary *dic in arr) {
+//        [_dataArr addObject:[PopModel modelWithDic:dic]];
+//    }
+//    
+//    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+//    CGRect rect = [_cityBtn convertRect: _cityBtn.bounds toView:window];
+//    CGFloat height;
+//    if (_dataArr.count > 5) {
+//        height = 40 * DISTENCEH * 5;
+//    }else{
+//        height = 40 * DISTENCEH * _dataArr.count;
+//    }
+//    PopUpView *showView = [PopUpView initWithFrame:CGRectMake(_cityBtn.left, _cityBtn.bottom, _cityBtn.width, height) popUpFrame:rect textArr:_dataArr block:^(NSString *str) {
+//        [_cityBtn setTitle:str forState:0];
+//         Here_Set_gravity(str);
+//        if ([str isEqualToString:@"台灣"]) {
+//            self.qianzhuiLabel.text = @"+886";
+//        }else {
+//            self.qianzhuiLabel.text = @"+81";
+//        }
+//    }];
+//    self.showView = showView;
+//    [self.view addSubview:showView];
+//    [_cityBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.mas_equalTo(0);
+//        make.top.mas_equalTo(10);
+//        make.size.mas_equalTo(CGSizeMake(0, 40));
+//    }];
     
-    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-    CGRect rect = [_cityBtn convertRect: _cityBtn.bounds toView:window];
-    CGFloat height;
-    if (_dataArr.count > 5) {
-        height = 40 * DISTENCEH * 5;
-    }else{
-        height = 40 * DISTENCEH * _dataArr.count;
-    }
-    PopUpView *showView = [PopUpView initWithFrame:CGRectMake(_cityBtn.left, _cityBtn.bottom, _cityBtn.width, height) popUpFrame:rect textArr:_dataArr block:^(NSString *str) {
-        [_cityBtn setTitle:str forState:0];
-         Here_Set_gravity(str);
-        if ([str isEqualToString:@"台灣"]) {
-            self.qianzhuiLabel.text = @"+886";
-        }else {
-            self.qianzhuiLabel.text = @"+81";
-        }
-    }];
-    self.showView = showView;
-    [self.view addSubview:showView];
+        [BRStringPickerView showStringPickerWithTitle:@"城市" dataSource:@[@"台灣", @"日本"] defaultSelValue:@"日本" isAutoSelect:YES resultBlock:^(id selectValue) {
+            [_cityBtn setTitle:selectValue forState:0];
+            Here_Set_gravity(selectValue);
+            if ([selectValue isEqualToString:@"台灣"]) {
+                self.qianzhuiLabel.text = @"+886";
+            }else {
+                self.qianzhuiLabel.text = @"+81";
+            }
+
+        }];
 }
+
+
+
 #pragma mark - 拨号按钮触发方法
 - (IBAction)callBtnAction:(id)sender {
     if (_numberTextFiled.text.length>0) {

@@ -138,6 +138,16 @@
 		EA4644E31F39698500825157 /* AddModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4644E21F39698500825157 /* AddModel.m */; };
 		EA4644ED1F39976000825157 /* AddRessBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4644EB1F39976000825157 /* AddRessBookViewController.m */; };
 		EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA4644EC1F39976000825157 /* AddRessBookViewController.xib */; };
+		EA62EB791F6F6E37008E8E6C /* BRAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB621F6F6E37008E8E6C /* BRAddressModel.m */; };
+		EA62EB7A1F6F6E37008E8E6C /* BRAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB641F6F6E37008E8E6C /* BRAddressPickerView.m */; };
+		EA62EB7B1F6F6E37008E8E6C /* BRCity.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA62EB651F6F6E37008E8E6C /* BRCity.plist */; };
+		EA62EB7C1F6F6E37008E8E6C /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB681F6F6E37008E8E6C /* BaseView.m */; };
+		EA62EB7D1F6F6E37008E8E6C /* BRDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB6C1F6F6E37008E8E6C /* BRDatePickerView.m */; };
+		EA62EB7E1F6F6E37008E8E6C /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB6F1F6F6E37008E8E6C /* BRStringPickerView.m */; };
+		EA62EB7F1F6F6E37008E8E6C /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB731F6F6E37008E8E6C /* NSObject+YYModel.m */; };
+		EA62EB801F6F6E37008E8E6C /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB751F6F6E37008E8E6C /* YYClassInfo.m */; };
+		EA62EB811F6F6E37008E8E6C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EA62EB771F6F6E37008E8E6C /* LICENSE */; };
+		EA62EB821F6F6E37008E8E6C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EA62EB781F6F6E37008E8E6C /* README.md */; };
 		EA6D73AA1F4174EA00DCB6F3 /* CallIncomingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D73711F4174EA00DCB6F3 /* CallIncomingView.m */; };
 		EA6D73AB1F4174EA00DCB6F3 /* CallIncomingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6D73721F4174EA00DCB6F3 /* CallIncomingView.xib */; };
 		EA6D73AC1F4174EA00DCB6F3 /* CallOutgoingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6D73741F4174EA00DCB6F3 /* CallOutgoingView.m */; };
@@ -467,6 +477,25 @@
 		EA4644EA1F39976000825157 /* AddRessBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRessBookViewController.h; sourceTree = "<group>"; };
 		EA4644EB1F39976000825157 /* AddRessBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRessBookViewController.m; sourceTree = "<group>"; };
 		EA4644EC1F39976000825157 /* AddRessBookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRessBookViewController.xib; sourceTree = "<group>"; };
+		EA62EB611F6F6E37008E8E6C /* BRAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressModel.h; sourceTree = "<group>"; };
+		EA62EB621F6F6E37008E8E6C /* BRAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressModel.m; sourceTree = "<group>"; };
+		EA62EB631F6F6E37008E8E6C /* BRAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRAddressPickerView.h; sourceTree = "<group>"; };
+		EA62EB641F6F6E37008E8E6C /* BRAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRAddressPickerView.m; sourceTree = "<group>"; };
+		EA62EB651F6F6E37008E8E6C /* BRCity.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BRCity.plist; sourceTree = "<group>"; };
+		EA62EB671F6F6E37008E8E6C /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		EA62EB681F6F6E37008E8E6C /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		EA62EB691F6F6E37008E8E6C /* BRPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRPickerView.h; sourceTree = "<group>"; };
+		EA62EB6B1F6F6E37008E8E6C /* BRDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRDatePickerView.h; sourceTree = "<group>"; };
+		EA62EB6C1F6F6E37008E8E6C /* BRDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRDatePickerView.m; sourceTree = "<group>"; };
+		EA62EB6E1F6F6E37008E8E6C /* BRStringPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRStringPickerView.h; sourceTree = "<group>"; };
+		EA62EB6F1F6F6E37008E8E6C /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
+		EA62EB721F6F6E37008E8E6C /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		EA62EB731F6F6E37008E8E6C /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		EA62EB741F6F6E37008E8E6C /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		EA62EB751F6F6E37008E8E6C /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		EA62EB761F6F6E37008E8E6C /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		EA62EB771F6F6E37008E8E6C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EA62EB781F6F6E37008E8E6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EA6D736C1F4172A100DCB6F3 /* UCSIPCCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCSIPCCClass.h; sourceTree = "<group>"; };
 		EA6D736D1F4172A100DCB6F3 /* UCSIPCCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCSIPCCDelegate.h; sourceTree = "<group>"; };
 		EA6D736E1F4172A100DCB6F3 /* UCSIPCCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCSIPCCManager.h; sourceTree = "<group>"; };
@@ -813,6 +842,7 @@
 		249104671F22EFF700B370F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA62EB5E1F6F6E37008E8E6C /* BRPickerView */,
 				247471571F24D55C0008B066 /* HomePageHeaderCateforyView.h */,
 				247471581F24D55C0008B066 /* HomePageHeaderCateforyView.m */,
 				247471591F24D55C0008B066 /* HomePageHeaderCateforyView.xib */,
@@ -1262,6 +1292,88 @@
 			path = CoreDatas;
 			sourceTree = "<group>";
 		};
+		EA62EB5E1F6F6E37008E8E6C /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB5F1F6F6E37008E8E6C /* BRPickerView */,
+				EA62EB771F6F6E37008E8E6C /* LICENSE */,
+				EA62EB781F6F6E37008E8E6C /* README.md */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		EA62EB5F1F6F6E37008E8E6C /* BRPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB601F6F6E37008E8E6C /* AddressPickerView */,
+				EA62EB661F6F6E37008E8E6C /* Base */,
+				EA62EB691F6F6E37008E8E6C /* BRPickerView.h */,
+				EA62EB6A1F6F6E37008E8E6C /* DatePickerView */,
+				EA62EB6D1F6F6E37008E8E6C /* StringPickerView */,
+				EA62EB701F6F6E37008E8E6C /* Vendor */,
+			);
+			path = BRPickerView;
+			sourceTree = "<group>";
+		};
+		EA62EB601F6F6E37008E8E6C /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB611F6F6E37008E8E6C /* BRAddressModel.h */,
+				EA62EB621F6F6E37008E8E6C /* BRAddressModel.m */,
+				EA62EB631F6F6E37008E8E6C /* BRAddressPickerView.h */,
+				EA62EB641F6F6E37008E8E6C /* BRAddressPickerView.m */,
+				EA62EB651F6F6E37008E8E6C /* BRCity.plist */,
+			);
+			path = AddressPickerView;
+			sourceTree = "<group>";
+		};
+		EA62EB661F6F6E37008E8E6C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB671F6F6E37008E8E6C /* BaseView.h */,
+				EA62EB681F6F6E37008E8E6C /* BaseView.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EA62EB6A1F6F6E37008E8E6C /* DatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB6B1F6F6E37008E8E6C /* BRDatePickerView.h */,
+				EA62EB6C1F6F6E37008E8E6C /* BRDatePickerView.m */,
+			);
+			path = DatePickerView;
+			sourceTree = "<group>";
+		};
+		EA62EB6D1F6F6E37008E8E6C /* StringPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB6E1F6F6E37008E8E6C /* BRStringPickerView.h */,
+				EA62EB6F1F6F6E37008E8E6C /* BRStringPickerView.m */,
+			);
+			path = StringPickerView;
+			sourceTree = "<group>";
+		};
+		EA62EB701F6F6E37008E8E6C /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB711F6F6E37008E8E6C /* YYModel */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		EA62EB711F6F6E37008E8E6C /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA62EB721F6F6E37008E8E6C /* NSObject+YYModel.h */,
+				EA62EB731F6F6E37008E8E6C /* NSObject+YYModel.m */,
+				EA62EB741F6F6E37008E8E6C /* YYClassInfo.h */,
+				EA62EB751F6F6E37008E8E6C /* YYClassInfo.m */,
+				EA62EB761F6F6E37008E8E6C /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
 		EA6D736B1F41729400DCB6F3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -1526,6 +1638,7 @@
 				EA6D73C01F4174EA00DCB6F3 /* LICENSE.txt in Resources */,
 				24896E4E1F5EDEF8001D39A4 /* LICENSE in Resources */,
 				EA6D73AD1F4174EA00DCB6F3 /* CallOutgoingView.xib in Resources */,
+				EA62EB811F6F6E37008E8E6C /* LICENSE in Resources */,
 				247471491F24BF820008B066 /* CallRecordsDetailViewController.xib in Resources */,
 				249104341F22DADB00B370F5 /* LaunchScreen.storyboard in Resources */,
 				EA6D73C31F4174EA00DCB6F3 /* SVProgressHUD.bundle in Resources */,
@@ -1549,6 +1662,7 @@
 				24896E3C1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib in Resources */,
 				2491042F1F22DADB00B370F5 /* Main.storyboard in Resources */,
 				EA4644EE1F39976000825157 /* AddRessBookViewController.xib in Resources */,
+				EA62EB7B1F6F6E37008E8E6C /* BRCity.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,6 +1686,8 @@
 				249105E21F22F20A00B370F5 /* MKAnnotationView+WebCache.m in Sources */,
 				249105DB1F22F20A00B370F5 /* MJRefreshStateHeader.m in Sources */,
 				249105E91F22F20A00B370F5 /* SDWebImageManager.m in Sources */,
+				EA62EB821F6F6E37008E8E6C /* README.md in Sources */,
+				EA62EB7E1F6F6E37008E8E6C /* BRStringPickerView.m in Sources */,
 				EA6D73AE1F4174EA00DCB6F3 /* DialerViewController.m in Sources */,
 				249105C51F22F20A00B370F5 /* UIButton+AFNetworking.m in Sources */,
 				249105DE1F22F20A00B370F5 /* NSBundle+MJRefresh.m in Sources */,
@@ -1602,6 +1718,7 @@
 				249105FE1F22F27A00B370F5 /* HBaseViewController.m in Sources */,
 				2491066C1F22FBD300B370F5 /* LoginViewController.m in Sources */,
 				EA4644ED1F39976000825157 /* AddRessBookViewController.m in Sources */,
+				EA62EB7C1F6F6E37008E8E6C /* BaseView.m in Sources */,
 				249106001F22F27A00B370F5 /* HBaseView.m in Sources */,
 				249105B81F22F20A00B370F5 /* AFHTTPRequestOperationManager.m in Sources */,
 				EAEE5A511F3038E3003F6583 /* AddDetailViewController.m in Sources */,
@@ -1623,6 +1740,7 @@
 				249105F01F22F20A00B370F5 /* UIImageView+WebCache.m in Sources */,
 				249106581F22F7C800B370F5 /* CallRecordsViewController.m in Sources */,
 				249105EB1F22F20A00B370F5 /* UIButton+WebCache.m in Sources */,
+				EA62EB7A1F6F6E37008E8E6C /* BRAddressPickerView.m in Sources */,
 				249106251F22F3DD00B370F5 /* NSString+BXExtension.m in Sources */,
 				247471541F24C84E0008B066 /* PopModel.m in Sources */,
 				249105DA1F22F20A00B370F5 /* MJRefreshNormalHeader.m in Sources */,
@@ -1636,6 +1754,7 @@
 				249105E51F22F20A00B370F5 /* SDWebImageCompat.m in Sources */,
 				247471561F24C84E0008B066 /* PopUpView.m in Sources */,
 				247471551F24C84E0008B066 /* PopTableCell.m in Sources */,
+				EA62EB7D1F6F6E37008E8E6C /* BRDatePickerView.m in Sources */,
 				247471431F24A7B40008B066 /* AHomePageViewController.m in Sources */,
 				249105D41F22F20A00B370F5 /* MJRefreshAutoNormalFooter.m in Sources */,
 				EA6D73BB1F4174EA00DCB6F3 /* UIEraseButton.m in Sources */,
@@ -1662,6 +1781,7 @@
 				24B4EE861F5B8EF400C063E7 /* PhoneRecored+CoreDataClass.m in Sources */,
 				249105B91F22F20A00B370F5 /* AFHTTPSessionManager.m in Sources */,
 				249106621F22F7E400B370F5 /* SettingViewController.m in Sources */,
+				EA62EB801F6F6E37008E8E6C /* YYClassInfo.m in Sources */,
 				249105E01F22F20A00B370F5 /* UIScrollView+MJRefresh.m in Sources */,
 				2491062F1F22F3DD00B370F5 /* UINavigationBar+Awesome.m in Sources */,
 				EA6D73BA1F4174EA00DCB6F3 /* UIDigitButtonLongVoiceMail.m in Sources */,
@@ -1669,6 +1789,7 @@
 				24896E511F5EDEF8001D39A4 /* NSString+Base64.m in Sources */,
 				249105FF1F22F27A00B370F5 /* HBaseModel.m in Sources */,
 				24B4EDDD1F585A7200C063E7 /* LoginModel.m in Sources */,
+				EA62EB791F6F6E37008E8E6C /* BRAddressModel.m in Sources */,
 				EA6D73B11F4174EA00DCB6F3 /* DTAlertView.m in Sources */,
 				249105BD1F22F20A00B370F5 /* AFURLRequestSerialization.m in Sources */,
 				249105BF1F22F20A00B370F5 /* AFURLSessionManager.m in Sources */,
@@ -1686,6 +1807,7 @@
 				24B4EE8D1F5B90E400C063E7 /* CoreDataAPI.m in Sources */,
 				249105E31F22F20A00B370F5 /* NSData+ImageContentType.m in Sources */,
 				249105FD1F22F27A00B370F5 /* HBaseNavigationController.m in Sources */,
+				EA62EB7F1F6F6E37008E8E6C /* NSObject+YYModel.m in Sources */,
 				249106231F22F3DD00B370F5 /* CALayer+layerCategory.m in Sources */,
 				249105D01F22F20A00B370F5 /* MJRefreshComponent.m in Sources */,
 				249106271F22F3DD00B370F5 /* ShowAlter.m in Sources */,
