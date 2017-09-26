@@ -254,17 +254,17 @@
 		247471661F24E9FE0008B066 /* UITextField+WWExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WWExtentRange.m"; sourceTree = "<group>"; };
 		24896DFA1F5D0694001D39A4 /* PhoneRecoredModelCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneRecoredModelCount.h; sourceTree = "<group>"; };
 		24896DFB1F5D0694001D39A4 /* PhoneRecoredModelCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneRecoredModelCount.m; sourceTree = "<group>"; };
-		24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecordsTableViewCell.h; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecordsTableViewCell.m; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecordsTableViewCell.xib; path = InternetPhone/Other/CoreDatas/CallRecordsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecordsTableViewCell.h; path = InternetPhone/Classes/CallRecords/view/CallRecordsTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecordsTableViewCell.m; path = InternetPhone/Classes/CallRecords/view/CallRecordsTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecordsTableViewCell.xib; path = InternetPhone/Classes/CallRecords/view/CallRecordsTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		24896E0D1F5D5AE1001D39A4 /* NSDate+judgeToday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+judgeToday.h"; sourceTree = "<group>"; };
 		24896E0E1F5D5AE1001D39A4 /* NSDate+judgeToday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+judgeToday.m"; sourceTree = "<group>"; };
-		24896E331F5EB357001D39A4 /* CallRecoredDetialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredDetialView.h; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredDetialView.h; sourceTree = SOURCE_ROOT; };
-		24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredDetialView.m; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredDetialView.m; sourceTree = SOURCE_ROOT; };
-		24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredDetialView.xib; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredDetialView.xib; sourceTree = SOURCE_ROOT; };
-		24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredsDetialTableViewCell.h; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredsDetialTableViewCell.m; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredsDetialTableViewCell.xib; path = InternetPhone/Classes/CallRecords/Controllers/CallRecoredsDetialTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		24896E331F5EB357001D39A4 /* CallRecoredDetialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredDetialView.h; path = InternetPhone/Classes/CallRecords/view/CallRecoredDetialView.h; sourceTree = SOURCE_ROOT; };
+		24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredDetialView.m; path = InternetPhone/Classes/CallRecords/view/CallRecoredDetialView.m; sourceTree = SOURCE_ROOT; };
+		24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredDetialView.xib; path = InternetPhone/Classes/CallRecords/view/CallRecoredDetialView.xib; sourceTree = SOURCE_ROOT; };
+		24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallRecoredsDetialTableViewCell.h; path = InternetPhone/Classes/CallRecords/view/CallRecoredsDetialTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallRecoredsDetialTableViewCell.m; path = InternetPhone/Classes/CallRecords/view/CallRecoredsDetialTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CallRecoredsDetialTableViewCell.xib; path = InternetPhone/Classes/CallRecords/view/CallRecoredsDetialTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		24896E431F5EDEF8001D39A4 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
 		24896E441F5EDEF8001D39A4 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
 		24896E451F5EDEF8001D39A4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -761,8 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				249104611F22EFF700B370F5 /* Controllers */,
-				249104621F22EFF700B370F5 /* Models */,
-				249104631F22EFF700B370F5 /* Views */,
+				EAFD88A41F739FFD00542A59 /* view */,
 			);
 			path = CallRecords;
 			sourceTree = "<group>";
@@ -786,34 +785,10 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		249104621F22EFF700B370F5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		249104631F22EFF700B370F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */,
-				24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */,
-				24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */,
-				24896E331F5EB357001D39A4 /* CallRecoredDetialView.h */,
-				24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */,
-				24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */,
-				24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */,
-				24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */,
-				24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		249104641F22EFF700B370F5 /* Phone */ = {
 			isa = PBXGroup;
 			children = (
 				249104651F22EFF700B370F5 /* Controllers */,
-				249104661F22EFF700B370F5 /* Models */,
 				249104671F22EFF700B370F5 /* Views */,
 			);
 			path = Phone;
@@ -830,13 +805,6 @@
 				247471421F24A7B40008B066 /* AHomePageViewController.xib */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		249104661F22EFF700B370F5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		249104671F22EFF700B370F5 /* Views */ = {
@@ -857,8 +825,6 @@
 			isa = PBXGroup;
 			children = (
 				249104691F22EFF700B370F5 /* Controllers */,
-				2491046A1F22EFF700B370F5 /* Models */,
-				2491046B1F22EFF700B370F5 /* Views */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -874,20 +840,6 @@
 				EA7421151F63DE5200D42328 /* exchangeViewController.xib */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		2491046A1F22EFF700B370F5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		2491046B1F22EFF700B370F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		2491046C1F22EFF700B370F5 /* Other */ = {
@@ -1242,7 +1194,6 @@
 			isa = PBXGroup;
 			children = (
 				24B4EDD91F585A6500C063E7 /* Model */,
-				24B4EDDA1F585A6500C063E7 /* Views */,
 				2491064D1F22F73100B370F5 /* Controllers */,
 			);
 			path = Login;
@@ -1265,13 +1216,6 @@
 				24B4EDDC1F585A7200C063E7 /* LoginModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		24B4EDDA1F585A6500C063E7 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		24B4EE7E1F5B8C8E00C063E7 /* CoreDatas */ = {
@@ -1548,6 +1492,22 @@
 				EAEE5A481F3027DA003F6583 /* Contacts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAFD88A41F739FFD00542A59 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				24896E051F5D44FB001D39A4 /* CallRecordsTableViewCell.h */,
+				24896E061F5D44FB001D39A4 /* CallRecordsTableViewCell.m */,
+				24896E071F5D44FB001D39A4 /* CallRecordsTableViewCell.xib */,
+				24896E331F5EB357001D39A4 /* CallRecoredDetialView.h */,
+				24896E341F5EB357001D39A4 /* CallRecoredDetialView.m */,
+				24896E361F5EB3B7001D39A4 /* CallRecoredDetialView.xib */,
+				24896E381F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.h */,
+				24896E391F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.m */,
+				24896E3A1F5EB87F001D39A4 /* CallRecoredsDetialTableViewCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1990,6 +1950,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Chunghwa  Telecom  Japan  Co.,Ltd (6CUT6XZBSA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CUT6XZBSA;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InternetPhone/Other/Resources/PrefixHeader.pch";
@@ -2004,7 +1965,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = InternetPhone.zhrbt;
+				PRODUCT_BUNDLE_IDENTIFIER = chinaandjapan.aqicorp.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2020,6 +1981,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Chunghwa  Telecom  Japan  Co.,Ltd (6CUT6XZBSA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6CUT6XZBSA;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/InternetPhone/Other/Resources/PrefixHeader.pch";
@@ -2034,7 +1996,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-Objc";
-				PRODUCT_BUNDLE_IDENTIFIER = InternetPhone.zhrbt;
+				PRODUCT_BUNDLE_IDENTIFIER = chinaandjapan.aqicorp.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -203,7 +203,7 @@
 //        make.size.mas_equalTo(CGSizeMake(0, 40));
 //    }];
     
-        [BRStringPickerView showStringPickerWithTitle:@"城市" dataSource:@[@"台灣", @"日本"] defaultSelValue:@"日本" isAutoSelect:YES resultBlock:^(id selectValue) {
+        [BRStringPickerView showStringPickerWithTitle:@"" dataSource:@[@"台灣", @"日本"] defaultSelValue:@"日本" isAutoSelect:YES resultBlock:^(id selectValue) {
             [_cityBtn setTitle:selectValue forState:0];
             Here_Set_gravity(selectValue);
             if ([selectValue isEqualToString:@"台灣"]) {

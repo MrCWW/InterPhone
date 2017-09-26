@@ -6,7 +6,7 @@
 //  Copyright © 2017年 DUC-apple3. All rights reserved.
 //
 
-#import "AddRessBookViewController.h"
+#import "AddressBookViewController.h"
 #import <Contacts/Contacts.h>
 #import "contTableViewCell.h"
 #import <ContactsUI/ContactsUI.h>
@@ -74,7 +74,7 @@
     self.myTableView.backgroundColor = [UIColor whiteColor];
     [vvv addSubview:self.myTableView];
     
-    _mysearchbar.frame = HCGRECT(0, 0, ScreenWidth, 40);
+    _mysearchbar.frame = HCGRECT(0, 0, ScreenWidth, 30);
     [vvv addSubview:_mysearchbar];
     //点击空白处收回键盘
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];

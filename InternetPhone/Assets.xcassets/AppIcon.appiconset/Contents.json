@@ -1,14 +1,14 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "20x20",
+      "idiom" : "iphone",
+      "filename" : "40x40.png",
       "scale" : "2x"
     },
     {
-      "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "20170724-中華電信語音logo-系統設置圖示-87x87.png",
+      "size" : "20x20",
       "scale" : "3x"
     },
     {
@@ -20,12 +20,13 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "20170724-中華電信語音logo-系統搜索框圖示-58x58-1.png",
+      "filename" : "20170724-中華電信語音logo-系統設置圖示-87x87.png",
       "scale" : "3x"
     },
     {
-      "idiom" : "iphone",
       "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "20170724-中華電信語音logo-系統搜索框圖示-80x80.png",
       "scale" : "2x"
     },
     {
@@ -44,6 +45,23 @@
       "size" : "60x60",
       "idiom" : "iphone",
       "filename" : "20170724-中華電信語音logo-桌面-180x180.png",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "ios-marketing",
+      "size" : "1024x1024",
+      "scale" : "1x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "car",
+      "filename" : "20170724-中華電信語音logo-桌面-120x120-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "car",
+      "filename" : "20170724-中華電信語音logo-桌面-180x180-1.png",
       "scale" : "3x"
     }
   ],
