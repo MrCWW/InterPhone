@@ -22,11 +22,11 @@
 
 @property (nonatomic ,copy) NSString *password;
 
-@property (nonatomic ,copy) NSString *sip_ip;
+@property (nonatomic ,copy) NSString *sip_ip;//服务器
 
 @property (nonatomic ,copy) NSString *sip_password;
 
-@property (nonatomic ,copy) NSString *sip_port;
+@property (nonatomic ,copy) NSString *sip_port;//端口
 
 @property (nonatomic ,copy) NSString *sip_username;
 

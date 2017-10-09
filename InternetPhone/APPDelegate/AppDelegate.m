@@ -35,7 +35,7 @@
             self.vc = [[LoginViewController alloc] init];
             self.window.rootViewController = [[HBaseNavigationController alloc] initWithRootViewController:self.vc];        }else{
                 //sip用户名 密码登录
-                [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"123"domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+                [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@""domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
                 self.dialerVC = [[AHomePageViewController alloc] init];
                 [self.window setRootViewController:[[HBaseNavigationController alloc] initWithRootViewController:self.dialerVC]];
             }
@@ -235,7 +235,7 @@
                     
                     [self userTokenIvalid];
                 }
-                 [MBProgressHUD showText:@"登錄失败" toView:nil];
+                 [MBProgressHUD showText:@"登錄失敗" toView:nil];
                 
             }
             break;

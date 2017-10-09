@@ -300,7 +300,7 @@
     NSString *timeWeekStr =  [self judegWeekDay:[comps weekday]];
     //        NSDate * date = p.updatedate;
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    format.dateFormat = @"MM月dd号";
+    format.dateFormat = @"MM月dd號";
     //日期字符串
     NSString *string = [format stringFromDate:today];
     NSLog(@"%@",string);

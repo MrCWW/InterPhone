@@ -29,17 +29,16 @@
         LoginModel *model = [LoginModel modelWithDic:dic];
         kArchiverHomepageModel(model);
     
-        
         NSLog(@"%@",model.sip_ip);
         NSLog(@"%@",model.sip_port);
 //sip用户名 密码登录
-             [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"123" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
+             [[UCSIPCCManager instance] addProxyConfig:model.sip_username password:model.sip_new_password displayName:@"" domain:model.sip_ip port:model.sip_port withTransport:@"UDP"];
     }else {
-        [MBProgressHUD showText:@"登錄失败" toView:nil];
+        [MBProgressHUD showText:@"登錄失敗" toView:nil];
         
     }
 } failure:^(NSError *error) {
-    [MBProgressHUD showText:@"登錄失败" toView:nil];
+    [MBProgressHUD showText:@"登錄失敗" toView:nil];
 }];
     
 

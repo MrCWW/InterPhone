@@ -23,8 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0M-BI-7Cn">
-                    <rect key="frame" x="182" y="704" width="50" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本1.0.4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0M-BI-7Cn">
+                    <rect key="frame" x="175.66666666666666" y="704" width="62.666666666666686" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="5jS-fc-v3R"/>
                     </constraints>
@@ -58,7 +58,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="语音失效日期    12 12月 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS6-Vu-VeS">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="語音失效日期    12 12月 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS6-Vu-VeS">
                     <rect key="frame" x="95" y="184" width="225" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="2aI-yq-jOB"/>
@@ -74,7 +74,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="pTQ-zw-eMP"/>
                     </constraints>
-                    <state key="normal" title="退出登录">
+                    <state key="normal" title="退出登錄">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" red="1" green="0.6824717437580341" blue="0.29132605796960331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>

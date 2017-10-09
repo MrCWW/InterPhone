@@ -257,7 +257,7 @@
             break;
         }
         case UCSRegistrationFailed: {
-            self.stateLabel.text = @" 登錄失败";
+            self.stateLabel.text = @" 登錄失敗";
             self.statusView.backgroundColor = [UIColor redColor];
             self.stateLabel.textColor = [UIColor redColor];
 

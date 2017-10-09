@@ -19,13 +19,31 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.4</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.4</string>
+	<string>1.1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>App需要您的同意,才能訪問媒體資料庫</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App需要您的同意,才能訪問藍牙</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>App需要您的同意,才能訪問日历</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,才能訪問相機</string>
 	<key>NSContactsUsageDescription</key>
-	<string>请求访问通讯录</string>
+	<string>請求訪問通訊錄，否則無法獲取通訊錄</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>App需要您的同意,才能訪問健康分享</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App需要您的同意,才能始终訪問位置</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Phone</string>
+	<string>請求打開麥克風，否則無法進行語音通話</string>
+	<key>NSMotionUsageDescription</key>
+	<string>App需要您的同意,才能訪問運動与健身</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App需要您的同意,才能訪問相冊</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>App需要您的同意,才能訪問提醒事項</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>voip</string>

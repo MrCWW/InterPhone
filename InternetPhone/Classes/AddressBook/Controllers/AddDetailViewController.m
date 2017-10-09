@@ -153,7 +153,7 @@
 }
 //删除
 - (void)clickbacksc:(UIBarButtonItem *)but {
-    UIAlertView *alerat = [[UIAlertView alloc] initWithTitle:@"提示" message:@"确认删除联系人？" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    UIAlertView *alerat = [[UIAlertView alloc] initWithTitle:@"提示" message:@"確認刪除聯繫人？" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     alerat.tag = 1001;
     alerat.delegate = self;
     [alerat show];
@@ -367,7 +367,7 @@
     NSString *timeWeekStr =  [self judegWeekDay:[comps weekday]];
     //        NSDate * date = p.updatedate;
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    format.dateFormat = @"MM月dd号";
+    format.dateFormat = @"MM月dd號";
     //日期字符串
     NSString *string = [format stringFromDate:today];
     NSLog(@"%@",string);
